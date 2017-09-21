@@ -1,0 +1,147 @@
+JavaScript <br><br><br>
+
+
+ Scripting language which is used to enhance the functionality and appearance of web pages.<br>
+ Before you can run code examples with JavaScript on your computer, you may need to change your browser’s security settings. <br>
+ IE9 prevents scripts on the local computer from running by default <br>
+ Firefox, Chrome, Opera, Safari (including on the iPhone) and the Android browser have JavaScript enabled by default. <br><br>
+
+ We begin with a simple script that displays the text "Welcome to JavaScript Programming!" in the HTML5 document.<br>
+ All major web browsers contain JavaScript interpreters, which process the commands written in JavaScript.<br>
+ The JavaScript code and its result are shown in Fig. 6.1. <br><br>
+
+ Spacing displayed by a browser in a web page is determined by the HTML5 elements used to format the page<br>
+ Often, JavaScripts appear in the <head> section of the HTML5 document<br>
+ The browser interprets the contents of the <head> section first<br>
+ The <script> tag indicates to the browser that the text that follows is part of a script. Attribute type specifies the scripting language used in the script—such as text/javascript <br><br>
+
+The script Element and Commenting Your Scripts
+ The <script> tag indicates to the browser that the text which follows is part of a script.<br>
+ The type attribute specifies the MIME type of the script as well as the scripting language used in the script—in this case, a text file written in javascript.<br>
+ In HTML5, the default MIME type for a <script> is "text/html", so you can omit the type attribute from your <script> tags.<br>
+ You’ll see it in legacy HTML documents with embedded JavaScripts. <br><br>
+
+ A string of characters can be contained between double quotation (") marks (also called a string literal) <br><br>
+
+ Browser’s document object represents the HTML5 document currently being displayed in the browser <br>
+ Allows a you to specify HTML5 text to be displayed in the HTML5 document<br>
+ Browser contains a complete set of objects that allow script programmers to access and manipulate every element of an HTML5 document<br>
+ Object <br>
+ Resides in the computer’s memory and contains information used by the script <br>
+ The term object normally implies that attributes (data) and behaviors (methods) are associated with the object <br>
+ An object’s methods use the attributes’ data to perform useful actions for the client of the object—the script that calls the methods <br><br>
+
+ The parentheses following the name of a method contain the arguments that the method requires to perform its task (or its action)<br>
+ Every statement should end with a semicolon (also known as the statement terminator), although none is required by JavaScript<br>
+ JavaScript is case sensitive <br>
+ Not using the proper uppercase and lowercase letters is a syntax error <br><br>
+
+ The document object’s writeln method <br>
+ Writes a line of HTML5 text in the HTML5 document <br>
+ Does not guarantee that a corresponding line of text will appear in the HTML5 document. <br>
+ Text displayed is dependent on the contents of the string written, which is subsequently rendered by the browser. <br>
+ Browser will interpret the HTML5 elements as it normally does to render the final text in the document <br><br>
+
+A Note About Embedding JavaScript Code into HTML5 Documents
+ JavaScript code is typically placed in a separate file, then included in the HTML5 document that uses the script.<br>
+ This makes the code more reusable, because it can be included into any HTML5 document—as is the case with the many JavaScript libraries used in professional web development today.<br>
+ We’ll begin separating both CSS3 and JavaScript into separate files starting in Chapter 10. <br><br>
+
+ A script can display Welcome to JavaScript Programming! in many ways.<br>
+ Figure 6.2 displays the text in magenta, using the CSS color property.<br>
+ Method write displays a string like writeln, but does not position the output cursor in the HTML5 document at the beginning of the next line after writing its argument <br><br>
+
+ The + operator (called the “concatenation operator” when used in this manner) joins two strings together <br><br>
+
+Displaying Text in an Alert Dialog
+ Dialogs <br>
+ Useful to display information in windows that “pop up” on the screen to grab the user’s attention <br>
+ Typically used to display important messages to the user browsing the web page <br>
+ Browser’s window object uses method alert to display an alert dialog <br>
+ Method alert requires as its argument the string to be displayed <br><br>
+
+Escape Sequences
+ When a backslash is encountered in a string of characters, the next character is combined with the backslash to form an escape sequence. The escape sequence \n is the newline character. It causes the cursor in the HTML5 document to move to the beginning of the next line. <br><br>
+
+ Scripting <br>
+ Gives you the ability to generate part or all of a web page’s content at the time it is shown to the user <br>
+ Such web pages are said to be dynamic, as opposed to static, since their content has the ability to change <br><br>
+
+ The next script creates a dynamic welcome page that obtains the user’s name, then displays it on the page.<br>
+ The script uses another predefined dialog box from the window object—a prompt dialog—which allows the user to enter a value that the script can use.<br>
+ Figure 6.5 presents the script and sample output. <br><br>
+
+ Keywords are words with special meaning in JavaScript<br>
+ Keyword var <br>
+ Used to declare the names of variables <br>
+ A variable is a location in the computer’s memory where a value can be stored for use by a script <br>
+ All variables have a name, type and value, and should be declared with a var statement before they are used in a script<br>
+ A variable name can be any valid identifier consisting of letters, digits, underscores ( _ ) and dollar signs ($) that does not begin with a digit and is not a reserved JavaScript keyword. <br><br>
+
+ Declarations end with a semicolon (;) and can be split over several lines, with each variable in the declaration separated by a comma (forming a comma-separated list of variable names) <br>
+ Several variables may be declared in one declaration or in multiple declarations.<br>
+ Comments <br>
+ A single-line comment begins with the characters // and terminates at the end of the line <br>
+ Comments do not cause the browser to perform any action when the script is interpreted; rather, comments are ignored by the JavaScript interpreter <br>
+ Multiline comments begin with delimiter /* and end with delimiter */  All text between the delimiters of the comment is ignored by the interpreter. <br><br>
+
+ The window object’s prompt method displays a dialog into which the user can type a value. <br>
+ The first argument is a message (called a prompt) that directs the user to take a specific action. <br>
+ The optional second argument is the default string to display in the text field.<br>
+ Script can then use the value that the user inputs. <br><br>
+
+ A variable is assigned a value with an assignment statement, using the assignment operator, =.<br>
+ The = operator is called a binary operator, because it has two operands. <br><br>
+
+ null keyword <br>
+ Signifies that a variable has no value <br>
+ null is not a string literal, but rather a predefined term indicating the absence of value <br>
+ Writing a null value to the document, however, displays the word “null”<br>
+ Function parseInt <br>
+ converts its string argument to an integer<br>
+ JavaScript has a version of the + operator for string concatenation that enables a string and a value of another data type (including another string) to be concatenated <br><br>
+
+ Our next script illustrates another use of prompt dialogs to obtain input from the user.<br>
+ Figure 6.7 inputs two integers (whole numbers, such as 7, –11, 0 and 31914) typed by a user at the keyboard, computes the sum of the values and displays the result. <br><br>
+
+ Variable names correspond to locations in the computer’s memory.<br>
+ Every variable has a name, a type and a value.<br>
+ When a value is placed in a memory location, the value replaces the previous value in that location.<br>
+ When a value is read out of a memory location, the process is nondestructive. <br><br>
+
+ JavaScript does not require variables to have a type before they can be used in a script<br>
+ A variable in JavaScript can contain a value of any data type, and in many situations, JavaScript automatically converts between values of different types for you<br>
+ JavaScript is referred to as a loosely typed language<br>
+ When a variable is declared in JavaScript, but is not given a value, it has an undefined value. <br>
+ Attempting to use the value of such a variable is normally a logic error.<br>
+ When variables are declared, they are not assigned default values, unless specified otherwise by the programmer. <br>
+ To indicate that a variable does not contain a value, you can assign the value null to it. <br><br>
+
+ The basic arithmetic operators (+, -, * , /, and %) are binary operators, because they each operate on two operands<br>
+ JavaScript provides the remainder operator, %, which yields the remainder after division<br>
+ Arithmetic expressions in JavaScript must be written in straight-line form to facilitate entering programs into the computer <br><br>
+
+ Parentheses can be used to group expressions as in algebra.<br>
+ Operators in arithmetic expressions are applied in a precise sequence determined by the rules of operator precedence: <br>
+ Multiplication, division and remainder operations are applied first. <br>
+ If an expression contains several of these operations, operators are applied from left to right. <br>
+ Multiplication, division and remainder operations are said to have the same level of precedence. <br>
+ Addition and subtraction operations are applied next. <br>
+ If an expression contains several of these operations, operators are applied from left to right. <br>
+ Addition and subtraction operations have the same level of precedence.<br>
+ When we say that operators are applied from left to right, we are referring to the associativity of the operators. Some operators associate from right to left. <br><br>
+
+ if statement allows a script to make a decision based on the truth or falsity of a condition <br>
+ If the condition is met (i.e., the condition is true), the statement in the body of the if statement is executed <br>
+ If the condition is not met (i.e., the condition is false), the statement in the body of the if statement is not executed<br>
+ Conditions in if statements can be formed by using the equality operators and relational operators <br><br>
+
+ Equality operators both have the same level of precedence, which is lower than the precedence of the relational operators.<br>
+ The equality operators associate from left to right. <br><br>
+
+ The script in Fig. 6.14 uses four if statements to display a time-sensitive greeting on a welcome page. <br><br>
+
+ Date object <br>
+ Used acquire the current local time <br>
+ Create a new instance of an object by using the new operator followed by the type of the object, Date, and a pair of parentheses <br><br>
+

@@ -1,0 +1,357 @@
+Introduction to canvas <br>
+<br>
+<br>
+ The canvas element, which you’ll learn to use in this chapter, provides a JavaScript application programming interface (API) with methods for drawing two-dimensional bitmapped graphics and animations, manipulating fonts and images, and inserting images and videos. ◦ Due to the large number of examples in this chapter, most of the examples use embedded JavaScripts.<br>
+ A key benefit of canvas is that it’s built into the browser, eliminating the need for plug-ins like Flash and Silverlight, thereby improving performance and convenience and reducing costs.<br>
+<br>
+ To begin drawing, we first must understand canvas’s coordinate system (Fig. 14.1), a scheme for identifying every point on a canvas.<br>
+ By default, the upper-left corner of a canvas has the coordinates (0, 0).<br>
+ A coordinate pair has both an x-coordinate (the horizontal coordinate) and a y-coordinate (the vertical coordinate).<br>
+ The x-coordinate is the horizontal distance to the right from the left border of a canvas.<br>
+ The y-coordinate is the vertical distance downward from the top border of a canvas.<br>
+ The x-axis defines every horizontal coordinate, and the y-axis defines every vertical coordinate.<br>
+ You position text and shapes on a canvas by specifying their x and y-coordinates.<br>
+ Coordinate space units are measured in pixels (“picture elements”), which are the smallest units of resolution on a screen.<br>
+<br>
+ Figure 14.2 demonstrates how to draw a rectangle with a border on a canvas.<br><br>
+
+Creating a Canvas<br>
+ The canvas element has two attributes—width and height.<br>
+ The default width is 300 and the default height 150.<br>
+ We create a canvas starting with a canvasID—in this case, "drawRectangle".<br>
+ Assigning a unique ID to a canvas allows you to access it like any other element, and to use more than one canvas on a page.<br>
+ Next, we specify the canvas’s width (300) and height (100), and a border of 1px solid black. You do not need to include a visible border.<br>
+ We include the fallback text Your browser does not support canvas. This will appear if the user runs the application in a browser that does not support canvas.<br><br>
+
+Graphics Contexts and Graphics Objects<br>
+ We use the getElementById method to get the canvas element using the ID.<br>
+ Next we get the context object. A context represents a 2D rendering surface that provides methods for drawing on a canvas.<br>
+ The context contains attributes and methods for drawing, font manipulation, color manipulation and other graphicsrelated actions.<br><br>
+
+Drawing the Rectangle<br>
+ To draw the rectangle, we specify its color by setting the fillStyle attribute to yellow.<br>
+ The fillRect method then draws the rectangle using the arguments x, y, width and height, where x and y are the coordinates for the top-left corner of the rectangle.<br>
+ The strokeStyle attribute specifies the stroke color or style (in this case, royalblue).<br>
+ The lineWidth attribute specifies the stroke width in coordinate space units.<br>
+ The strokeRect method specifies the coordinates of the stroke using the arguments x, y, width and height.<br>
+<br>
+ To draw lines and complex shapes in canvas, we use paths.<br>
+ A path can have zero or more subpaths, each having one or more points connected by lines or curves.<br>
+ If a subpath has fewer than two points, no path is drawn.<br>
+ Figure 14.3 uses paths to draw lines on a canvas.<br>
+ The beginPath method starts the line’s path.<br>
+ The moveTo method sets the x- and y-coordinates of the path’s origin.<br>
+<br>
+ From the point of origin, we use the lineTo method to specify the destinations for the path.<br>
+ The lineWidth attribute is used to change the thickness of the line.<br>
+ We then use the lineJoin attribute to specify the style of the corners where two lines meet—in this case, bevel.<br>
+ The lineJoin attribute has three possible values— bevel, round, and miter. The value bevel gives the path sloping corners.<br>
+<br>
+ The lineCap attribute specifies the style of the end of the lines.<br>
+ There are three possible values—butt, round, and square.<br>
+ A butt lineCap specifies that the line ends have edges perpendicular to the direction of the line and no additional cap.<br>
+ Next, the strokeStyle attribute specifies the line color—in this case, red.<br>
+ The stroke method draws the line on the canvas. The default stroke color is black.<br>
+ The round lineJoin creates rounded corners.<br>
+<br>
+ The round lineCap adds a semicircular cap to the ends of the path—the cap’s diameter is equal to the width of the line.<br>
+ The closePath method closes the path by drawing a straight line from the last specified destination back to the point of the path’s origin.<br>
+ The miter lineJoin bevels the lines at an angle where they meet.<br>
+<br>
+ The butt lineCap adds a rectangular cap to the line ends.<br>
+ The length of the cap is equal to the line width, and the width of the cap is equal to half the line width.<br>
+ The edge of the square lineCap is perpendicular to the direction of the line.<br>
+<br>
+ Arcs are portions of the circumference of a circle.<br>
+ To draw an arc, you specify the arc’s starting angle and ending angle measured in radians—the ratio of the arc’s length to its radius.<br>
+ The arc is said to sweep from its starting angle to its ending angle.<br>
+ Figure 14.4 depicts two arcs.<br>
+ The arc at the left of the figure sweeps counterclockwise from zero radians to p/2 radians, resulting in an arc that sweeps three quarters of the circumference a circle.<br>
+ The arc at the right of the figure sweeps clockwise from zero radians to p/2 radians.<br>
+<br>
+ Figure 14.5 shows how to draw arcs and circles using the arc method.<br>
+ The beginPath method starts the path.<br>
+ Next, the arc method draws the circle using five arguments.<br>
+ The first two arguments represent the x- and ycoordinates of the center of the circle—in this case, 35, 50.<br>
+ The third argument is the radius of the circle.<br>
+ The fourth and fifth arguments are the arc’s starting and ending angles in radians. In this case, the ending angle is Math.PI*2.<br>
+<br>
+ The constant Math.PI is the JavaScript representation of the mathematical constant p, the ratio of a circle’s circumference to its diameter.<br>
+ 2p radians represents a 360-degree arc, p radians is 180 degrees and p/2 radians is 90 degrees.<br>
+ To draw the circle to the canvas, we specify a fillStyle of mediumslateblue, then draw the circle using the fill method.<br>
+<br>
+ We then draw a black arc that sweeps clockwise.<br>
+ Using the arc method, we draw an arc with a center at 110, 50, a radius of 30, a starting angle of 0 and an ending angle of Math.PI (180 degrees).<br>
+ The sixth argument is optional and specifies the direction in which the arc’s path is drawn.<br>
+ By default, the sixth argument is false, indicating that the arc is drawn clockwise.<br>
+ If the argument is true, the arc is drawn counterclockwise (or anticlockwise).<br>
+ We draw the arc using the stroke method.<br>
+<br>
+ Next, we draw a filled red semicircle counterclockwise so that it sweeps upward.<br>
+ To draw the arc counterclockwise, we use the sixth argument, true.<br>
+ Finally, we draw a darkorange 270-degree clockwise arc.<br>
+ Since we do not include the optional sixth argument, it defaults to false, drawing the arc clockwise.<br>
+<br>
+ In the next example, we add shadows to two filled rectangles (Fig. 14.6).<br>
+ We start by specifying the shadowBlur attribute, setting its value to 10. By default, the blur is 0 (no blur).<br>
+ The higher the value, the more blurred the edges of the shadow will appear.<br>
+ Next, we set the shadowOffsetX attribute to 15, which moves the shadow to the right of the rectangle.<br>
+ We then set the shadowOffsetY attribute to 15, which moves the shadow down from the rectangle.<br>
+ Finally, we specify the shadowColor attribute as blue.<br>
+<br>
+ For the second rectangle, we create a shadow that shifts above and to the left of the rectangle.<br>
+ Notice that the shadowBlur is 20. The effect is a shadow on which the edges appear more blurred than on the shadow of the first rectangle.<br>
+ Next, we specify the shadowOffsetX, setting its value to -20. Using a negative shadowOffsetX moves the shadow to the left of the rectangle.<br>
+ We then specify the shadowOffsetY attribute, setting its value to -20. Using a negative shadowOffsetY moves the shadow up from the rectangle.<br>
+<br>
+ Figure 14.7 demonstrates how to draw a rounded rectangle using lines to draw the straight sides and quadratic curves to draw the rounded corners.<br>
+ Quadratic curves have a starting point, an ending point and a single point of inflection.<br>
+ The quadraticCurveTo method uses four arguments. ◦ The first two, cpx and cpy, are the coordinates of the control point—the point of the curve’s inflection. ◦ The third and fourth arguments, x and y, are the coordinates of the ending point. ◦ The starting point is the last subpath destination, specified using the moveTo or lineTo methods.<br>
+ For example, if we write  context.moveTo(5, 100); context.quadraticCurveTo(25, 5, 95, 50);<br>
+ the curve starts at (5, 100), curves at (25, 5) and ends at (95, 50).<br>
+<br>
+ Bezier curves have a starting point, an ending point and two control points through which the curve passes.<br>
+ These can be used to draw curves with one or two points of inflection, depending on the coordinates of the four points.<br>
+ For example, you might use a Bezier curve to draw complex shapes with s-shaped curves.<br>
+ The bezierCurveTo method uses six arguments. ◦ The first two arguments, cp1x and cp1y, are the coordinates of the first control point. ◦ The third and fourth arguments, cp2x and cp2y, are the coordinates for the second control point. ◦ Finally, the fifth and sixth arguments, x and y, are the coordinates of the ending point.<br>
+ The starting point is the last subpath destination, specified using either the moveTo or lineTo method.<br>
+ Figure 14.8 demonstrates how to draw an s-shaped Bezier curve using the bezierCurveTo method.<br>
+<br>
+ Figure 14.9 fills three separate canvases with linear gradients—vertical, horizontal and diagonal.<br>
+ On the first canvas, we draw a vertical gradient. We use the createLinearGradient method ◦ the first two arguments are the x- and y-coordinates of the gradient’s start, and the last two are the x- and ycoordinates of the end. ◦ The start and end have the same x-coordinates but different y-coordinates, so the start of the gradient is a point at the top of the canvas directly above the point at the end of the gradient at the bottom.<br>
+ This creates a vertical linear gradient that starts at the top and changes as the gradient moves to the bottom of the canvas.<br>
+<br>
+ We use the addColorStop method to add three color stops. ◦ Each color stop has a positive value between 0 (the start of the gradient) and 1 (the end of the gradient). ◦ For each color stop, we specify a color.<br>
+ The fillStyle method specifies a gradient and then the fillRect method draws the gradient on the canvas.<br>
+<br>
+ On the second canvas, we draw a horizontal gradient.<br>
+ We use the createLinearGradient method where the first two arguments are (0, 0) for the start of the gradient and (200, 0) for the end.<br>
+ In this case, the start and end have different xcoordinates but the same y-coordinates, horizontally aligning the start and end. This creates a horizontal linear gradient.<br>
+<br>
+ On the third canvas, we draw a diagonal gradient.<br>
+ Using the createLinearGradient method, the first two arguments are (0, 0)—the coordinates of the starting position of the gradient in the top left of the canvas.<br>
+ The last two arguments are (135, 200)—the ending position of the gradient.<br>
+ This creates a diagonal linear gradient that starts at the top left and changes at an angle as the gradient moves to the right edge of the canvas.<br>
+<br>
+ Fig. 14.10 shows how to create radial gradients on a canvas.<br>
+ A radial gradient is comprised of two circles—an inner circle where the gradient starts and an outer circle where it ends.<br>
+ We use the createRadialGradient method whose first three arguments are the x- and y-coordinates and the radius of the gradient’s start circle, respectively, and whose last three arguments are the x- and ycoordinates and the radius of the end circle.<br>
+ The first radial gradient has concentric circles—they have the same x- and y-coordinates but each has a different radius, creating a radial gradient that starts in a common center and changes as it moves outward.<br>
+<br>
+ On the second canvas, the start and end circles have different x- and y-coordinates, altering the effect.<br>
+ These are not concentric circles. The start circle of the gradient is near the bottom left of the canvas and the end circle is centered on the canvas.<br>
+ This creates a radial gradient that starts near the bottom left of the canvas and changes as it moves to the right.<br>
+<br>
+ Figure 14.11 uses the drawImage method to draw an image to a canvas.<br>
+ We create a new Image object and store it in the variable image.<br>
+ Function draw is called to draw the image after the document and all of its resources load.<br>
+ The drawImage method draws the image to the canvas using five arguments. ◦ The first argument can be an image, canvas or video element. ◦ The second and third arguments are the destination x- and destination ycoordinates—these indicate the position of the top-left corner of the image on the canvas. ◦ The fourth and fifth arguments are the destination width and destination height.<br>
+ If the values do not match the size of the image, it will be stretched to fit.<br>
+<br>
+ Note that you can call drawImage in three ways. In its simplest form, you can use  context.drawImage(image, dx, dy)<br>
+ where dx and dy represent the position of the top-left corner of the image on the destination canvas.<br>
+ The default width and height are the source image’s width and height.<br>
+ Or, as we did in this example, you can use  context.drawImage(image, dx, dy, dw, dh)<br>
+ where dw is the specified width of the image on the destination canvas and dh is the specified height of the image on the destination canvas.<br>
+ Finally, you can use  context.drawImage(image, sx, sy, sw, sh, dx, dy, dw, dh)<br>
+ where sx and sy are the coordinates of the top-left corner of the source image, sw is the source image’s width and sh its height.<br>
+<br>
+ Figure 14.12 shows how to obtain a canvas’s pixels and manipulate their red, green, blue and alpha (RGBA) values.<br>
+ For security reasons, some browsers allow a script to get an image’s pixels only if the document is requested from a web server.<br>
+ For this reason, you can test this example at  http://test.deitel.com/iw3htp5/ch14/fig14_12/imagemanipula tion.html<br>
+ You can change the RGBA values with the input elements of type range defined in the body.<br>
+ You can adjust the amount of red, green or blue from 0 to 500% of its original value—on a pixel-by-pixel basis, we calculate the new amount of red, green or blue accordingly.<br>
+ For the alpha, you can adjust the value from 0 (completely transparent) to 255 (completely opaque).<br>
+ The script begins when the window’s load event calls function start.<br><br>
+
+Script-Level Variables and Loading the Original Image<br>
+ Variables redRange, greenRange, blueRange and alphaRange will refer to the four range inputs so that we can easily access their values in the script’s other functions.<br>
+ Variable image represents the original image to draw.<br>
+ Next, create an Image object and use it to load the image redflower.png, which is provided with the example.<le.<br>
+
+Function start<br>
+ Draw the original image twice—once in the upper-left corner of the canvas and once 250 pixels to the right.<br>
+ Call function processGrayscale to create the grayscale version of the image which will appear at x-coordinate 500.<br>
+ Get the range input elements and register their event handlers.<br>
+ For the redRange, greenRange and blueRange elements, we register for the change event and call processImage with the values of these three range inputs.<br>
+ For the alphRange elements we register for the change event and call processAlpha with the value of that range input.<br><br>
+
+Function processAlpha<br>
+ Function processAlpha applies the new alpha value to every pixel in the image.<br>
+ Call canvas method getImageData to obtain an object that contains the pixels we wish to manipulate.<br>
+ The method receives a bounding rectangle representing the portion of the canvas to get—in this case, a 250-pixel square from the upper-left corner.<br>
+ The returned object contains an array named data which stores every pixel in the selected rectangular area as four elements in the array.<br>
+ Each pixel’s data is stored in the order red value, green value, blue value, alpha value.<br>
+<br>
+ So, the first four elements in the array represent the RGBA values of the pixel in row 0 and column 0, the next four elements represent the pixel in row 0 and column 1, etc.<br>
+ We then iterate through the array processing every fourth element, which represents the alpha value in each pixel, and assigning it the new alpha value.<br>
+ canvas method putImageData places the updated pixels on the canvas with the upper-left corner of the processed image at location 250, 0.<br><br>
+
+Function processImage<br>
+ Function processImage is similar to function processAlpha except that its loop processes the first three of every four elements—that is, the ones that represent a pixel’s RGB values. Function processGrayscale<br>
+ Function processGrayscale is similar to function processImage except that its loop performs a weighted-average calculation to determine the new value assigned to the red, green and blue components of a given pixel.<br>
+ We used the formula for converting from RGB to grayscale provided at http://en.wikipedia.org/wiki/Grayscale. Function resetImage<br>
+ Function resetImage resets the on-screen images and the range input elements to their original values.<br>
+<br>
+ Figure 14.13 demonstrates how to draw a pattern on a canvas.<br>
+ Create and load the image we’ll use for our pattern.<br>
+ Function start is called in response to the window’s load event.<br>
+ The createPattern method creates the pattern.<br>
+ The first argument is the image we’re using for the pattern, which can be an image element, a canvas element or a video element.<br>
+ The second argument specifies how the image will repeat to create the pattern and can be one of four values—repeat (repeats horizontally and vertically), repeat-x (repeats horizontally), repeat-y (repeats vertically) or no-repeat.<br>
+ Specify the coordinates for the pattern on the canvas.<br>
+ Then specify the fillStyle attribute (pattern) and use the fill method to draw the pattern to the canvas.<br>
+<br>
+ The next several examples show you how to use canvas transformation methods including translate, scale, rotate and transform.<br>
+<br>
+ Figure 14.14 demonstrates how to draw ellipses.<br>
+ We change the transformation matrix (the coordinates) on the canvas using the translate method so that the center of the canvas becomes the origin (0, 0).<br>
+ To do this, we use half the canvas width as the x-coordinate and half the canvas height as the y-coordinate.<br>
+ This will enable us to center the ellipse on the canvas.<br>
+ We then use the scale method to stretch a circle to create an ellipse. ◦ The x value represents the horizontal scale factor; the y value represents the vertical scale factor—in this case, our scale factor indicates that the ratio of the width to the height is 1:3, which will create a tall, thin ellipse.<br>
+ Next, we draw the circle that we want to stretch using the beginPath method to start the path, then the arc method to draw the circle.<br>
+ The x- and y-coordinates for the center of the circle are (0, 0), which is now the center of the canvas (not the top-left corner).<br>
+<br>
+ Next, we create a horizontal purple ellipse on a separate canvas.<br>
+ We use a scale of 3, 2, indicating that the ratio of the width to the height is 3:2.<br>
+<br>
+ Figure 14.15 uses the rotate method to create an animation of a rotating rectangle on a canvas.<br>
+ First, we create the JavaScript function startRotating.<br>
+ We change the transformation matrix on the canvas using the translate method, making the center of the canvas the origin with the x, y values (0, 0). This allows us to rotate the rectangle (which is centered on the canvas) around its center.<br>
+<br>
+ We use the setInterval method of the window object. The first argument is the name of the function to call (rotate) and the second is the number of milliseconds between calls.<br>
+ Next, we create the JavaScript function rotate.<br>
+ We use the clearRect method to clear the rectangle’s pixels from the canvas, converting them back to transparent as the rectangle rotates. This method takes four arguments—x, y, width and height.<br>
+ Next, the rotate method takes one argument—the angle of the clockwise rotation, expressed in radians.<br>
+<br>
+ The transform method allows you to skew, scale, rotate and translate elements without using the separate transformation methods discussed earlier in this section.<br>
+ The transform method takes six arguments in the format ( a, b, c, d, e, f ).<br>
+ The first argument, a, is the x-scale—the factor by which to scale the element horizontally.<br>
+ The second argument, b, is the y-skew.<br>
+ The third argument, c, is the x-skew.<br>
+ The fourth argument, d, is the y-scale—the factor by which to scale the element vertically.<br>
+ The fifth argument, e, is the x-translation and the sixth argument, f, is the y-translation.<br>
+ The default x- and y-scale values are 1. The default values of the x- and y-skew and the x- and y-translation are 0, meaning there is no skew or translation.<br>
+<br>
+ Figure 14.16 uses the transform method to skew, scale and translate two rectangles.<br>
+ On the first canvas (lines 12–32), we declare the variable rectangleWidth and assign it the value 120, and declare the variable rectangleHeight and assign it the value 60 (lines 18–19).<br>
+<br>
+ Figure 14.17 shows you how to draw text on a canvas.<br>
+ We use the font attribute to specify the style, size and font of the text.<br>
+<br>
+ Next, we use textBaseline attribute to specify the alignment points of the text.<br>
+ There are six different textBaseline attribute values (Fig. 14.18).<br>
+ To see how each value aligns the font, see the graphic in the HTML5 canvas specification at  http://www.whatwg.org/specs/webapps/current-work/multipage/the-canvaselement.html#text-0 <br>
+<br>
+ The fillText method draws the text to the canvas. This method takes three arguments. ◦ The first is the text being drawn to the canvas. ◦ The second and third arguments are the x- and ycoordinates. ◦ You may include the optional fourth argument, maxWidth, to limit the width of the text.<br>
+ We center the second line of text on the canvas using the textAlign attribute which specifies the horizontal alignment of the text relative to the xcoordinate of the text.<br>
+ Fig. 14.19 describes the textAlign attribute values.<br>
+<br>
+ The strokeStyle specifies the color of the text.<br>
+ Finally, we use strokeText to specify the text being drawn to the canvas and its xand y-coordinates.<br>
+ By using strokeText instead of fillText, we draw outlined text instead of filled text.<br>
+ Keep in mind that once text is on a canvas it’s just bits—it can no longer be manipulated as text.<br>
+<br>
+ Figure 14.20 demonstrates how to dynamically resize a canvas to fill the window.<br>
+<br>
+ Use a CSS style sheet to set the position of the canvas to absolute and set both its width and height to 100%, rather than using fixed coordinates.<br>
+ This places the canvas at the top left of the screen and allows the canvas width and height to be resized to 100% of those of the window.<br>
+ Do not include a border on the canvas.<br>
+ We use JavaScript function draw to draw the canvas when the application is rendered.<br>
+<br>
+ fillRect draws the color to the canvas. Recall that in previous examples, the four coordinates we used for method fillRect were x, y, x1, y1, where x1 and y1 represent the coordinates of the bottom-right corner of the rectangle.<br>
+ In this example, the x- and y-coordinates are (0, 0)—the top left of the canvas.<br>
+<br>
+ The the x1 value is context.canvas.width and the y1 value is context.value.height, so no matter the size of the window, the x1 value will always be the width of the canvas and the y1 value will always be the height of the canvas.<br>
+<br>
+ In Fig. 14.21, the globalAlpha attribute is used to demonstrate three different alpha transparencies.<br>
+ The globalAlpha value can be any number between 0 (fully transparent) and 1 (the default value, which is fully opaque). ◦ The first canvas has a globalAlpha attribute value of 0.9 to create a circle that’s mostly opaque. ◦ The second canvas has a globalAlpha attribute value of 0.5 to create a circle that’s semitransparent. ◦ The third canvas has a globalAlpha attribute value of 0.15 to create a circle that’s almost entirely transparent.<br>
+<br>
+ Compositing allows you to control the layering of shapes and images on a canvas using two attributes—the globalAlpha attribute described in the previous example, and the globalCompositeOperation attribute.<br>
+ There are 11 globalCompositeOperation attribute values (Fig. 14.22).<br>
+ The source is the image being drawn to a canvas.<br>
+ The destination is the current bitmap on a canvas.<br>
+ In Fig. 14.23, we demonstrate six of the compositing effects.<br>
+<br>
+ The Cannon Game app challenges you to destroy a seven-piece moving target before a ten-second time limit expires (Fig. 14.24). ◦ The Cannon Game currently works in Chrome, Internet Explorer 9 and Safari. It does not work properly in Opera, Firefox, iPhone and Android.<br>
+<br>
+ The game consists of four visual components—a cannon that you control, a cannonball fired by the cannon, the sevenpiece target and a moving blocker that defends the target to make the game more challenging.<br>
+ You aim the cannon by clicking the screen— the cannon then aims where you clicked and fires a cannonball. You can fire a cannonball only if there is not another one on the screen.<br>
+<br>
+ The game begins with a 10-second time limit. Each time you hit a target section, you are rewarded with three seconds being added to the time limit; each time you hit the blocker, you are penalized with two seconds being subtracted from the time limit.<br>
+ You win by destroying all seven target sections before time runs out. If the timer reaches zero, you lose.<br>
+ When the game ends, it displays an alert dialog indicating whether you won or lost, and shows the number of shots fired and the elapsed time (Fig. 14.25). <br>
+<br>
+ When the cannon fires, the game plays a firing sound.<br>
+ The target consists of seven pieces. When a cannonball hits a piece of the target, a glassbreaking sound plays and that piece disappears from the screen.<br>
+ When the cannonball hits the blocker, a hit sound plays and the cannonball bounces back.<br>
+ The blocker cannot be destroyed.<br>
+ Figure 14.26 shows the HTML5 document for the Cannon Game. <br>
+<br>
+ Figure 14.27 lists the Cannon Game’s numerous constants and instance variables. <br>
+<br>
+ Figure 14.28 shows function setupGame. s<br>
+<br>
+ Figure 14.29 presents functions startTimer and stopTimer which manage the click event handler and the interval timer.<br>
+<br>
+ Function resetElements (Fig. 14.30) is called by function newGame to position and scale the size of the game elements relative to the size of the canvas.<br>
+ The calculations performed here scale the game’s on-screen elements based on the canvas’s pixel width and height—we arrived at our scaling factors via trial and error until the game surface looked good. <br>
+<br>
+ Function newGame (Fig. 14.31) is called when the user clicks the Start Game button; the function initializes the game’s instance variables. <br>
+<br>
+ This app performs its animations manually by updating the positions of all the game elements at fixed time intervals.<br>
+ The interval timer (Fig. 14.29) in function startTimer calls function updatePositions (Fig. 14.32) to update the game every 25 milliseconds (i.e., 40 times per second).<br>
+<br>
+ This function also performs simple collision detection to determine whether the cannonball has collided with any of the canvas’s edges, with the blocker or with a section of the target.<br>
+ Game-development frameworks generally provide more sophisticated, built-in collision-detection capabilities.<br>
+<br>
+ The function begins by updating the positions of the blocker and the target.<br>
+ Lines 171–173 change the blocker’s position by multiplying blockerVelocity by the amount of time that has passed since the last update and adding that value to the current x- and y-coordinates.<br>
+ Lines 176–178 do the same for the target.<br>
+<br>
+ If the blocker has collided with the top or bottom wall, its direction is reversed by multiplying its velocity by -1 (lines 181–182).<br>
+ Lines 185–186 perform the same check and adjustment for the full length of the target, including any sections that have already been hit.<br>
+ Line 188 checks whether the cannonball is on the screen. If it is, we update its position by adding the distance it should have traveled since the last timer event. This is calculated by multiplying its velocity by the amount of time that passed.<br>
+<br>
+ We perform simple collision detection, based on the rectangular boundary of the cannonball. Four conditions must be met if the cannonball is in contact with the blocker: ◦ The cannonball has reached the blocker’s distance from the left edge of the screen. ◦ The cannonball has not yet passed the blocker. ◦ Part of the cannonball must be lower than the top of the blocker. ◦ Part of the cannonball must be higher than the bottom of the blocker.<br>
+<br>
+ If all these conditions are met, we play blocker hit sound, reverse the cannonball’s direction on the screen and penalize the user by subtracting MISS_PENALTY from timeLeft.<br>
+ We remove the cannonball if it reaches any of the screen’s edges.<br>
+ We then check whether the cannonball has hit the target.<br>
+<br>
+ If the cannonball hit the target, we determine which section of the target was hit by dividing the distance between the cannonball and the bottom of the target by the length of a piece.<br>
+ This expression evaluates to 0 for the topmost section and 6 for the bottommost.<br>
+<br>
+ When the user clicks the mouse on the canvas, the click event handler calls function fireCannonball (Fig. 14.33) to fire a cannonball.<br>
+<br>
+ Function alignCannon (Fig. 14.34) aims the cannon at the point where the user clicked the mouse on the screen.<br>
+ We compute the vertical distance of the mouse click from the center of the screen.<br>
+ If this is not zero, we calculate the cannon barrel’s angle from the horizontal.<br>
+<br>
+ If the click is on the lower half of the screen we adjust the angle by Math.PI.<br>
+ We then use the cannonLength and the angle to determine the x- and y-coordinates for the end point of the cannon’s barrel—this is used in function draw (Fig. 14.35) to draw a line from the cannon base’s center at the left edge of the screen to the cannon barrel’s end point.<br>
+<br>
+ When the screen needs to be redrawn, the draw function (Fig. 14.35) renders the game’s on-screen elements—the cannon, the cannonball, the blocker and the seven-piece target. <br>
+<br>
+ When the game ends, the showGameOverDialog function (Fig. 14.36) displays an alert indicating whether the player won or lost, the number of shots fired and the total time elapsed.<br>
+<br>
+ The canvas’s state includes its current style and transformations, which are maintained in a stack.<br>
+ The save method is used to save the context’s current state.<br>
+ The restore method restores the context to its previous state.<br>
+ Figure 14.37 demonstrates using the save method to change a rectangle’s fillStyle and the restore method to restore the fillStyle to the previous settings in the stack.<br>
+<br>
+ Most current browsers also support SVG (Scalable Vector Graphics), which offers a different approach to developing 2D graphics.<br>
+ Vector graphics are made of scalable geometric primitives such as line segments and arcs.<br>
+ SVG is XML-based, so it uses a declarative approach—you say what you want and SVG builds it for you.<br>
+<br>
+ With SVG, each separate part of your graphic becomes an object that can be manipulated through the DOM.<br>
+ The DOM manipulation in SVG can degrade performance, particularly for more complex graphics.<br>
+ SVG graphics easily and accurately scale to larger or smaller drawing surfaces.<br>
+<br>
+ SVG is more appropriate for accessibility applications for people with disabilities. It’s easier, for example, for people with low vision or vision impairments to work with the XML text in an SVG document than with the pixels in a canvas.<br>
+ SVG has better animation capabilities, so game developers often use a mix of both the canvas and SVG approaches.<br>
+<br>
+ SVG is more convenient for cross-platform graphics, which is becoming especially important with the proliferation of “form factors,” such as desktops, notebooks, smartphones, tablets and various specialpurpose devices such as car navigation systems.<br>
+<br>
+ Figure 14.38 lists several websites with fun and interesting 3D examples.<br><br>
+

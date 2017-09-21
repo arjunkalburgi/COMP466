@@ -1,0 +1,347 @@
+HTML5 (HyperText Markup Language 5)
+<br><br>
+
+
+<br>
+ HTML5 (HyperText Markup Language 5) markup language that specifies the structure andcontent of documents that are displayed in webbrowsers. Published in October 1st 2014.
+<br>
+ We introduce some basics, then cover moresophisticated HTML5 techniques such as: tables, which are particularly useful for structuringinformation from databases (i.e., software that storesstructured sets of data) forms for collecting information from web-pagevisitors internal linking for easier page navigation meta elements for specifying information about adocument
+
+<br><br>
+
+
+<br>
+ We’ll create HTML5 documents by typingHTML5 markup text in a text editor (such asNotepad, TextEdit, vi, emacs) and saving itwith the .html or .htm filename extension.
+<br>
+ Computers called web servers store HTML5documents.
+<br>
+ Clients (such as web browsers running onyour local computer or smartphone) requestspecific resources such as HTML5 documentsfrom web servers.
+
+<br><br>
+
+
+<br>
+ Figure 2.1 is an HTML5 document namedmain.html, which is stored in theexamples/ch02 folder.
+<br>
+ This first example displays the messageWelcome to HTML5! in the browser.
+
+<br><br>
+
+Document Type Declaration
+<br>
+ The document type declaration (DOCTYPE) isrequired in HTML5 documents so thatbrowsers render the page in standards mode.
+<br>
+ Some browsers operate in quirks mode tomaintain backward compatibility with webpages that are not up-to-date with the lateststandards.
+
+<br><br>
+
+Comments
+<br>
+ Insert comments in your HTML5 markup toimprove readability and describe the contentof a document.
+<br>
+ The browser ignores comments when yourdocument is rendered.
+<br>
+ Comments start with < !-- and end with -- >.
+
+<br><br>
+
+html, head and body Elements
+<br>
+ HTML5 markup contains text (and images, graphics,animations, audios and videos) that represents the contentof a document and elements that specify a document’sstructure and meaning. The html element encloses the head section (represented by thehead element) and the body section (represented by the bodyelement). The head section contains information about the HTML5document, such as the character set (UTF-8, the most popularcharacter-encoding scheme for the web) that the page use—whichhelps the browser determine how to render the content—and thetitle. The head section also can contain special document-formattinginstructions called CSS3 style sheets and client-side programscalled scripts for creating dynamic web pages. The body section contains the page’s content, which the browserdisplays when the user visits the web page.
+
+<br><br>
+
+Start Tags and End Tags
+<br>
+ HTML5 documents delimit most elements with a start tagand end tag.
+<br>
+ A start tag consists of the element name in angle brackets For example,  <html >
+<br>
+ An end tag consists of the element name preceded by aforward slash (/) in angle brackets For example,  </html >
+<br>
+ There are several so-called “void elements” that do nothave end tags.
+<br>
+ Many start tags have attributes that provide additionalinformation about an element, which browsers use todetermine how to process the element.
+<br>
+ Each attribute has a name and a value separated by anequals sign (=).
+
+<br><br>
+
+Title Element
+<br>
+ The title element is called a nested element,because it’s enclosed in the head element’s start andend tags.
+<br>
+ The head element is also a nested element, becauseit’s enclosed in the html element’s start and end tags.
+<br>
+ The title element describes the web page. Titles usually appear in the title bar at the top of thebrowser window, in the browser tab on which the page isdisplayed, and also as the text identifying a page whenusers add the page to their list of Favorites or Bookmarks,enabling them to return to their favorite sites. Search engines use the title for indexing purposes andwhen displaying results
+
+<br><br>
+
+Paragraph Element ( <p >... </p >)
+<br>
+ All text placed between the  <p > and  </p >tags forms one paragraph.
+
+<br><br>
+
+
+<br>
+ HTML5 documents that are syntacticallycorrect are guaranteed to render properly
+<br>
+ HTML5 documents that contain syntax errorsmay not display properly
+<br>
+ Validation services (e.g.,validator.w3.org/#validate-by-upload)ensure that an HTML5 document issyntactically correct
+
+<br><br>
+
+
+<br>
+ HTML5 provides six heading elements (h1through h6) for specifying the relativeimportance of information Heading element h1 is considered the mostsignificant heading and is rendered in the largestfont. Each successive heading element (i.e., h2, h3, etc.)is rendered in a progressively smaller font.
+
+<br><br>
+
+
+<br>
+ A hyperlink references or links to otherresources, such as HTML5 documents andimages.
+<br>
+ Web browsers typically underline texthyperlinks and color them blue by default.
+
+<br><br>
+
+
+<br>
+ The strong element indicates that the content has highimportance. Browsers typically render such text in a bold font.
+<br>
+ Links are created using the a (anchor) element.
+<br>
+ Attribute href (hypertext reference) specifies a resource’slocation, such as a web page or location within a web page a file an e-mail address
+<br>
+ When a URL does not indicate a specific document on thewebsite, the web server returns a default web page. This pageis often called index.html, but most web servers can beconfigured to use any file as the default web page for the site.
+<br>
+ If the web server cannot locate a requested document, itreturns an error indication to the web browser (known as a 404error), and the browser displays a web page containing anerror message.
+
+<br><br>
+
+Hyperlinking to an E-Mail Address Anchors can link to an e-mail address using amailto: URL When a user clicks this type of anchored link, mostbrowsers launch the default e-mail program (e.g.,Mozilla Thunderbird, Microsoft Outlook or AppleMail) to enable the user to write an e-mail messageto the linked address.
+
+<br><br>
+
+
+<br>
+ The most popular image formats used byweb developers today are PNG (PortableNetwork Graphics) and JPEG (JointPhotographic Experts Group).
+<br>
+ Users can create images using specializedsoftware, such as Adobe Photoshop Express(www.photoshop.com), G.I.M.P.(www.gimp.org), Inkscape(www.inkscape.org) and many more.
+<br>
+ Images may also be acquired from variouswebsites, many of which offer royalty-freeimages.
+
+<br><br>
+
+
+<br>
+ The img element’s src attribute specifies animage’s location
+<br>
+ Every img element must have an altattribute, which contains text that isdisplayed if the client cannot render theimage The alt attribute makes web pages moreaccessible to users with disabilities, especiallyvision impairments Width and height are optional attributes If omitted, the browser uses the image’s actual widthand height Images are measured in pixels
+
+<br><br>
+
+alt Attribute
+<br>
+ A browser may not be able to render an image.
+<br>
+ Every img element in an HTML5 document musthave an alt attribute.
+<br>
+ If a browser cannot render an image, thebrowser displays the alt attribute’s value.
+<br>
+ The alt attribute is also important foraccessibility—speech synthesizer software canspeak the alt attribute’s value so that a visuallyimpaired user can understand what the browseris displaying. For this reason, the alt attributeshould describe the image’s contents.
+
+<br><br>
+
+Void Elements
+<br>
+ Some HTML5 elements (called void elements)contain only attributes and do not mark up text(i.e., text is not placed between a start and anend tag).
+<br>
+ You can terminate void elements (such as theimg element) by using the forward slashcharacter (/) inside the closing right anglebracket ( >) of the start tag.
+<br>
+ For example, lines 15–16 of Fig. 2.6 could bewritten as follows: <img src = "jhtp.png" width = "92" height = "120" alt = "Java How to Program book cover" / >
+
+<br><br>
+
+Using Images as Hyperlinks
+<br>
+ By using images as hyperlinks, you cancreate graphical web pages that link to otherresources.
+<br>
+ In Fig. 2.7, we create five different imagehyperlinks.
+<br>
+ Clicking an image in this example takes theuser to a corresponding web page—one ofthe other examples in this chapter.
+
+<br><br>
+
+
+<br>
+ HTML5 provides character entity references(in the form &code;) for representing specialcharacters that cannot be renderedotherwise
+<br>
+ The code can be: Word abbreviations Numbers Decimal Hexadecimal
+
+<br><br>
+
+
+<br>
+ Figure 2.9 demonstrates how to use specialcharacters in an HTML5 document.
+<br>
+ For an extensive list of character entities,see www.w3.org/TR/REC-html40/sgml/entities.html
+
+<br><br>
+
+
+<br>
+ A horizontal rule, indicated by the  <hr > tag renders ahorizontal line with extra space above and below it inmost browsers.
+<br>
+ The horizontal rule element should be considered alegacy element and you should avoid using it.
+<br>
+ CSS can be used to add horizontal rules and otherformatting to documents.
+<br>
+ Special characters can also be represented as numericcharacter references—decimal or hexadecimal (hex)values representing special characters. For example, the & character is represented in decimal andhexadecimal notation as &#38; and &#x26;, respectively.
+<br>
+ Hexadecimal numbers are discussed in Appendix E,Number Systems, which is available online atwww.deitel.com/books/iw3htp5/.
+
+<br><br>
+
+
+<br>
+ Unordered list element ul creates a list in which each item in the list beginswith a bullet symbol (typically a disc) Each entry is an li (list item) element. Most webbrowsers render these elements with a line breakand a bullet symbol at the beginning of the line.
+
+<br><br>
+
+Nested Lists
+<br>
+ Lists may be nested to representhierarchical relationships, as in a multi-leveloutline.
+<br>
+ Figure 2.11 demonstrates nested lists andordered lists.
+<br>
+ The ordered-list element ol creates a list inwhich each item begins with a number.
+
+<br><br>
+
+ Tables are frequently used to organize data into rowsand columns. The table element defines an HTML5 table The summary attribute summarizes the table’s contentsand is used by speech devices to make the table moreaccessible to users with visual impairments. The caption element specifies a table’s title. It’s good practice to include a general description of atable’s information in the table element’s summaryattribute—one of the many HTML5 features that makeweb pages more accessible to users with disabilities. Speech devices use this attribute to make the table moreaccessible to users with visual impairments.
+
+<br><br>
+
+
+<br>
+ A table can be split into three distinctsections: Head (thead element) Table titles Column headers Body (tbody element) Primary table data Table Foot (tfoot element) Calculation results Footnotes Above body section in the code, but displays at thebottom in the page
+
+<br><br>
+
+
+<br>
+ tr Element Defines individual table rows Element th Defines a header cell
+<br>
+ Td Element Contains table data elements
+
+<br><br>
+
+Using rowspan and colspan with Tables
+<br>
+ Figure 2.13 introduces two new attributes that allowyou to build more complex tables.
+<br>
+ You can merge data cells with the rowspan andcolspan attributes The values of these attributes specify the number of rowsor columns occupied by the cell. Can be placed inside any data cell or table header cell.
+<br>
+ The br element is render as a line break in mostbrowsers—any markup or text following a brelement is rendered on the next line.
+<br>
+ Like the img element, br is an example of a voidelement.
+<br>
+ Like the hr element, br is considered a legacyformatting element that you should avoid using—ingeneral, formatting should be specified using CSS.
+
+<br><br>
+
+
+<br>
+ HTML5 provides forms for collectinginformation from users.
+<br>
+ Figure 2.14 is a simple form that sends datato the web server for processing.
+
+<br><br>
+
+method Attribute of the form Element
+<br>
+ A form is defined by a form element Attribute method specifies how the form’s data issent to the web server. Using method = "post" appends form data tothe browser request, which contains the protocol(HTTP) and the requested resource’s URL. The other possible value, method = "get",appends the form data directly to the end of theURL of the script, where it’s visible in thebrowser’s Address field. The action attribute of the form elementspecifies the script to which the form data will besent
+
+<br><br>
+
+action Attribute of the form Element The action attribute of the form elementspecifies the script to which the form data will besent. Since we haven’t introduced server-sideprogramming yet, we set this attribute tohttp://www.deitel.com for now. input elements that specify data to provide to thescript that processes the form (also called theform handler). An input’s type is determined by its typeattribute.
+
+<br><br>
+
+Hidden Inputs
+<br>
+ Forms can contain visual and nonvisualcomponents.
+<br>
+ Visual components include clickable buttons andother graphical user interface components withwhich users interact.
+<br>
+ Nonvisual components, called hidden inputs,store any data that you specify, such as e-mailaddresses and HTML5 document file names thatact as links.
+
+<br><br>
+
+text input Element
+<br>
+ The text input inserts a text field into the form,which allows the user to input data.
+<br>
+ The label element provides users withinformation about the input element’s purpose
+<br>
+ The size attribute specifies the number ofcharacters visible in the text field.
+<br>
+ Optional attribute maxlength limits the numberof characters input into a text field.
+
+<br><br>
+
+submit and reset input Elements
+<br>
+ The submit input element is a button. When the submit button is pressed, the form’s data issent to the location specified in the form’s actionattribute.
+<br>
+ The value attribute sets the text displayed on thebutton.
+<br>
+ The reset input element allows a user to reset allform elements to their default values.
+
+<br><br>
+
+Additional Form Elements
+<br>
+ Figure 2.15 contains a form that solicits userfeedback about a website.
+<br>
+ The textarea element inserts a multiline textarea into the form.
+<br>
+ The number of rows is specified with the rowsattribute, and the number of columns (i.e.,characters per line) with the cols attribute.
+<br>
+ Default text can be specified in other inputtypes, such as text fields, by using the valueattribute.
+
+<br><br>
+
+
+<br>
+ The password input inserts a password boxinto a form. Allows users to enter sensitive information, suchas credit card numbers and passwords, by“masking” the information input with anothercharacter, usually asterisks. The actual value input is sent to the web server,not the asterisks that mask the input.
+
+<br><br>
+
+
+<br>
+ The checkbox input element enables users toselect and option. When the checkbox is selected, a check mark appears inthe checkbox . Otherwise, the checkbox is empty checkboxes can be used individually and in groups.checkboxes that are part of the same group have thesame name
+<br>
+ radio buttons are similar to checkboxes, exceptthat only one radio button in a group can beselected at any time. All radio buttons in a group have the same name attributebut different value attributes.
+<br>
+ The select input provides a drop-down list ofitems. The name attribute identifies the drop-down list. The option element adds items to the drop-down list.
+
+<br><br>
+
+
+<br>
+ The a tag can be used to link to anothersection of the same document by specifyingthe element’s id as the link’s href.
+<br>
+ To link internally to an element with its idattribute set, use the syntax #id.
+
+<br><br>
+
+
+<br>
+ One way that search engines catalog pagesis by reading the meta element’s contents. The name attribute identifies the type of metaelement The content attribute Of a keywords meta element: provides searchengines with a list of words that describe a page,which are compared with words in search requests Of a description meta element: provides a threetofour-line description of a site in sentence form,used by search engines to catalog your site. This textis sometimes displayed as part of the search result
+
+<br><br>
+

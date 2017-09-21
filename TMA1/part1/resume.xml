@@ -1,0 +1,123 @@
+<resume>
+
+  <header>
+    <name>
+      <firstname>Arjun</firstname>
+      <lastname>Kalburgi</lastname>
+    </name>
+    <address>
+      <street>6524 112th Street</street>
+      <city>Edmonton</city>
+      <state>Alberta</state>
+      <zip>T6H 4R2</zip>
+    </address>
+    <contact>
+      <phone>3065968926</phone>
+      <email>askalburgi@gmail.com</email>
+      <url>http://www.arjunkalburgi.com</url>
+    </contact>
+  </header>
+
+  <general>
+    <profile>
+      Front-end and usability design engineer excited about Web Technologies, Cloud Computing, Data Science and Product Design. Seeking summer employment in 2017 where my enthusiasm to better our world with dynamic technologies will be valued.
+    </profile>
+    <additionallinks>
+      <github>https://github.com/askalburgi</github>
+      <instagram>https://www.instagram.com/askalburgi/</instagram>
+      <youtube>https://www.youtube.com/arjunkalburgi</youtube>
+    </additionallinks>
+  </general>
+
+  <education>
+    <degrees>
+      <degree>
+        <level>BSc</level>
+        <major>Computer Software Engineering</major>
+        <graduationdate>
+          <month>April</month>
+          <year>2018</year>
+        </graduationdate>
+        <institution>University of Alberta</institution>
+        <annotation>
+          Topics of interest thus far: Data Structures and Algorithms (C/C++, Python),Object-Oriented Software Design and Android (Java), Databases (SQL), Software development concepts.  
+        </annotation>
+      </degree>
+    </degrees>
+  </education>
+
+  <workexperience>
+
+    <job>
+      <jobtitle>iOS Developer</jobtitle>
+      <employer>iQmetrix</employer>
+      <period>
+        <from>
+          <date>
+            <month>May</month>
+            <year>2017</year>
+          </date>
+        </from>
+        <to>
+          <date>
+            <month>August</month>
+            <year>2017</year>
+          </date>
+        </to>
+      </period>
+      <description>
+        Bug fixes in ObjC and Swift. Working as a member of the team.
+      </description>
+    </job>
+
+    <job>
+      <jobtitle>iOS QA Analyst</jobtitle>
+      <employer>iQmetrix</employer>
+      <period>
+        <from>
+          <date>
+            <month>May</month>
+            <year>2016</year>
+          </date>
+        </from>
+        <to>
+          <date>
+            <month>August</month>
+            <year>2016</year>
+          </date>
+        </to>
+      </period>
+      <description>
+        Automated the testing process of 10% of the iOS app by creating automated UI tests using Swift to ensure functionality and correctness of the app.
+        Created automated tests for 6-8 API feature-sets for the iOS app.
+        Worked with both iOS and API development teams to ensure understanding of thefeatures and success of the feature-tests.
+      </description>
+    </job>
+
+    <job>
+      <jobtitle>Mobile Developer</jobtitle>
+      <employer>Fourth Dimension</employer>
+      <period>
+        <from>
+          <date>
+            <month>May</month>
+            <year>2014</year>
+          </date>
+        </from>
+        <to>
+          <date>
+            <month>August</month>
+            <year>2014</year>
+          </date>
+        </to>
+      </period>
+      <description>
+        Built a mobile app using Ionic to provide conference attendees with conference details.
+        Configured the app's data to sync with Azure and organized the data using Javascript.
+        Thoroughly tested and debugged each use-case of the application for launch.
+        Thoroughly documented with development and testing processes and code walkthrough.      </description>
+    </job>
+    
+  </workexperience>
+
+</resume>

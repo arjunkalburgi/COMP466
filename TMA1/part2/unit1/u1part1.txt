@@ -1,0 +1,202 @@
+Web Servers (Apache and IIS)
+<br><br>
+
+<br>
+ A web server responds to client requests (typicallyfrom a web browser) by providing resources suchas HTML documents. When users enter a UniformResource Locator (URL) address, such aswww.deitel.com, into a web browser, they’rerequesting a specific document from a web server.The web server maps the URL to a resource on theserver (or to a file on the server’s network) andreturns the requested resource to the client.
+<br>
+ A web server and a client communicate using theplatform-independent Hypertext Transfer Protocol(HTTP), a protocol for transferring requests andfiles over the Internet or an intranet.5
+<br><br>
+
+
+<br>
+ URIs (Uniform Resource Identifiers) identifyresources on the Internet.
+<br>
+ URIs that start with http:// are called URLs(Uniform Resource Locators). Common URLs referto files, directories or server-side code thatperforms tasks, such as database lookups, Internetsearches and business-application processing.
+<br>
+ A URL contains information that directs a browserto the resource that the user wishes to access.
+<br>
+ http:// indicates that the HyperText TransferProtocol (HTTP) should be used to obtain theresource.6
+<br><br>
+
+
+<br>
+ Next in the URL is the server’s fully qualified hostname the name of the web-server computer on which the resource resides.
+<br>
+ A hostname is translated into an IP (InternetProtocol) address—a numerical value that uniquelyidentifies the server An Internet domain name system (DNS) server maintains a database ofhostnames and their corresponding IP addresses and performs thetranslations automatically
+<br>
+ The remainder of the URL after the hostnamespecifies the resource’s location (/books) and nameon the web server
+<br>
+ For security reasons the path location is typically avirtual directory. The web server translates thevirtual directory into a real location on the server,thus hiding the true location of the resource7
+<br><br>
+
+
+<br>
+ When given a web page URL, a web browser uses HTTP torequest and display the web page found at that address.
+<br>
+ HTTP method get indicates that the client wishes to obtain aresource from the server. The remainder of the requestprovides the path name of the resource (e.g., an HTML5document) and the protocol’s name and version number(HTTP/1.1).
+<br>
+ Any server that understands HTTP can receive a get requestand respond appropriately.
+<br>
+ HTTP status code 200 indicates success. Status code 404informs the client that the web server could not locate therequested resource. A complete list of numeric codesindicating the status of an HTTP transaction can be found atwww.w3.org/Protocols/rfc2616/rfc2616-sec10.html8
+<br><br>
+
+
+<br>
+ Next, the server sends one or more HTTP headers, whichprovide additional information about the data that will besent.
+<br>
+ The Multipurpose Internet Mail Extensions (MIME) standardspecifies data formats, which programs can use to interpretdata correctly.
+<br>
+ The MIME type text/plain indicates that the sentinformation is text that can be displayed directly.
+<br>
+ The MIME type image/jpeg indicates that the content is aJPEG image. When the browser receives this MIME type, itattempts to display the image.
+<br>
+ The header or set of headers is followed by a blank line,which indicates to the client browser that the server isfinished sending HTTP headers.9
+<br><br>
+
+
+<br>
+ Two most common HTTP request types get and post get request typically gets (or retrieves) information from a server. Common uses ofget requests are to retrieve an HTML document or an image, or search results basedon a user-submitted search term. post request typically posts (or sends) data to a server. Common uses of postrequests are to send information to a server, such as authentication information ordata from a form that gathers user input. An HTTP request often posts data to a server-side form handler that processes thedata. A get request appends data to the URL in a query string. A ? separates the querystring from the rest of the URL in a get request. A name/value pair is passed to theserver with the name and the value separated by an equals sign (=). If more than onename/value pair is submitted, each pair is separated by an ampersand (&). A get request may be initiated by submitting an HTML form whose method attributeis set to "get", or by typing the URL (possibly containing a query string) directly intothe browser’s address bar A post request sends form data as an HTTP message, not as part of the URL. A get request limits the query string to a specific number of characters. Large amounts of information must be sent using the post method.12
+<br><br>
+
+
+<br>
+ Browsers often cache recently viewed webpages so they can quickly reload the pages.
+<br>
+ If there are no changes between the versionstored in the cache and the current versionon the web, this helps speed up yourbrowsing experience.
+<br><br>
+
+
+<br>
+ Web-based applications are often multitier applications that dividefunctionality into separate tiers. Although tiers can be located on thesame computer, the tiers of web-based applications typically resideon separate computers.
+<br>
+ The bottom tier (also called the data tier or the information tier)maintains the application’s data.
+<br>
+ The middle tier implements business logic, controller logic andpresentation logic to control interactions between the application’sclients and its data.
+<br>
+ Business logic in the middle tier enforces business rules and ensuresthat data is reliable before the server application updates thedatabase or presents the data to users. Business rules dictate howclients can and cannot access application data, and how applicationsprocess data.
+<br>
+ The top tier, or client tier, is the application’s user interface. Inresponse to user actions, the client tier interacts with the middle tierto make requests and to retrieve data from the information tier. Theclient tier then displays the data retrieved for the user. The clienttier never directly interacts with the information tier.15
+<br><br>
+
+
+<br>
+ Client-side scripting can be used to validate userinput, to interact with the browser, to enhance webpages, and to add client/server communicationbetween a browser and a web server.
+<br>
+ Client-side scripting does have limitations, such asbrowser dependency; the browser or scripting hostmust support the scripting language andcapabilities.
+<br>
+ Client-side scripts can be viewed by the client byusing the browser’s source-viewing capability.
+<br>
+ Sensitive information, such as passwords or otherpersonally identifiable data, should not be storedor validated on the client.
+<br><br>
+
+
+<br>
+ Placing large amounts of JavaScript on the clientcan open web applications to security issues.
+<br>
+ Code executed on the server often generatecustom responses for clients.
+<br>
+ Server-side scripting languages have a wider rangeof programmatic capabilities than their client-sideequivalents.18
+<br><br>
+
+
+<br>
+ To request documents from web servers, usersmust know the hostnames on which the web serversoftware resides.
+<br>
+ Users can request documents from local webservers or remote web servers.
+<br>
+ Local web servers can be accessed through yourcomputer’s name or through the namelocalhost—a hostname that references the localmachine and normally translates to the IP address127.0.0.1 (also known as the loopback address).19
+<br><br>
+
+
+<br>
+ The Apache HTTP Server, maintained by the Apache SoftwareFoundation, is currently the most popular web server. It’s open sourcesoftware that runs on UNIX, Linux, Mac OS X, Windows and numerousother platforms.
+<br>
+ MySQL is the most popular open-source database management system.It, too, runs on Linux, Mac OS X and Windows.
+<br>
+ The Apache HTTP Server, MySQL database server and PHP can each bedownloaded and installed separately, but this also requires additionalconfiguration on your part.
+<br>
+ For simplicity, we’ll use the XAMPP integrated installer provided by theApache Friends website (www.apachefriends.org).
+<br>
+ Go to http://www.apachefriends.org/en/xampp.html
+<br>
+ Choose the installer for your platform. Carefully follow the providedinstallation instructions and be sure to read the entire installation pagefor your platform!
+<br>
+ If you’d prefer to use PHP with Microsoft’s IIS Express and SQL ServerExpress, you can use their Web Platform Installer to set up and configurePHP:http://www.microsoft.com/web/platform/phponwindows.aspx
+<br><br>
+
+Windows
+<br>
+ Go to your c:\xampp folder (or the folder in which you installed XAMPP)and double click xampp_start.exe. If you need to stop the servers (e.g.,so you can shut down your computer), use xampp_stop.exe in the samefolder.Mac OS X
+<br>
+ Go to your Applications folder (or the folder in which you installedXAMPP), then open the XAMPP folder and run XAMP Control.app. Clickthe Start buttons in the control panel to start the servers. If you need tostop the servers (e.g., so you can shut down your computer), you canstop them by clicking the Stop buttons.Linux
+<br>
+ Open a shell and enter the command /opt/lampp/lampp start
+<br>
+ If you need to stop the servers (e.g., so you can shut down yourcomputer), open a shell and enter the command /opt/lampp/lamppstop21
+<br><br>
+
+
+<br>
+ you’ve started the servers, you can open any web browser on yourcomputer and enter the address http://localhost/ to confirmthat the web server is up and running.
+<br>
+ You’re now ready to go!22
+<br><br>
+
+
+<br>
+ Now that the Apache HTTP Server is running on your computer, youcan copy the book’s examples into XAMPP’s htdocs folder.
+<br>
+ Assuming you copy the entire examples folder into the htdocsfolder, you can run the examples in Chapters 2–16 and 19 with URLsof the formhttp://localhost/examples/chapter/figure/filename wherechapter is one of the chapter folders (e.g., ch03), figure is a folderfor a particular example (e.g., fig03_01) and filename is the page toload (e.g., NewFormInputTypes.html). So, you can run the firstexample in Chapter 3 withhttp://localhost/examples/ch03/fig03_01/NewFormInputTypes.html
+<br>
+ [Note: The ch02 examples folder does not contain any subfolders.]24
+<br><br>
+
+
+<br>
+ Microsoft Internet Information Services (IIS) is a web serverthat is included with several versions of Windows. InstallingIIS on a machine allows that computer to serve documents.
+<br>
+ You can install it in a bundle with Microsoft’s WebMatrix—afree development tool for building PHP and ASP.NET webapps.25
+<br><br>
+
+
+<br>
+ If you simply want to test your web pages on IIS Express, youcan install it from:www.microsoft.com/web/gallery/install.aspx?appid=IISExpress
+<br>
+ We recommend using the default installation options. Onceyou’ve installed IIS Express you can learn more about using itat: learn.iis.net/page.aspx/860/iis-express/26
+<br><br>
+
+
+<br>
+ You can install the WebMatrix and IIS Express bundle from:
+<br>
+ www.microsoft.com/web/gallery/install.aspx?appid=IISExpress
+<br>
+ Again, we recommend using the default installation options.
+<br>
+ You can run WebMatrix by opening the Start menu andselecting All Programs > Microsoft WebMatrix > MicrosoftWebMatrix. This will also start IIS Express.
+<br>
+ Microsoft provides tutorials on how to use WebMatrix at:www.microsoft.com/web/post/web-development-101-using-webmatrix27
+<br><br>
+
+
+<br>
+ To execute IIS Express, open a Command Prompt window andchange directories to the IIS Express folder. On 32-bitWindows versions, use the command cd "c:\Program Files\IIS Express"
+<br>
+ On 64-bit Windows versions, use the command cd "c:\Program Files (x86)\IIS Express"
+<br>
+ If the book’s examples are in a folder named c:\examples,you can use the command iisexpress /path:c:\examples
+<br>
+ You can now run your examples with URLs of the form http://localhost:8080/chapter/figure/filename28
+<br><br>
+
+
+<br>
+ The easiest way to test Chapter 19’s PHP examplesis to use WebMatrix to enable PHP for the ch19folder in the book’s examples. To do so, performthe following steps. Run WebMatrix by opening the Start menuand selecting All Programs > Microsoft WebMatrix >Microsoft WebMatrix. In the Quick Start - Microsoft WebMatrix window,select Site From Folder. Locate and select the ch19 folder in the Select Folderwindow, then click the Select Folder button.
+<br>
+ This opens the ch19 folder as a website inWebMatrix().
+<br><br>
+
+
+<br>
+ To enable PHP, perform the following steps: Click the Site option in the bottom-left corner ofthe window. Click Settings and ensure that Enable PHP ischecked(). [Note: The first time you do this,WebMatrix will ask you for permission to installPHP. You must do this to test the PHPexamples.]
+<br><br>

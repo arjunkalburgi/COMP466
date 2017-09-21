@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arjun's Comp 466 Intro to Web</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../assets/materialize.min.css">
+
+</head>
+<body>
+	<nav class="light-blue lighten-1" role="navigation">
+		<div class="nav-wrapper container">
+			<a id="logo-container" href="#" class="brand-logo"><i class="material-icons">flash_on</i></a>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="../unit1/unitone.html">Unit 3</a></li>
+			</ul>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="../unit2/unittwo.html">Unit 2</a></li>
+			</ul>
+			<ul class="right hide-on-med-and-down">
+				<li><a href="../unit3/unitthree.html">Unit 1</a></li>
+			</ul>
+
+			<ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
+				<li><a href="../unit1/unitone.html">Unit 3</a></li>
+			</ul>
+			<ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
+				<li><a href="../unit2/unittwo.html">Unit 2</a></li>
+			</ul>
+			<ul id="nav-mobile" class="side-nav" style="transform: translateX(-100%);">
+				<li><a href="../unit3/unitthree.html">Unit 1</a></li>
+			</ul>
+			<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+		</div>
+	</nav> <!-- 1 -->
+
+	<header class="section no-pad-bot" id="index-banner">
+		<div class="container">
+			<br><br>
+			<h3 class="header center orange-text">Unit Two</h3>
+			<div class="row center">
+				<h5 class="header col s12 light">Arjun's Comp 466 Intro to Web</h5>
+			</div>
+		</div>
+	</header> <!-- 2 -->
+
+	<main class="container" id="index-content">
+		<div class="section row">
+
+			<div class="col s12 m4">
+				<div class="icon-block center">
+					<h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+					<h5 class="center">Intro JS</h5>
+
+					<a id="part1" class="btn light-blue">Load</a>
+				</div>
+			</div>
+
+			<div class="col s12 m4">
+				<div class="icon-block center">
+					<h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+					<h5 class="center">Functions JS</h5>
+
+					<a id="part2" class="btn light-blue">Load</a>
+				</div>
+			</div>
+
+			<div class="col s12 m4">
+				<div class="icon-block center">
+					<h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+					<h5 class="center">Canvas JS</h5>
+
+					<a id="part3" class="btn light-blue">Load</a>
+				</div>
+			</div>
+
+		</div>
+	</main> <!-- 3 -->
+
+	<section>
+		<div id="quiz-content" class="center"></div>
+	</section>
+
+	<section>
+		<div id="content"></div>
+	</section> <!-- 4 -->
+
+	<footer class="page-footer orange">
+		<div class="container">
+			<div class="row">
+				<div class="col l6 s12">
+					<h5 class="white-text">This site uses</h5>
+					<p class="grey-text text-lighten-4">MaterializeCSS for ...</p>
+
+
+				</div>
+				<div class="col l3 s12">
+					<h5 class="white-text">Links</h5>
+					<ul>
+						<li><a class="white-text" href="#!">Site</a></li>
+						<li><a class="white-text" href="#!">Link 3</a></li>
+						<li><a class="white-text" href="#!">Link 4</a></li>
+					</ul>
+				</div>
+				<div class="col l3 s12">
+					<h5 class="white-text">Connect</h5>
+					<ul>
+						<li><a class="white-text" href="#!">Link 1</a></li>
+						<li><a class="white-text" href="#!">Link 2</a></li>
+						<li><a class="white-text" href="#!">Link 3</a></li>
+						<li><a class="white-text" href="#!">Link 4</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-copyright">
+			<div class="container">
+				Made by <a class="orange-text text-lighten-3" href="http://www.arjunkalburgi.com">Arjun</a>
+			</div>
+		</div>
+	</footer> <!-- 5 -->
+
+	<script src="../assets/jquery.min.js"></script>
+	<script src="../assets/materialize.min.js"></script>
+
+	<!-- Quiz-completion logic -->
+	<script type="text/javascript">
+		loadAnsTable = function(answerstr) {
+			var xhr
+			xhr = new window.XMLHttpRequest(); 
+			xhr.onreadystatechange = function(){ 
+				if (xhr.readyState == 4) {
+					if (xhr.status == 200) {
+						$("#content").html(xhr.responseText); 
+						printAnswers(answerstr);
+					} else {
+						document.ajax.dyn="Error making table code " + xhr.status;
+					}
+				}
+			}; 
+			xhr.open("GET", "../assets/answerstable.html", true); 
+			xhr.send(null);
+		}
+
+		printAnswers = function(answerstr) {
+			var answers = answerstr.split(","); 
+			var questionnumber = 0; 
+			var rightanswers = 0; 
+			for (var i = 0; i <= answers.length - 1; i=i+2) {
+				// answers[i] == answers[i+1]);
+				questionnumber++; 
+				if (answers[i] == answers[i+1]) {
+					$("#tbody").append("<tr><td>"+questionnumber+"</td><td>"+answers[i]+"</td><td>"+answers[i+1]+"</td></tr>"); 
+					rightanswers++; 
+				} else {
+					$("#tbody").append("<tr class='red-text strong'><td>"+questionnumber+"</td><td>"+answers[i]+"</td><td>"+answers[i+1]+"</td></tr>"); 
+				}
+			}
+			$("#quiz-content").html("<p class='light-blue-text'>Great job, you got "+rightanswers+"/"+questionnumber+" correct!</p>");
+
+		}
+
+		getData = function() {
+ 		 	var submission = "q1=" + $('#q1').val() + "&q1answer=" + $('#q1').attr("answer");
+			submission = submission + "&q2=" + $('#q2').val() + "&q2answer=" + $('#q2').attr("answer"); 
+			submission = submission + "&q3=" + $('#q3').val() + "&q3answer=" + $('#q3').attr("answer");
+			submission = submission + "&q4=" + $('#q4').val() + "&q4answer=" + $('#q4').attr("answer");
+			submission = submission + "&q5=" + $('#q5').val() + "&q5answer=" + $('#q5').attr("answer");
+			submission = submission + "&q6=" + $('#q6').val() + "&q6answer=" + $('#q6').attr("answer");
+			submission = submission + "&q7=" + $('#q7').val() + "&q7answer=" + $('#q7').attr("answer");
+
+			return submission;
+		}
+
+		submitForm = function() {
+			var xhr
+			try {
+				xhr = new window.XMLHttpRequest(); 
+			} catch (e) {
+				xhr = false; 
+			}
+			xhr.onreadystatechange = function(){ 
+				if (xhr.readyState == 4) {
+					if (xhr.status == 200) {
+						console.log("THE POST WORKED \n " + xhr.status);
+						loadAnsTable(xhr.responseText); 
+					} else {
+						console.log("THE POST DIDN'T WORK \n " + xhr.status);
+					}
+				}
+			}; 
+			xhr.open("POST", "../assets/server.php", true); 
+			xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded"); 
+			xhr.send(getData());
+		}
+	</script>
+
+	<!-- Quiz-load logic -->
+	<script type="text/javascript">
+		loadQuiz = function() {
+			var xhr
+			xhr = new window.XMLHttpRequest(); 
+			xhr.onreadystatechange = function(){ 
+				if (xhr.readyState == 4) {
+					if (xhr.status == 200) {
+						// document.ajax.dyn="Received:" + xhr.responseText; 
+						$("#content").html(xhr.responseText); 
+						$("#quiz-content").html("<p class='orange-text'>Submit the quiz below!</p>");
+						$("#submitForm").on("click", function(e) {submitForm();}); 
+					} else {
+						document.ajax.dyn="Error code " + xhr.status;
+					}
+				}
+			}; 
+			xhr.open("GET", "u2quiz.html", true); 
+			xhr.send(null);
+		}
+
+		isQuizReady = function() {
+			if (quizstate1 && quizstate2 && quizstate3) {
+				$("#quiz-content").html("<a id='loadQuiz' class='btn orange'>Start Quiz</a>")
+				$("#loadQuiz").on("click", function(e) {loadQuiz();}); 
+			} else {
+				$("#quiz-content").html("<p class='orange-text'>Quiz will be available once all sections are read.</p>")
+			}
+		}
+
+		var quizstate1 = false; 
+		var quizstate2 = false; 
+		var quizstate3 = false; 
+		isQuizReady();
+	</script>
+
+	<!-- Readings-load logic -->
+	<script type="text/javascript">
+		$("#part1").click(function() {
+			var xhr
+			try {
+				xhr = new window.XMLHttpRequest(); 
+			} catch (e) {
+				xhr = false; 
+			}
+			xhr.onreadystatechange = function(){ 
+				if (xhr.readyState == 4) {
+					if (xhr.status == 200) {
+						$("#content").html(xhr.responseText); 
+						quizstate1 = true; 
+						isQuizReady(); 
+					} else {
+						document.ajax.dyn="Error code " + xhr.status;
+					}
+				}
+			}; 
+			xhr.open("GET", "u2part1.txt", true); 
+			xhr.send(null);
+		})
+
+
+		$("#part2").click(function() {
+			var xhr
+			try {
+				xhr = new window.XMLHttpRequest(); 
+			} catch (e) {
+				xhr = false; 
+			}
+			xhr.onreadystatechange = function(){ 
+				if (xhr.readyState == 4) {
+					if (xhr.status == 200) {
+						$("#content").html(xhr.responseText); 
+						quizstate2 = true; 
+						isQuizReady(); 
+					} else {
+						document.ajax.dyn="Error code " + xhr.status;
+					}
+				}
+			}; 
+			xhr.open("GET", "u2part2.txt", true); 
+			xhr.send(null);
+		})
+
+
+		$("#part3").click(function() {
+			var xhr
+			try {
+				xhr = new window.XMLHttpRequest(); 
+			} catch (e) {
+				xhr = false; 
+			}
+			xhr.onreadystatechange = function(){ 
+				if (xhr.readyState == 4) {
+					if (xhr.status == 200) {
+						$("#content").html(xhr.responseText); 
+						quizstate3 = true;  
+						isQuizReady(); 
+					} else {
+						document.ajax.dyn="Error code " + xhr.status;
+					}
+				}
+			}; 
+			xhr.open("GET", "u2part3.txt", true); 
+			xhr.send(null);
+		})
+	</script>
+
+
+
+</body>
+</html>

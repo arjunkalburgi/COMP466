@@ -1,0 +1,361 @@
+Cascading Style Sheets 3 (CSS3)
+<br><br>
+
+<br>
+ Cascading Style Sheets 3 (CSS3) Used to specify the presentation of elementsseparately from the structure of the document.
+<br>
+ CSS validator jigsaw.w3.org/css-validator/ This tool can help you make sure that your code iscorrect and will work on CSS3-compliant browsers.
+<br>
+
+<br>
+ Inline style declare an individual element’s format using theHTML5 attribute style.
+<br>
+ Figure 4.1 applies inline styles to p elementsto alter their font size and color.
+<br>
+ Each CSS property is followed by a colon andthe value of the attribute Multiple property declarations are separated by asemicolon
+<br>
+<br>
+<br>
+<br>
+
+<br>
+ color property sets text color Color names and hexadecimal codes may be usedas the color property value. Figure 4.2 contains the HTML standard color set. A list of extended hexadecimal color codes andcolor names is provided in Appendix B. You can also find a complete list of HTML standardand extended colors at www.w3.org/TR/css3-color/
+<br>
+<br>
+
+<br>
+ A second technique for using style sheets isembedded style sheets, which enable you toembed a CSS3 document in an HTML5document’s head section.
+<br>
+ Figure 4.3 creates an embedded style sheetcontaining four styles.
+<br>
+<br>
+<br>
+<br>The style Element and MIME Types
+<br>
+ Styles that are placed in a style element useselectors to apply style elements throughoutthe entire document
+<br>
+ style element type attribute specifies theMIME type (the specific encoding format) ofthe style sheet. Style sheets use text/css.
+<br>
+ Figure 4.4 lists common MIME types used inthis book. For a complete list, visit: www.w3schools.com/media/media_mimeref.asp
+<br>
+<br>
+
+<br>
+ The style sheet’s body declares the CSS rulesfor the style sheet.
+<br>
+ To achieve the separation between the CSS3code and the HTML5 that it styles, we’ll use aCSS selector to specify the elements that willbe styled according to a rule.
+<br>
+ An em element indicates that its contentsshould be emphasized.
+<br>
+ Each rule body in a style sheet is enclosed incurly braces ({ and }).
+<br>
+
+<br>
+ font-weight property specifies the“boldness” of text. Possible values are: bold normal (the default) bolder (bolder than bold text) lighter (lighter than normal text) Boldness also can be specified with multiples of100, from 100 to 900 (e.g., 100, 200, …, 900). Textspecified as normal is equivalent to 400, and boldtext is equivalent to 700
+<br>Style Classes
+<br>
+ Style-class declarations are preceded by aperiod (.).
+<br>
+ They define styles that can be applied to anyelement.
+<br>
+ In this example, class special sets color topurple.
+<br>
+ You can also declare id selectors.
+<br>
+ If an element in your page has an id, you candeclare a selector of the form #elementId tospecify that element’s style.
+<br>font-family Property
+<br>
+ font-family property specifies the name ofthe font to use. Generic font families allow authors to specify a typeof font instead of a specific font, in case a browserdoes not support a specific font.
+<br>
+<br>font-size Property
+<br>
+ font-size property specifies the size used torender the font.
+<br>
+ You can specify a point size or a relative valuesuch as xx-small, x-small, small, smaller,medium, large, larger, x-large and xx-large.
+<br>
+ Relative font-size values are preferred overpoints, because an author does not know thespecific measurements of each client’s display.
+<br>
+ Relative values permit more flexible viewing ofweb pages. For example, users can change font sizes the browserdisplays for readability.
+<br>Applying a Style Class
+<br>
+ In many cases, the styles applied to an element(the parent or ancestor element) also apply to theelement’s nested elements (child or descendantelements).
+<br>
+ Multiple values of one property can be set orinherited on the same element, so the browsermust reduce them to one value for that propertyper element before they’re rendered.
+<br>
+ We discuss the rules for resolving these conflictsin the next section.
+<br>
+
+<br>
+ Styles may be defined by a user, an author or auser agent. Styles cascade (and hence the term “Cascading StyleSheets”), or flow together, such that the ultimateappearance of elements on a page results fromcombining styles defined in several ways. Styles defined by the user take precedence overstyles defined by the user agent. Styles defined by authors take precedence overstyles defined by the user.
+<br>
+ Most styles defined for parent elements are alsoinherited by child (nested) elements.
+<br>
+
+<br>
+ text-decoration property appliesdecorations to text in an elementunderlineoverlineline-throughblink
+<br>
+
+<br>
+ Figure 4.3 contains an example of inheritance inwhich a child em element inherits the font-sizeproperty from its parent p element.
+<br>
+ However, in Fig. 4.3, the child em element has acolor property that conflicts with (i.e., has a differentvalue than) the color property of its parent pelement.
+<br>
+ Properties defined for child and descendant elementshave a higher specificity than properties defined forparent and ancestor elements.
+<br>
+ Conflicts are resolved in favor of properties with ahigher specificity, so the child’s styles takeprecedence.
+<br>
+ Figure 4.6 illustrates examples of inheritance andspecificity.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+ Pseudoclasses give you access to contentthat’s not declared in the document.
+<br>
+ hover pseudoclass is activated when the usermoves the mouse cursor over an element.
+<br>
+<br>
+
+<br>
+ Relative length measurements: px (pixels – size varies depending on screen resolution) em (usually the height of a font’s uppercase M) ex (usually the height of a font’s lowercase x) Percentages (of the font’s default size)
+<br>
+ Absolute-length measurements (units that do notvary in size): in (inches) cm (centimeters) mm (millimeters) pt (points; 1 pt = 1/72 in) pc (picas; 1 pc = 12 pt)
+<br>
+<br>
+
+<br>
+ External style sheets are separate documentsthat contain only CSS rules.
+<br>
+ Help create a uniform look for a website Separate pages can all use the same styles. Modifying a single style-sheet file makes changesto styles across an entire website (or to a portion ofone).
+<br>
+ When changes to the styles are required, youneed to modify only a single CSS file to makestyle changes across all the pages that usethose styles. This concept is sometimesknown as skinning.
+<br>
+
+<br>
+ Figure 4.7 presents an external style sheet.
+<br>
+ CSS comments may be placed in any type ofCSS code (i.e., inline styles, embedded stylesheets and external style sheets) and alwaysstart with /* and end with */.
+<br>
+<br>
+
+<br>
+ Figure 4.8 contains an HTML5 document thatreferences the external style sheet.
+<br>
+ link element Uses rel attribute to specify a relationship betweentwo documents rel attribute declares the linked document to be astylesheet for the document
+<br>
+ type attribute specifies the MIME type of therelated document
+<br>
+ href attribute provides the URL for thedocument containing the style sheet
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+ CSS position property Allows absolute positioning, which provides greatercontrol over where on a page elements reside Normally, elements are positioned on the page inthe order in which they appear in the HTML5document Specifying an element’s position as absoluteremoves it from the normal flow of elements on thepage and positions it according to distance fromthe top, left, right or bottom margin of its parentelement
+<br>
+<br>
+<br>
+<br>
+
+<br>
+ The z-index property allows a developer tolayer overlapping elements
+<br>
+ Elements that have higher z-index values aredisplayed in front of elements with lower zindexvalues
+<br>
+
+<br>
+ Figure 4.10 demonstrates relativepositioning, in which elements are positionedrelative to other elements.
+<br>
+<br>
+<br>
+<br>Inline and Block-Level Elements
+<br>
+ Inline-level elements Do not change the flow of the document Examples: img a em strong spanGrouping elementDoes not apply any formatting to its contentsCreates a container for CSS rules or id attributes to beapplied to a section
+<br>
+
+<br>
+ Block-level elements Displayed on their own line Have virtual boxes around them Examples: p all headings (h1 through h6) divA grouping element like span
+<br>
+
+<br>
+ CSS can control the backgrounds of blocklevelelements by adding: Colors Images
+<br>
+ Figure 4.11 adds a corporate logo to thebottom-right corner of the document. Thislogo stays fixed in the corner even when theuser scrolls up or down the screen.
+<br>
+<br>
+<br>
+<br>background-image Property
+<br>
+ Specifies the URL of the image, in the formaturl(fileLocation)background-position Property
+<br>
+ Places the image on the page using the valuestop, bottom, center, left and rightindividually or in combination for vertical andhorizontal positioning. You can also positionby using lengths
+<br>background-repeat Property
+<br>
+ background-repeat property controls thetiling of the background image Setting the tiling to no-repeat displays one copy ofthe background image on screen Setting to repeat (the default) tiles the imagevertically and horizontally Setting to repeat-x tiles the image only horizontally Setting to repeat-y tile the image only vertically
+<br>background-attachment: fixed Property
+<br>
+ Fixes the image in the position specified bybackground-position.
+<br>
+ Scrolling the browser window will not movethe image from its set position.
+<br>
+ The default value, scroll, moves the imageas the user scrolls the window
+<br>text-indent Property
+<br>
+ Indents the first line of text in the element bythe specified amountfont-style Property
+<br>
+ Allows you to set text to none, italic oroblique
+<br>
+
+<br>
+ Figure 4.12 demonstrates how to set thedimensions of elements.
+<br>
+<br>
+<br>
+<br>Specifying the width and height of anElement
+<br>
+ Dimensions of elements on a page can be setwith CSS by using properties height andwidth Their values can be relative or absolutetext-align Property
+<br>
+ Text in an element can be centered usingtext-align: center; other values for thetext-align property are left and right
+<br>overflow Property and Scroll Bars
+<br>
+ Problem with setting both vertical and horizontaldimensions of an element Content might sometimes exceed the set boundaries, in whichcase the element must be made large enough for all the contentto fit Can set the overflow property to scroll, which adds scroll barsif the text overflows the boundaries set for it
+<br>
+
+<br>
+ Block-level HTML5 elements have a virtual box drawn aroundthem based on the box model
+<br>
+ When the browser renders an element using the box model,the content is surrounded by padding, a margin and a border.
+<br>
+ Padding The padding property determines the distance between thecontent inside an element and the edge of the element Padding be set for each side of the box by using padding-top,padding-right, padding-left and padding-bottom
+<br>
+ Margin Determines the distance between the element’s edge and anyoutside text Margins for individual sides of an element can be specified byusing margin-top, margin-right, margin-left and marginbottom
+<br>
+
+<br>
+ Border The border is controlled using the properties: border-width May be set to any of the CSS lengths or to thepredefined value of thin, medium or thick border-color Sets the color used for the border border-style Options are: none, hidden, dotted, dashed, solid,double, groove, ridge, inset and outset
+<br>
+<br>
+
+<br>
+ CSS controls the border using threeproperties: border-width, border-colorand border-style.
+<br>
+ We illustrate these properties in Fig. 4.14.
+<br>
+<br>
+<br>
+<br>Floating Elements
+<br>
+ Floating allows you to move an element toone side of the screen; other content in thedocument then flows around the floatedelement.
+<br>
+ Figure 4.15 demonstrates how floatingelements and the box model can be used tocontrol the layout of an entire page.
+<br>
+<br>
+<br>
+<br>
+<br>margin and padding Properties
+<br>
+ The margin property sets the space between theoutside of an element’s border and all other contenton the page.
+<br>
+ The padding property determines the distancebetween the content inside an element and the insideof the element’s border.
+<br>
+ Margins for individual sides of an element can bespecified by using the properties margin-top,margin-right, margin-left and margin-bottom.
+<br>
+ Padding can be specified in the same way, usingpadding-top, padding-right, padding-left andpadding-bottom.
+<br>
+
+<br>
+ CSS media types allow you to decide what a page should look likedepending on the kind of media being used todisplay the page Most common media type for a web page is thescreen media type, which is a standard computerscreen
+<br>
+
+<br>
+ A block of styles that applies to all mediatypes is declared by @media all andenclosed in curly braces
+<br>
+ To create a block of styles that apply to asingle media type such as print, use @mediaprint and enclose the style rules in curlybraces
+<br>
+
+<br>
+ Other media types in CSS include: handheld Designed for mobile Internet devices braille For machines that can read or print web pages inbraille speech Allow the programmer to give a speech-synthesizingweb browser more information about the content ofthe web page print Affects a web page’s appearance when it is printed
+<br>
+
+<br>
+ Figure 4.16 gives a simple classic examplethat applies one set of styles when thedocument is viewed on all media (includingscreens) other than a printer, and anotherwhen the document is printed.
+<br>
+ To see the difference, look at the screencaptures below the paragraph or use the PrintPreview feature in your browser if it has one.
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>Media Queries
+<br>
+ Allow you to format your content to specific output devices.
+<br>
+ Include a media type and expressions that check the mediafeatures of the output device.
+<br>
+ Common media features include: width—the width of the part of the screen on which the document isrendered, including any scrollbars height—the height of the part of the screen on which the document isrendered, including any scrollbars device-width—the width of the screen of the output device device-height—the height of the screen of the output device orientation—if the height is greater than the width, orientation isportrait, and if the width is greater than the height, orientation islandscape aspect-ratio—the ratio of width to height device-aspect-ratio—the ratio of device-width to device-height
+<br>
+
+<br>
+ :hover pseudoclass used to apply styles to an element when the mousecursor is over it
+<br>
+ display property allows a programmer to decide if an element isdisplayed as a block element, inline element, or isnot rendered at all (none)
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+ Users can define their own user style sheetsto format pages based on their preferences
+<br>
+ Absolute font size measurements overrideuser style sheets, while relative font sizes willyield to a user-defined style
+<br>
+ User style sheets are not linked to adocument; rather, they are set in thebrowser’s options
+<br>
+
+<br>
+ Figure 4.18 contains an author style.
+<br>
+ User style sheets are external style sheets.Figure 4.19 shows a user style sheet that setsthe body’s font-size to 20pt, color toyellow and background-color to navy. Thefont-size value specified in the user stylesheet conflicts with the one in line 10 of Fig.4.18.
+<br>
+<br>
+<br>
+<br>Adding a User Style Sheet
+<br>
+ User style sheets are not linked to a document; rather, they’reset in the browser’s options.
+<br>
+ To add a user style sheet in IE9, select Internet Options...,located in the Tools menu. In the Internet Options dialog (Fig.4.20) that appears, click Accessibility..., check the Formatdocuments using my style sheet checkbox, and type the locationof the user style sheet.
+<br>
+ To add a user style sheet in Firefox, find your Firefox profileusing the instructions at www.mozilla.org/support/firefox/profile#locate
+<br>
+ Place a style sheet called userContent.css in the chromesubdirectory.
+<br>
+ For information on adding a user style sheet in Chrome, see www.google.com/support/forum/p/Chrome/thread?tid=1fa0dd079dbdc2ff&hl=en.
+<br>
+<br>
+
+<br>
+ The web page from Fig. 4.18 is displayed inFig. 4.21, with the user style sheet from Fig.4.19 applied.
+<br>
+<br>Defining font-size in a User Style Sheet
+<br>
+ Figure 4.22 changes the font-size property touse a relative measurement that does notoverride the user style set in Fig. 4.19.
+<br>
+ Instead, the font size displayed is relative tothe one specified in the user style sheet.
+<br>
+<br>
+<br>
+
+<br>
+ Figure 4.23 displays the web page from Fig.4.22 in Internet Explorer with the user stylesheet from Fig. 4.19 applied.
+<br>
+ Note that the second line of text displayed islarger than the same line of text in Fig. 4.21.
+<br>
+<br>
