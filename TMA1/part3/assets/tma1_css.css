@@ -1,0 +1,119 @@
+body {
+/*	margin: 0px;
+	padding: 0px;*/
+}
+
+a:link {
+    color: #000052;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #FF6600;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #000052;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #FF6600;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: square;
+}
+
+#header {
+	background-color: #FFFFFF;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	color: #000052;
+	font-family: sans-serif;
+}
+
+#header > div {
+	float: left;
+	margin: 0px 2px;
+}
+
+#buffer {
+	background-color: #FFFFFF;
+	width: 100%;
+}
+
+.content {
+	padding: 0px 0px 0px;
+	border: 1px solid black;
+	margin: auto;
+	width: 95%;
+	background-image: url("images/paper-texture.jpg");
+	font-family: sans-serif;
+	text-align: center;
+}
+
+.content > div {
+	width: 95%;
+	margin: auto;
+}
+
+#navmenu {
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#navmenu > li {
+	float: left;
+	border: 2px solid #FF6600;
+	text-align: center;
+}
+
+#navmenu a {
+	display: block;
+	width: 160px;
+}
+
+#navmenu a:link, #navmenu a:visited, #navmenu a:active {
+	font-style: normal;
+	color: #000052;
+	text-decoration: none;
+}
+
+#navmenu a:hover {
+	font-style: normal;
+	color: #000052;
+	text-decoration: none;
+	background-color: #FF6600;
+}
+
+header > nav > ul, details > ul, #quiz > ul {
+	list-style: none;
+}
+
+section > p {
+	text-align: justify;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#quiz > * {
+	text-align: left;
+}
+#Q1Label, #Q2Label, #Q3Label, #Q4Label, #Q5Label, #Q6Label, #Q7Label, #Q8Label, #Q9Label, #Q10Label {
+	color: rgb(255,0,0);
+}
