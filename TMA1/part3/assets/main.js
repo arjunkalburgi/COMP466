@@ -12,14 +12,26 @@ var choice;
 canvas = document.getElementById("myCanvas");
 	context = canvas.getContext("2d");
 
-for (var i = 1; i < imageList.length; ++i) {
-	imageList[i] = "slideshow/slideshow(" + i + ").jpg";
+for (var i = 0; i < imageList.length; i++) {
+	imageList[i] = "assets/slideshow/slideshow(" + i + ").jpg";
 }
 
 image.src = imageList[0];
 
 nextImage.src = imageList[0];
 
+start()
+window.addEventListener("load", start, false);
+window.addEventListener("resize", start, false);
+
+
+function start() {
+	// var divElem = document.getElementById("buffer");
+	// var divSize = document.getElementById("header").offsetHeight;
+	// divElem.style.height = divSize + "px";
+	startSlideShow();
+
+}
 
 function startSlideShow() {
 	context.translate(canvas.width/2, canvas.height/2);
