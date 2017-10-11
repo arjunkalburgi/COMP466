@@ -1,4 +1,4 @@
-var loaded = 0, numOfImages = 20, next = true;
+var loaded = 0, numOfImages = 20, next = true, sequence = true;
 
 var imagearray = new Array(numOfImages); 
 for (var i = 0; i < numOfImages; i++) {
@@ -30,7 +30,12 @@ function draw() {
                                        0, 0, myCanvas.width,        myCanvas.height); // destination rectangle
         
         if (next) {
-    	    counter++; 
+        	if (sequence) {
+	    	    counter++; 
+	    	} else {
+	    		counter = Math.floor(Math.random() * (maxNum - 0) + 0);
+	    		console.log("counter: " + counter); 
+	    	}
         }
         if (counter > maxNum) counter = 0;
 
@@ -43,6 +48,11 @@ function draw() {
 function startstop() {
 	next = !next; 
 	console.log("next " + next); 
+}
+
+function randomizersequencer() {
+	sequence = !sequence; 
+	console.log("sequence " + sequence); 
 }
 
 // code source: https://stackoverflow.com/questions/16931072/simplest-slideshow-in-html5-canvas-canvas-context-clearrect-not-working-with-se
