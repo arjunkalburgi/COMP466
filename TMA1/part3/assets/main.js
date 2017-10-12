@@ -1,4 +1,4 @@
-var loaded = 0, numOfImages = 20, next = true, sequence = true;
+var loaded = 0, numOfImages = 20, next = sequence = forward = true;
 
 var imagearray = new Array(numOfImages); 
 for (var i = 0; i < numOfImages; i++) {
@@ -31,7 +31,11 @@ function draw() {
         
         if (next) {
         	if (sequence) {
-	    	    counter++; 
+        		if (forward) {
+	    		    counter++; 
+        		} else {
+        			counter--; 
+        		}
 	    	} else {
 	    		counter = Math.floor(Math.random() * (maxNum - 0) + 0);
 	    		console.log("counter: " + counter); 
@@ -52,7 +56,17 @@ function startstop() {
 
 function randomizersequencer() {
 	sequence = !sequence; 
+	if(sequence) document.getElementById('backwardforward').disabled = false;
+    else document.getElementById('backwardforward').disabled = true;
 	console.log("sequence " + sequence); 
+	console.log("#backwardforward " + (sequence ? "enabled" : "disabled")); 
+}
+
+function backwardforward() {
+	if (sequence) {
+		forward = !forward; 
+	}
+	console.log("forward " + forward); 
 }
 
 // code source: https://stackoverflow.com/questions/16931072/simplest-slideshow-in-html5-canvas-canvas-context-clearrect-not-working-with-se
