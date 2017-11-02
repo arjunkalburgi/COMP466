@@ -3,6 +3,7 @@
 <head>
 	<title>Arjun's Comp 466 Intro to Web</title>
 	<link rel="stylesheet" type="text/css" href="assets/materialize.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/main.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
@@ -19,9 +20,18 @@
 			<div class="row center">
 				<h5 class="header col s12 light">Slideshow</h5>
 				<p>all the rando photoshoot pics I have</p>
-				<button onclick="startstop()">start/stop</button>
-				<p><input type="checkbox" checked id="test5" onchange="randomizersequencer()" /><label for="test5">sequence</label></p>
-				<button onclick="backwardforward()" id="backwardforward">forward/backward</button>
+				<br><br>
+				<div class="container" style="max-width: 500px;">
+					<button onclick="startstop()">start/stop</button> <button onclick="backwardforward()" id="backwardforward">forward/backward</button> 
+					<br>
+					<p><input type="checkbox" checked id="test5" onchange="randomizersequencer()" /><label for="test5">sequence</label></p>
+					<select>
+	  					<option value="0">all</option>
+	  					<option value="1">fade out</option>
+	  					<option value="2">wipe left</option>
+	  					<option value="3">wipe right</option>
+					</select>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -32,7 +42,7 @@
 		<!--   Icon Section   -->
 		<div class="row">
 			<div class="col s12">
-				<canvas id="myCanvas" style="border: 1px solid black"></canvas>
+				<canvas id="myCanvas" width = "500" height = "500" style="border: 1px solid black"></canvas>
 			</div>
 		</div>
 
@@ -77,7 +87,7 @@
 
 	<script src="assets/jquery.min.js"></script>
 	<script src="assets/materialize.min.js"></script>
-	<script src="assets/main.js"></script>
+	<script src="assets/canvas.js"></script>
 
 </body>
 </html>
