@@ -48,10 +48,13 @@ var timing = 0;
 var imageData, transitionInterval, showInterval, originX, originY, wipeDir, wipeOffset;
 var choice;
 canvas = document.getElementById("myCanvas");
-	context = canvas.getContext("2d");
+context = canvas.getContext("2d");
+
 
 for (var i = 0; i < imageList.length; ++i) {
-	imageList[i] = "assets/slideshow/slideshow(" + i + ").jpg";
+	imageList[i] = imageobj[i].src; 
+
+	// "assets/slideshow/slideshow(" + i + ").jpg";
 }
 
 image.src = imageList[0];
@@ -66,6 +69,7 @@ function startSlideShow() {
 }
 
 function startTransition() {
+
 	clearInterval(showInterval);
 	//choice = 1;
 	var choice; 
@@ -89,6 +93,10 @@ function startTransition() {
 			break;
 	}
 
+	// set caption 
+	console.log("middle +1" + imageobj[imageCount+1].caption)
+	$(".caption").text(imageobj[imageCount+1].caption)
+
 	// if slideshow is on
     if (next) {
 
@@ -111,6 +119,7 @@ function startTransition() {
 		nextImage.src = imageList[imageCount];
 
     }
+
 
 }
 
