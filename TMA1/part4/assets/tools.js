@@ -62,6 +62,13 @@ function isNum() {
 
 
 function unitChange(newType) {
+
+	var ou = document.converter.oUnit;
+	var cu = document.converter.cUnit;
+
+	document.converter.original.value = 0;
+	document.converter.converted.value = 0;
+
 	var xhr
 	try {
 		xhr = new window.XMLHttpRequest(); 
