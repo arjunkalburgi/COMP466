@@ -1,0 +1,32 @@
+<form name="retirement">
+	<h5>Retirement Savings Calculator</h5>
+	<p>
+		<label>Current Age (years):<br>
+			<input name="cAge" type="text"></label>
+	</p>
+	<p>
+		<label>Planned Retirement Age (years):<br>
+			<input name="rAge" type="text"></label>
+	</p>
+	<p>
+		<label>Years of Retirement (years):<br>
+			<input name="years" type="text"></label>
+	</p>
+	<p>
+		<label>Current Annual Salary ($):<br>
+			<input name="salary" type="text"></label>
+	</p>
+	<p>
+		<label>Social Security ($):<br>
+			<input name="ssecurity" type="text"></label>
+	</p>
+	<p>
+		<input type="button" value="Calculate" onclick="retireCalc()">
+		<input type="reset" value="Clear">
+	</p>
+	<h4>Results</h4>
+	<p>
+		<label>You need to save:<br>
+			$<input name="save" type="text" readonly=""></label>
+	</p>
+</form>

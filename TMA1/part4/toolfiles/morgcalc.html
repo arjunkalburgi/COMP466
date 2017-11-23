@@ -1,0 +1,34 @@
+<form name="mortgage" action="JavaScript:mortgageCalc()" method="POST">
+	
+	<h5>Mortgage Calculator</h5>
+	<p>
+		<label>Purchase Price ($):<br>
+			<input name="purchase" type="text">
+		</label>
+	</p>
+	<p>
+		<label>Down Payment ($):<br>
+			<input name="down" type="text">
+		</label>
+	</p>
+	<p>
+		<label>Interest Rate (%):<br>
+			<input name="rate" type="text">
+		</label>
+	</p>
+	<p>
+		<label>Loan Term (years):<br>
+			<input name="term" type="text">
+		</label>
+	</p>
+	<p>
+		<input type="button" value="Calculate" onclick="mortgageCalc()">
+		<input type="reset" value="Clear">
+	</p>
+	<h4>Results</h4>
+	<p>
+		<label>Monthly Payment ($):<br>
+			<input name="monthlyPay" type="text" readonly="">
+		</label>
+	</p>
+</form>

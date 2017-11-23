@@ -1,0 +1,63 @@
+<form name="converter" action="JavaScript:convertCheck()" method="POST">
+
+	<h5>Measurement Converter</h5>
+	<p>
+		<label>Conversion type:
+			<select name="convertChoice" onchange="unitChange(this.selectedIndex)">
+				<option value="w" selected="">Weight</option>
+				<option value="l">Length</option>
+				<option value="a">Area</option>
+				<option value="v">Volume</option>
+			</select>
+		</label>
+	</p>
+	<div>
+		<div id="Oval">
+			<p>Original value:</p>
+			<div class="row">
+				<input class="col s6 m6 l6" name="original" type="text"> 
+				<div class="col s6 m6 l6 oUnit" id="oUnit">
+					<label>
+						<select name="oUnit">
+							<option>Imperial ton</option>
+							<option>Stone</option>
+							<option>Pound</option>
+							<option>Ounce</option>
+							<option>Metric tonne</option>
+							<option>Kilogram</option>
+							<option>Gram</option>
+							<option>Milligram</option>
+							<option>Microgram</option>
+						</select>
+					</label>
+				</div>
+			</div>
+		</div>
+		<div id="Cval">
+			<p>Converted value:</p>
+			<div class="row">
+				<input class="col s6 m6 l6" name="converted" type="text" readonly="">
+				<div class="col s6 m6 l6 cUnit" id="cUnit">
+					<label>
+						<select name="cUnit">
+						<option>Imperial ton</option>
+						<option>Stone</option>
+						<option>Pound</option>
+						<option>Ounce</option>
+						<option>Metric tonne</option>
+						<option>Kilogram</option>
+						<option>Gram</option>
+						<option>Milligram</option>
+						<option>Microgram</option>
+					</select>
+					</label>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<p>
+		<input type="button" value="Calculate" onclick="convertCheck()">
+		<input type="reset" value="Clear">
+	</p>
+</form>
