@@ -1,54 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<xsl:stylesheet version="1.0"
-xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:template match="/">
+<xsl:template match="resume">
   <html>
   <body>
   <h2>My Resume</h2>
   <table border="1">
     <tr bgcolor="#9acd32">
-      <th><xsl:value-of select="firstname"/> <xsl:value-of select="lastname"/></th>
-      <th><xsl:value-of select="lastname"/></th>
+      <td><xsl:value-of select="header/name/firstname"/>_<xsl:value-of select="header/name/lastname"/> </td>
     </tr>
     <tr bgcolor="#9acd32">
-      <th><xsl:value-of select="street"/></th>
-      <th><xsl:value-of select="city"/> <xsl:value-of select="state"/></th>
-      <th><xsl:value-of select="zip"/></th>
+      <td><xsl:value-of select="header/address/street"/></td>
+      <td><xsl:value-of select="header/address/city"/> <xsl:value-of select="header/address/state"/></td>
+      <td><xsl:value-of select="header/address/zip"/></td>
     </tr>
     <tr bgcolor="#9acd32">
-      <th><xsl:value-of select="phone"/></th>
-      <th><xsl:value-of select="email"/></th>
-      <th><xsl:value-of select="url"/></th>
+      <td><xsl:value-of select="header/contact/phone"/></td>
+      <td><xsl:value-of select="header/contact/email"/></td>
+      <td><xsl:value-of select="header/contact/url"/></td>
     </tr>
   </table>
 
   <table border="1">
     <tr bgcolor="#9acd32">
-      <th><xsl:value-of select="profile"/></th>
+      <td><xsl:value-of select="general/profile"/></td>
     </tr>
     <tr bgcolor="#9acd32">
-      <th><xsl:value-of select="github"/></th>
-      <th><xsl:value-of select="instagram"/></th>
-      <th><xsl:value-of select="youtube"/></th>
+      <td><xsl:value-of select="general/additionallinks/github"/></td>
+      <td><xsl:value-of select="general/additionallinks/instagram"/></td>
+      <td><xsl:value-of select="general/additionallinks/youtube"/></td>
     </tr>
   </table>
 
   <table border="1">
     <xsl:for-each select="education/degrees">
     <tr bgcolor="#9acd32">
-      <th><xsl:value-of select="level"/></th>
-      <th><xsl:value-of select="major"/></th>
-      <th><xsl:value-of select="institution"/></th>
+      <td><xsl:value-of select="degree/level"/></td>
+      <td><xsl:value-of select="degree/major"/></td>
+      <td><xsl:value-of select="degree/institution"/></td>
     </tr>
     <tr bgcolor="#9acd32">
-      <th>Grad Date: </th>
-      <th><xsl:value-of select="graduationdate/month"/></th>
-      <th><xsl:value-of select="graduationdate/year"/></th>
+      <td>Grad Date: </td>
+      <td><xsl:value-of select="degree/graduationdate/month"/></td>
+      <td><xsl:value-of select="degree/graduationdate/year"/></td>
     </tr>
     <tr bgcolor="#9acd32">
-      <th><xsl:value-of select="annotation"/></th>
+      <td><xsl:value-of select="degree/annotation"/></td>
     </tr>
     <tr bgcolor="#9acd32">
     </tr>
@@ -60,15 +58,15 @@ xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <table border="1">
     <xsl:for-each select="workexperience/job">
     <tr bgcolor="#9acd32">
-      <th><xsl:value-of select="jobtitle"/></th>
-      <th><xsl:value-of select="employer"/></th>
+      <td><xsl:value-of select="jobtitle"/></td>
+      <td><xsl:value-of select="employer"/></td>
     </tr>
     <tr bgcolor="#9acd32">
-      <th>From <xsl:value-of select="period/from/date/month"/> <xsl:value-of select="period/from/date/year"/></th>
-      <th>To <xsl:value-of select="period/to/date/month"/> <xsl:value-of select="period/to/date/year"/></th>
+      <td>From <xsl:value-of select="period/from/date/month"/> <xsl:value-of select="period/from/date/year"/></td>
+      <td>To <xsl:value-of select="period/to/date/month"/> <xsl:value-of select="period/to/date/year"/></td>
     </tr>
     <tr bgcolor="#9acd32">
-      <th><xsl:value-of select="description"/></th>
+      <td><xsl:value-of select="description"/></td>
     </tr>
     <tr bgcolor="#9acd32">
     </tr>
