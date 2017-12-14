@@ -26,6 +26,7 @@
 				$_SESSION['user_id'] = $login;
 				//redirect user to home
 				ECHO "DLSKJFADLS;KFJAL;SK";
+				header('Location: index.php?content=template_files/main_content.php');
 				// header('Location: index.php?content=bookmarks/bookmark.php');
 				// exit();
 			}

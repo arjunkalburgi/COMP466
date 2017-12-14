@@ -8,11 +8,8 @@
 
 	<div class="container">
 
-		<!-- Bookmarking tools -->
-
-
-		<!-- Login/logout/register -->
-		<?php include 'template_files/bookmark_side.php'; ?>
+		<!-- content & authenticate -->
+		<?php include 'template_files/main_content.php'; ?>
 
 	</div>
 
