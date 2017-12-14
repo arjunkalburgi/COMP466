@@ -1,7 +1,7 @@
 <div class="content">
     <?php
     	if (isset($_GET['content'])) {
-    		echo "we are a go people"; 
+    		// echo "we are a go people"; 
             include 'bookmarks/bookmark.php';
             include 'template_files/loggedin.php';
     	} else {

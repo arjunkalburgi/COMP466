@@ -104,7 +104,7 @@ function output_bookmarks(){
       }
       echo  implode('', $output);
    }else{
-      echo '<div class="bookmark_select">You have no stored bookmarks.</div>';
+      echo '<div class="bookmark_select">No stored bookmarks. <a href="index.php?content=bookmarks/create_bookmarks.php">Create a bookmark</a>.</div>';
    }
 }
 
