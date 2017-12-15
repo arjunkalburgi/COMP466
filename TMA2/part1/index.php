@@ -2,7 +2,6 @@
 	$content = 'index.php'; 
 
 	include 'database/init.php';
-	check_to_show_bookmark();
 	include 'template_files/page_structure/top_page.php';
 ?>
 

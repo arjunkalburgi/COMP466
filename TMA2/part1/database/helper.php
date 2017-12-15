@@ -13,13 +13,6 @@ function protect_page(){
     }
 }
 
-function check_to_show_bookmark(){
-    if(logged_in() === true){
-        ECHO "check_to_show_bookmark LSKDFJ";
-        // header('Location: index.php?content=bookmarks/bookmark.php');
-        // exit();
-    }
-}
 function array_sanitize(&$item){
     // echo "globals"; var_dump($GLOBALS); echo "globals";
     $item = mysqli_real_escape_string($GLOBALS['connect'], $item);

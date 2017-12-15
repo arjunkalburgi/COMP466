@@ -3,7 +3,7 @@
     <div class="col s12 m6">
         <div class="card light-blue darken-1">
             <div class="card-content white-text">
-                <span class="card-title">Menu</span>
+                <span class="card-title">App Actions</span>
                 <p>Hey <?php echo $user_data['first_name']; ?>, feel free to sign out or email your feedback!</p>
             </div>
             <div class="card-action">
@@ -15,7 +15,7 @@
     <div class="col s12 m6">
         <div class="card light-blue darken-1">
             <div class="card-content white-text">
-                <span class="card-title">Bookmark Menu</span>
+                <span class="card-title">Bookmark Actions</span>
                 <p>Hey <?php echo $user_data['first_name']; ?>, these are quick links for you to create, update and delete bookmarks</p>
             </div>
             <div class="card-action">

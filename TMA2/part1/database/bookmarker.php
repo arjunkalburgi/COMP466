@@ -98,13 +98,11 @@ function output_bookmarks(){
    if($my_bookmarks !== false){
       $output = array();
       foreach($my_bookmarks as $bookmark ){
-         $name = $bookmark['bookmark_name'];
-         $url = $bookmark['bookmark_url'];
-         $output[] = '<div class="bookmark_select"><a href='.$url.' target="_blank">' . $name . '</a></div>';
+         $output[] = '<li class="collection-item"><a href='.$bookmark['bookmark_url'].' target="_blank">' . $bookmark['bookmark_name'] . ' - ' .$bookmark['bookmark_url']. '</a></li>';
       }
       echo  implode('', $output);
    }else{
-      echo '<div class="bookmark_select">No stored bookmarks. <a href="index.php?content=bookmarks/create_bookmarks.php">Create a bookmark</a>.</div>';
+      echo '<div class="bookmark_select">No stored bookmarks.';
    }
 }
 
@@ -122,7 +120,7 @@ function output_bookmarks_to_check(){
       }
       echo  implode('', $output);
    }else{
-      echo '<div class="bookmark_check">You have no stored bookmarks.</div>';
+      echo '<div class="bookmark_select">No stored bookmarks.';
    }
 }
 
