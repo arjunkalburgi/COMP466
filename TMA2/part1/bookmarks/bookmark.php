@@ -13,5 +13,6 @@
 </ul>
 
 <?php
+    include 'bookmarks/create_bookmarks.php';
 ?>
 

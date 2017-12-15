@@ -3,29 +3,22 @@
 
 //we insert into the database, an array of multiple bookmarks, returns true on success
 function create_bookmarks($post_array){
+
    $create_result = false;
    if(count($post_array) > 0){
 
-      $sql_string = '';       //construct the insertion SQL statement
-      $user_id = $_SESSION['user_id']; //we need to insert foreign key user_id into the bookmarks database
-      array_pop($post_array); //remove the last element, because it contains the submit button's data
-      $length = count($post_array);
-      $my_keys = array_keys($post_array); //get an array of keys, because the post_array, is an associative array and we want to be able to index correctly
-      // we loop through the post_array to construct our query
-      for($index = 0; $index < $length; $index=$index+2){
-         $bookmark_name = $post_array[$my_keys[$index]];
-         $bookmark_url = $post_array[$my_keys[$index + 1]];
+      $user_id = $_SESSION['user_id']; 
+      $bookmark_name = sanitize($post_array["bookmark_name"]); 
+      $bookmark_url = sanitize($post_array["bookmark_url"]);
 
-         $bookmark_url = sanitize($bookmark_url);  //sanitize first of all
-         $bookmark_name = sanitize($bookmark_name);
 
-         $sql_string .= "INSERT INTO bookmarks (user_id_ref, bookmark_name, bookmark_url) VALUES ('$user_id', '$bookmark_name', '$bookmark_url');";
-      }
+      $sql_string = "INSERT INTO bookmarks (user_id_ref, bookmark_name, bookmark_url) VALUES ('$user_id', '$bookmark_name', '$bookmark_url');";
+
 
       if (mysqli_multi_query($GLOBALS['connect'], $sql_string)) {
          $create_result = true;
       } else {
-         //$GLOBALS['errors'][] = "Error: " . $sql_string . "<br>" . mysqli_error($GLOBALS['connect']);
+         $GLOBALS['errors'][] = "Error: Could not commit the bookmark, please try again.";
       }
    }
 
@@ -35,25 +28,15 @@ function create_bookmarks($post_array){
 // validates an entered bookmark url
 function check_url_bookmark($post_array){
 
+
    $validate_url = true;
    if(count($post_array) > 0){
-      array_pop($post_array); //remove the last element, because it contains the submit buttons data
-      $length = count($post_array);
-      $my_keys = array_keys($post_array); //get an array of keys, because the post_array, is an associative array and we want to be able to index correctly
 
-      //we are indirectly looping through the post_array, and parsing the bookmark_name and url
-      for($index = 0; $index < $length; $index=$index+2){
-         $bookmark_name = $post_array[$my_keys[$index]];
-         $bookmark_url = $post_array[$my_keys[$index + 1]]; //we add index + 1 because the bookmark_url is stored at the next index position
+      $bookmark_name = $post_array["bookmark_name"]; 
+      $bookmark_url = sanitize($post_array["bookmark_url"]);
 
-         $bookmark_url = sanitize($bookmark_url);  //sanitize first of all
-         //regex expression for URLs
-         if (!preg_match("/\\b(?:(?:https?|ftp):\\/\\/|www\\.)[-a-z0-9+&@#\\/%?=~_|!:,.;]*[-a-z0-9+&@#\\/%=~_|]/i",$bookmark_url)) {
-            $validate_url = false;
-            $GLOBALS['errors'][] = 'A URL entered, is invalid!';
-            break 1;
-         }
-      }
+      $validate_url = check_url($bookmark_url); 
+
    }
 
    return $validate_url;
@@ -64,7 +47,7 @@ function check_url($url_string){
    $validate_url = true;
    if (!preg_match("/\\b(?:(?:https?|ftp):\\/\\/|www\\.)[-a-z0-9+&@#\\/%?=~_|!:,.;]*[-a-z0-9+&@#\\/%=~_|]/i", $url_string)) {
       $validate_url = false;
-      //$GLOBALS['errors'][] = 'A URL entered, is invalid!';
+      $GLOBALS['errors'][] = 'The URL entered is invalid!';
    }
 
    return $validate_url;
