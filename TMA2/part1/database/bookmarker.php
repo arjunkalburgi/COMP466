@@ -89,48 +89,21 @@ function output_bookmarks(){
    }
 }
 
-/* responsible for outputting the list of bookmarks for selection purposes */
-function output_bookmarks_to_check(){
-   $my_bookmarks = $GLOBALS['bookmark_data'];      //global data of all the bookmarks related to a specific user
+function output_editable_bookmarks() {
 
-   if(empty($my_bookmarks) === false && $my_bookmarks !== false){
+   $my_bookmarks = $GLOBALS['bookmark_data'];
+
+   if ($my_bookmarks !== false) {
       $output = array();
       foreach($my_bookmarks as $bookmark ){
-         $name = $bookmark['bookmark_name'];
-         $url = $bookmark['bookmark_url'];
-         $output[] = '<div class="bookmark_check"><input type="checkbox" name="'.$name.'" value="'.$url.'"><span class="shift_label">'.$name.'</span></div>';
-         //$output[] = '<div class="bookmark_check"><input type="text" name='.$url.' value="'.$name.'"><input type="text" name='.$url.' value="'.$url.'"></div>';
+         $output[] = '<li class="collection-item">
+                     <a href='.$bookmark['bookmark_url'].' target="_blank">' . $bookmark['bookmark_name'] . ' - ' .$bookmark['bookmark_url']. '</a>
+                     <div class="secondary-content"><button onclick="updateButtonClick(\''.$bookmark['bookmark_name'].'\')"><i class="material-icons">edit</i></button>
+                     <button onclick="deleteButtonClick(\''.$bookmark['bookmark_name'].'\')"><i class="material-icons">delete</i></button></div></li>';
       }
       echo  implode('', $output);
    }else{
       echo '<div class="bookmark_select">No stored bookmarks.';
-   }
-}
-
-//this function outputs the bookmarks previously selected by the user, in a input text field; that way the user can easily modify the data.
-//returns an array of old data in the same order
-function output_bookmarks_to_modify($post_array){
-
-   if(count($post_array) > 1){
-      array_pop($post_array); //remove the last element, because it contains the submit buttons data
-      $length = count($post_array);
-      $my_keys = array_keys($post_array); //get an array of keys, because the post_array, is an associative array and we want to be able to index correctly
-
-      $output = array();     //this array outputs a list of input text fields on screen
-      $old_data = array(); //because we are doing an update, this array holds the old bookmark data that the user is about to update
-      for($index = 0; $index < $length; $index++){
-         $url_value = $post_array[$my_keys[$index]];
-         $name_value = str_replace('_', ' ', $my_keys[$index]);   //the POST array, formats the name/value pairs by removing the whitespaces, and (.). So we are changing that
-
-         $old_data[] = array("$name_value" => "$url_value");
-
-         //we are creating two text fields that has an array as it's name. This allows us to save multiple values
-         $output[] = '<div class="bookmark_check"><input type="text" name="index'.$index.'[]" value="'.$name_value.'"><input type="text" name="index'.$index.'[]" value="'.$url_value.'"></div>';
-      }
-      //echo print_r($old_data);
-      echo implode('', $output);
-
-      return $old_data;
    }
 
 }
@@ -202,31 +175,26 @@ function update_selected_bookmarks($post_array, $old_data_array){
 
 }
 
-function delete_selected_bookmarks($post_array){
+function delete_bookmarks($post_array) {
 
-   $result = true;
-   if(count($post_array) > 1){
-      $user_id = $GLOBALS['session_user_id'];
-      array_pop($post_array); //remove the last element, because it contains the submit buttons data
-      $length = count($post_array);
-      $my_keys = array_keys($post_array); //get an array of keys, because the post_array, is an associative array and we want to be able to index correctly
-      $sql_string = '';
+   $result = true; 
 
-      for($index = 0; $index < $length; $index++){
-         $url_value = $post_array[$my_keys[$index]];
-         $name_value = str_replace('_', ' ', $my_keys[$index]);   //the POST array, formats the name/value pairs by removing the whitespaces, and (.). So we are changing that
+   if (count($post_array) > 0) {
 
-         $sql_string .= "DELETE FROM bookmarks WHERE user_id_ref='$user_id' AND bookmark_name='$name_value' AND bookmark_url='$url_value';";
-      }
+      $user_id = $_SESSION['user_id']; 
+      $bookmark_name = sanitize($post_array["bookmark_name"]); 
+
+
+      $sql_string = "DELETE FROM bookmarks WHERE user_id_ref='$user_id' AND bookmark_name='$bookmark_name';";
+
 
       if (mysqli_multi_query($GLOBALS['connect'], $sql_string)) {
-         $result = true;
+         $create_result = true;
       } else {
-         $result = false;
-         $GLOBALS['errors'] = 'Encountered error during deletion!';
+         $GLOBALS['errors'][] = "Error: Could not commit the bookmark, please try again.";
       }
-
    }
+
    return $result;
 }
 

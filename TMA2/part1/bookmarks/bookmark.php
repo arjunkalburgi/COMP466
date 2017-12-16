@@ -7,12 +7,8 @@
 	<h1 class="header_text">Welcome To Bookmarking!</h1>
 </div>
 
-<ul class="collection with-header">
-	<li class="collection-header">Current Bookmarks</li>
-	<?php	output_bookmarks();	?>
-</ul>
-
 <?php
+    include 'bookmarks/update_bookmarks.php';
     include 'bookmarks/create_bookmarks.php';
 ?>
 

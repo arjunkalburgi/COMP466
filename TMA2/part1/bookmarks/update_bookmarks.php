@@ -1,52 +1,109 @@
 <?php
-	include 'core/init.php';
 	protect_page();
-	include 'includes/overall/top_page.php';
+
+	// did user submit a form and was the form to update bookmarks? 
+	if (empty($_POST) === false && $_POST["commit"] === "Update Bookmark(s)") {
+
+		// ensure fields are filled 
+		foreach ($_POST as $key => $value) {
+			if (empty($value)) {
+				$errors[] = 'All fields are required!';
+				break 1;
+			}
+		}
+
+		// if all good and bookmark good, commit. 
+		if(empty($errors) === true) {
+			echo "Update Bookmark(s)"; 
+			// update_bookmarks($_POST); 
+		}
+
+	} elseif (empty($_POST) === false && $_POST["commit"] === "Delete Bookmark(s)") {
+		
+		// ensure fields are filled 
+		foreach ($_POST as $key => $value) {
+			if (empty($value)) {
+				$errors[] = 'All fields are required!';
+				break 1;
+			}
+		}
+
+		// if all good and bookmark good, commit. 
+		if(empty($errors) === true) {
+			echo "Delete Bookmark(s)"; 
+			delete_bookmarks($_POST); 
+		}
+
+	}
+
 ?>
 
-<div class="index_splash">
-	<h1 class="header_text">Update Bookmark(s)</h1>
-</div>
+<!-- <div class="index_splash"> -->
+	<!-- <h1 class="header_text">Current Bookmarks</h1> -->
+<!-- </div> -->
 
-<h2 class="bookmark_list_header">Select Bookmarks To Update</h2>
+<ul class="collection with-header">
+	<li class="collection-header"><b>link to bookmark, pencil to edit, trash to delete</b></li>
+	<?php	output_editable_bookmarks();	?>
+</ul>
 
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
-	<?php
-		//a form which contains only check box and a button (like our case) will have only one element if no checkbox element was checked
-		if(count($_POST) > 1){     //the count of POST tells us the number of elements in the form.
-			//we only want to update the DB if the Update Bookmark(s) was previously clicked
-			//we check for name: commit. if true, this means the Update Bookmark(s) button was clicked
-			if(array_key_exists('commit', $_POST) === true){
-					if(validate_bookmark_update($_POST)){
-						//do the update here
-						if(update_selected_bookmarks($_POST, $_SESSION['selected_bookmarks']) === true){
-							header("Location: index.php?content=bookmarks/bookmark.php");
-							exit();
-						}else{echo output_errors($GLOBALS['errors']);}
-					}else{
-						echo output_errors($errors);
-					}
-			}else{
-					//this should execute after the Modify Bookmark(s) butt$on has been clicked
-					//we store the array in the session, so we can retrieve later
-					$_SESSION['selected_bookmarks'] = output_bookmarks_to_modify($_POST);   //returns an array of bookmarks to be modified
-			}
-		}else{
-			//output a list of bookmarks to select. We expect this function to execute first
-			output_bookmarks_to_check();
-		}
-	?>
+<script type="text/javascript">
+	
+	function updateButtonClick(thing) {
+		console.log("update thing"); 
+		console.log(thing); 
 
-	<p class="create_bk_submit">
-		<?php
-			//when count of a _POST is greater than 1, this means some values were submitted, and so we want to modify our output as the submit button is clicked
-			if(count($_POST) > 1){
-				echo '<input type="submit" name="commit" value="Update Bookmark(s)" class="create_bk_submit" >';
-			}else{
-				echo '<input type="submit" name="select" value="Modify Bookmark(s)" class="create_bk_submit" >';
-			}
-		?>
-	</p>
-</form>
+		// * * * * * * * * * * * * * * * * * * * *
+		// from https://stackoverflow.com/a/133997
+		var form = document.createElement("form");
+		form.setAttribute("method", "post");
+		form.setAttribute("action", "");
 
-<?php include 'includes/overall/bottom_page.php'; ?>
+		// bookmark field
+	    var bookmarkfield = document.createElement("input");
+		bookmarkfield.setAttribute("type", "text");
+		bookmarkfield.setAttribute("name", "bookmark_name");
+		bookmarkfield.setAttribute("value", thing);
+		form.appendChild(bookmarkfield);
+
+		// commit field
+	    var commitfield = document.createElement("input");
+		commitfield.setAttribute("type", "text");
+		commitfield.setAttribute("name", "commit");
+		commitfield.setAttribute("value", "Update Bookmark(s)");
+		form.appendChild(commitfield);
+
+
+		document.body.appendChild(form);
+		form.submit();
+	}
+
+	function deleteButtonClick(thing) {
+		console.log("delete thing"); 
+		console.log(thing); 
+
+		// * * * * * * * * * * * * * * * * * * * *
+		// from https://stackoverflow.com/a/133997
+		var form = document.createElement("form");
+		form.setAttribute("method", "post");
+		form.setAttribute("action", "");
+
+		// bookmark field
+	    var bookmarkfield = document.createElement("input");
+		bookmarkfield.setAttribute("type", "text");
+		bookmarkfield.setAttribute("name", "bookmark_name");
+		bookmarkfield.setAttribute("value", thing);
+		form.appendChild(bookmarkfield);
+
+		// commit field
+	    var commitfield = document.createElement("input");
+		commitfield.setAttribute("type", "text");
+		commitfield.setAttribute("name", "commit");
+		commitfield.setAttribute("value", "Delete Bookmark(s)");
+		form.appendChild(commitfield);
+
+
+		document.body.appendChild(form);
+		form.submit();
+	}
+</script>
