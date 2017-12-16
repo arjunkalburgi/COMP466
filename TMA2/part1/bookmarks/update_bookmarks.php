@@ -30,17 +30,13 @@
 
 		// if all good and bookmark good, commit. 
 		if(empty($errors) === true) {
-			echo "Delete Bookmark(s)"; 
+			// echo "Delete Bookmark(s)"; 
 			delete_bookmarks($_POST); 
 		}
 
 	}
 
 ?>
-
-<!-- <div class="index_splash"> -->
-	<!-- <h1 class="header_text">Current Bookmarks</h1> -->
-<!-- </div> -->
 
 <ul class="collection with-header">
 	<li class="collection-header"><b>link to bookmark, pencil to edit, trash to delete</b></li>

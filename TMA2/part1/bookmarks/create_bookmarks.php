@@ -1,25 +1,22 @@
 <?php
 	protect_page();
 
-	//execute the logic below only when the user has submitted a form
-	if(empty($_POST) === false) {
-		// make sure this is actually a create bookmark post lol
-		// since it might be a login post instead 
-		if ($_POST["commit"] === "Create Bookmark(s)") {
+	// did user submit a form and was the form to Create bookmarks? 
+	if (empty($_POST) === false && $_POST["commit"] === "Create Bookmark(s)") {
 
-			// ensure fields are filled 
-			foreach ($_POST as $key => $value) {
-				if (empty($value)) {
-					$errors[] = 'All fields are required!';
-					break 1;
-				}
-			}
-
-			// if all good and bookmark good, commit. 
-			if(empty($errors) === true && check_url_bookmark($_POST)) {
-				create_bookmarks($_POST); 
+		// ensure fields are filled 
+		foreach ($_POST as $key => $value) {
+			if (empty($value)) {
+				$errors[] = 'All fields are required!';
+				break 1;
 			}
 		}
+
+		// if all good and bookmark good, commit. 
+		if(empty($errors) === true && check_url_bookmark($_POST)) {
+			create_bookmarks($_POST); 
+		}
+		
 	}
 ?>
 

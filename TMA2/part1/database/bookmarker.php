@@ -98,8 +98,10 @@ function output_editable_bookmarks() {
       foreach($my_bookmarks as $bookmark ){
          $output[] = '<li class="collection-item">
                      <a href='.$bookmark['bookmark_url'].' target="_blank">' . $bookmark['bookmark_name'] . ' - ' .$bookmark['bookmark_url']. '</a>
-                     <div class="secondary-content"><button onclick="updateButtonClick(\''.$bookmark['bookmark_name'].'\')"><i class="material-icons">edit</i></button>
-                     <button onclick="deleteButtonClick(\''.$bookmark['bookmark_name'].'\')"><i class="material-icons">delete</i></button></div></li>';
+                     <div class="secondary-content">
+                        <button onclick="updateButtonClick(\''.$bookmark['bookmark_name'].'\')"><i class="material-icons">edit</i></button>
+                        <button onclick="deleteButtonClick(\''.$bookmark['bookmark_name'].'\')"><i class="material-icons">delete</i></button>
+                     </div></li>';
       }
       echo  implode('', $output);
    }else{
