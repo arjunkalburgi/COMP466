@@ -1,5 +1,5 @@
 <?php
-	protect_page();
+	is_logged_in();
 
 	// did user submit a form and was the form to update bookmarks? 
 	if (empty($_POST) === false) {
@@ -15,7 +15,7 @@
 
 			// if all good and bookmark good, commit. 
 			if(empty($errors) === true) {
-				// echo var_dump($_POST); 
+				// refresh content after deletion to make sure the correct content is on the page
 				if (update_bookmark($_POST)) {
 					header("Refresh:0");
 				}
@@ -73,8 +73,6 @@
 <script type="text/javascript">
 	
 	function updateButtonClick(bookmark_name, bookmark_url) {
-		console.log("update bookmark_name"); 
-		console.log(bookmark_name); 
 
 		$('#modal1 .edit-bookmark-form .register_boxes.name input').attr("value", bookmark_name); 
 		$('#modal1 .edit-bookmark-form input.old_name').attr("value", bookmark_name); 
@@ -82,12 +80,9 @@
 		$('#modal1 .edit-bookmark-form input.old_url').attr("value", bookmark_url); 
 
 		$('#modal1').modal("open");
-
 	}
 
 	function deleteButtonClick(bookmark_name, bookmark_url) {
-		console.log("delete thing"); 
-		console.log(bookmark_name); 
 
 		// * * * * * * * * * * * * * * * * * * * *
 		// from https://stackoverflow.com/a/133997
@@ -120,4 +115,5 @@
 		document.body.appendChild(form);
 		form.submit();
 	}
+	
 </script>

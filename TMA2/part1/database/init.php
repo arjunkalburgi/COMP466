@@ -12,6 +12,8 @@
 
 	$userquery = mysqli_query($GLOBALS['connect'], "SELECT 1 FROM users LIMIT 1");
 	if ($userquery === false) {
+	    echo "hiiiiiiii from createuserstable"; 
+	    
 	    $createuserstable = "CREATE TABLE users (
 	        user_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	        username varchar (30) NOT NULL,
@@ -21,8 +23,6 @@
 	        email varchar (30) NOT NULL
 	        )";
 	    $results = mysqli_query($GLOBALS['connect'], $createuserstable) or die (mysqli_error($GLOBALS['connect']));
-
-	    echo "hiiiiiiii from createuserstable"; 
 	}
 	$bookmarkquery = mysqli_query($GLOBALS['connect'], "SELECT 1 FROM bookmarks LIMIT 1");
 	if ($bookmarkquery === false) {

@@ -7,7 +7,6 @@
 
 	<div class="container">
 
-		<!-- content & authenticate -->
 		<?php include 'template_files/main_content.php'; ?>
 
 	</div>

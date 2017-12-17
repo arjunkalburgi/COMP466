@@ -1,0 +1,8 @@
+things 
+
+array_sanitize() 
+
+clean up login.php
+clean up register.php
+clean up users.php
+change permissiondenied.php

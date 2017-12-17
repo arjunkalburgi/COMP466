@@ -1,6 +1,6 @@
 
 <?php
-	protect_page();
+	is_logged_in();
 ?>
 
 <div class="index_splash">

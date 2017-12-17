@@ -1,5 +1,5 @@
 <?php
-	protect_page();
+	is_logged_in();
 
 	// did user submit a form and was the form to Create bookmarks? 
 	if (empty($_POST) === false && $_POST["commit"] === "Create Bookmark") {
@@ -14,7 +14,11 @@
 
 		// if all good and bookmark good, commit. 
 		if(empty($errors) === true && check_url_bookmark($_POST)) {
-			create_bookmarks($_POST); 
+			// refresh content after deletion to make sure the correct content is on the page
+			if (create_bookmarks($_POST)) {
+				echo "lolo";
+				header("Location: index.php?content=bookmarks/update_bookmarks.php");
+			}
 		}
 		
 	}
