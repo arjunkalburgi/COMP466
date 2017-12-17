@@ -1,159 +1,146 @@
 <?php
 
 
-//we insert into the database, an array of multiple bookmarks, returns true on success
-function create_bookmarks($post_array){
-
-   $create_result = false;
-   if(count($post_array) > 0){
-
-      $user_id = $_SESSION['user_id']; 
-      $bookmark_name = sanitize($post_array["bookmark_name"]); 
-      $bookmark_url = sanitize($post_array["bookmark_url"]);
-
-
-      $sql_string = "INSERT INTO bookmarks (user_id_ref, bookmark_name, bookmark_url) VALUES ('$user_id', '$bookmark_name', '$bookmark_url');";
-
-
-      if (mysqli_multi_query($GLOBALS['connect'], $sql_string)) {
-         $create_result = true;
-      } else {
-         $GLOBALS['errors'][] = "Error: Could not commit the bookmark, please try again.";
-      }
-   }
-
-   return $create_result;
-}
-
-// validates an entered bookmark url
 function check_url_bookmark($post_array){
 
 
-   $validate_url = true;
-   if(count($post_array) > 0){
+	$validate_url = true;
+	if(count($post_array) > 0){
 
-      $bookmark_name = $post_array["bookmark_name"]; 
-      $bookmark_url = sanitize($post_array["bookmark_url"]);
+		$bookmark_name = $post_array["bookmark_name"]; 
+		$bookmark_url = sanitize($post_array["bookmark_url"]);
 
-      $validate_url = check_url($bookmark_url); 
+		$validate_url = check_url($bookmark_url); 
 
-   }
+	}
 
-   return $validate_url;
+	return $validate_url;
 }
 
-//validate a url given a string, returns true if the url is valid
 function check_url($url_string){
-   $validate_url = true;
-   if (!preg_match("/\\b(?:(?:https?|ftp):\\/\\/|www\\.)[-a-z0-9+&@#\\/%?=~_|!:,.;]*[-a-z0-9+&@#\\/%=~_|]/i", $url_string)) {
-      $validate_url = false;
-      $GLOBALS['errors'][] = 'The URL entered is invalid!';
-   }
+	$validate_url = true;
 
-   return $validate_url;
+	if (!preg_match("/\\b(?:(?:https?|ftp):\\/\\/|www\\.)[-a-z0-9+&@#\\/%?=~_|!:,.;]*[-a-z0-9+&@#\\/%=~_|]/i", $url_string)) {
+		$validate_url = false;
+		$GLOBALS['errors'][] = 'The URL entered is invalid!';
+	}
+
+	return $validate_url;
 }
 
-//search the DB to find all bookmark associated with this user_id.
-//returns an array of bookmark name and url, or false on error
-function get_all_user_bookmarks($user_id){
-   $data = array();
-   $user_id = (int)$user_id;
+function get_all_bookmarks($user_id){
+	$data = array();
+	$user_id = (int)$user_id;
 
-   $func_num_args = func_num_args();   //this gets the count of the arguments that was sent to the function
-   $func_get_args = func_get_args();   //this returns an array of the actual arguments
+	$func_num_args = func_num_args();   //this gets the count of the arguments that was sent to the function
+	$func_get_args = func_get_args();   //this returns an array of the actual arguments
 
-   if($func_num_args > 1){
-      unset($func_get_args[0]);   //we pop out the user_id from the array variable
+	if($func_num_args > 1){
+		unset($func_get_args[0]);   //we pop out the user_id from the array variable
 
-      $fields = implode(', ', $func_get_args);
+		$fields = implode(', ', $func_get_args);
 
-      $query = "SELECT $fields FROM bookmarks WHERE user_id_ref = '$user_id'";
-      $result = mysqli_query($GLOBALS['connect'], $query);
-      $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
-      return (($data !== null) && (empty($data) === false)) ? $data : false;
-   }
+		$query = "SELECT $fields FROM bookmarks WHERE user_id_ref = '$user_id'";
+		$result = mysqli_query($GLOBALS['connect'], $query);
+		$data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+		return (($data !== null) && (empty($data) === false)) ? $data : false;
+	}
 }
 
-//this is used in the home page of a logged in bookmark application
-function output_bookmarks(){
 
-   $my_bookmarks = $GLOBALS['bookmark_data'];      //global data of all the bookmarks related to a specific user
-   if($my_bookmarks !== false){
-      $output = array();
-      foreach($my_bookmarks as $bookmark ){
-         $output[] = '<li class="collection-item"><a href='.$bookmark['bookmark_url'].' target="_blank">' . $bookmark['bookmark_name'] . ' - ' .$bookmark['bookmark_url']. '</a></li>';
-      }
-      echo  implode('', $output);
-   }else{
-      echo '<div class="bookmark_select">No stored bookmarks.';
-   }
+// list bookmarks
+
+function output_bookmarks() {
+
+	$my_bookmarks = $GLOBALS['bookmark_data'];
+
+	if ($my_bookmarks !== false) {
+		$output = array();
+		foreach($my_bookmarks as $bookmark ) {
+			$output[] = '<li class="collection-item">
+					 <a href='.$bookmark['bookmark_url'].' target="_blank">' . $bookmark['bookmark_name'] . ' - ' .$bookmark['bookmark_url']. '</a>
+					 <div class="secondary-content">
+						<button onclick="updateButtonClick(\''.$bookmark['bookmark_name'].'\', \''.$bookmark['bookmark_url'].'\')"><i class="material-icons">edit</i></button>
+						<button onclick="updateButtonClick(\''.$bookmark['bookmark_name'].'\', \''.$bookmark['bookmark_url'].'\')"><i class="material-icons">delete</i></button>
+					 </div></li>';
+		}
+		echo implode('', $output);
+
+	} else {
+		echo '<div class="bookmark_select">No stored bookmarks.';
+	}
 }
 
-function output_editable_bookmarks() {
 
-   $my_bookmarks = $GLOBALS['bookmark_data'];
+// actions
 
-   if ($my_bookmarks !== false) {
-      $output = array();
-      foreach($my_bookmarks as $bookmark ){
-         $output[] = '<li class="collection-item">
-                     <a href='.$bookmark['bookmark_url'].' target="_blank">' . $bookmark['bookmark_name'] . ' - ' .$bookmark['bookmark_url']. '</a>
-                     <div class="secondary-content">
-                        <button onclick="updateButtonClick(\''.$bookmark['bookmark_name'].'\', \''.$bookmark['bookmark_url'].'\')"><i class="material-icons">edit</i></button>
-                        <button onclick="updateButtonClick(\''.$bookmark['bookmark_name'].'\', \''.$bookmark['bookmark_url'].'\')"><i class="material-icons">delete</i></button>
-                     </div></li>';
-      }
-      echo  implode('', $output);
-   }else{
-      echo '<div class="bookmark_select">No stored bookmarks.';
-   }
+function create_bookmarks($post_array){
 
-}
+	$create_result = false;
+	if(count($post_array) > 0){
 
-function update_bookmark($post_array) {
+		$user_id = $_SESSION['user_id']; 
+		$bookmark_name = sanitize($post_array["bookmark_name"]); 
+		$bookmark_url = sanitize($post_array["bookmark_url"]);
 
-   $result = true; 
 
-   if (count($post_array) > 0) {
+		$sql_string = "INSERT INTO bookmarks (user_id_ref, bookmark_name, bookmark_url) VALUES ('$user_id', '$bookmark_name', '$bookmark_url');";
 
-      $user_id = $_SESSION['user_id']; 
-      $bookmark_name = sanitize($post_array["bookmark_name"]); 
-      $bookmark_url = sanitize($post_array["bookmark_url"]); 
-      $old_name = sanitize($post_array["old_name"]);
-      $old_url = sanitize($post_array["old_url"]);
 
-      $sql_string = "UPDATE bookmarks SET bookmark_name='$bookmark_name', bookmark_url='$bookmark_url' WHERE user_id_ref='$user_id' AND bookmark_name='$old_name' AND bookmark_url='$old_url';";
+		if (mysqli_multi_query($GLOBALS['connect'], $sql_string)) {
+			$create_result = true;
+		} else {
+			$GLOBALS['errors'][] = "Error: Could not commit the bookmark, please try again.";
+		}
+		}
 
-      if (mysqli_multi_query($GLOBALS['connect'], $sql_string)) {
-         $create_result = true;
-      } else {
-         $GLOBALS['errors'][] = "Error: Could not commit the action, please try again.";
-      }
-   }
+		return $create_result;
+		}
 
-   return $result;
+		function update_bookmark($post_array) {
+
+		$result = true; 
+
+		if (count($post_array) > 0) {
+
+		$user_id = $_SESSION['user_id']; 
+		$bookmark_name = sanitize($post_array["bookmark_name"]); 
+		$bookmark_url = sanitize($post_array["bookmark_url"]); 
+		$old_name = sanitize($post_array["old_name"]);
+		$old_url = sanitize($post_array["old_url"]);
+
+		$sql_string = "UPDATE bookmarks SET bookmark_name='$bookmark_name', bookmark_url='$bookmark_url' WHERE user_id_ref='$user_id' AND bookmark_name='$old_name' AND bookmark_url='$old_url';";
+
+		if (mysqli_multi_query($GLOBALS['connect'], $sql_string)) {
+		 $create_result = true;
+		} else {
+		 $GLOBALS['errors'][] = "Error: Could not commit the action, please try again.";
+		}
+	}
+
+	return $result;
 }
 
 function delete_bookmarks($post_array) {
 
-   $result = true; 
+	$result = true; 
 
-   if (count($post_array) > 0) {
+	if (count($post_array) > 0) {
 
-      $user_id = $_SESSION['user_id']; 
-      $bookmark_name = sanitize($post_array["bookmark_name"]); 
-      $bookmark_url = sanitize($post_array["bookmark_url"]);
+		$user_id = $_SESSION['user_id']; 
+		$bookmark_name = sanitize($post_array["bookmark_name"]); 
+		$bookmark_url = sanitize($post_array["bookmark_url"]);
 
-      $sql_string = "DELETE FROM bookmarks WHERE user_id_ref='$user_id' AND bookmark_name='$bookmark_name' AND bookmark_url='$bookmark_url';";
+		$sql_string = "DELETE FROM bookmarks WHERE user_id_ref='$user_id' AND bookmark_name='$bookmark_name' AND bookmark_url='$bookmark_url';";
 
-      if (mysqli_multi_query($GLOBALS['connect'], $sql_string)) {
-         $create_result = true;
-      } else {
-         $GLOBALS['errors'][] = "Error: Could not commit the action, please try again.";
-      }
-   }
+		if (mysqli_multi_query($GLOBALS['connect'], $sql_string)) {
+			$create_result = true;
+		} else {
+			$GLOBALS['errors'][] = "Error: Could not commit the action, please try again.";
+		}
+	}
 
-   return $result;
+	return $result;
 }
 
 ?>

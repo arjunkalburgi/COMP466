@@ -22,7 +22,7 @@
 
 			}
 
-		} elseif ($_POST["commit"] === "Delete Bookmark(s)") {
+		} elseif ($_POST["commit"] === "Delete Bookmark") {
 			
 			// ensure fields are filled 
 			foreach ($_POST as $key => $value) {
@@ -47,7 +47,7 @@
 
 <ul class="collection with-header">
 	<li class="collection-header"><b>link to bookmark, pencil to edit, trash to delete</b></li>
-	<?php	output_editable_bookmarks();	?>
+	<?php	output_bookmarks();	?>
 </ul>
 
 <div id="modal1" class="modal">
@@ -113,7 +113,7 @@
 	    var commitfield = document.createElement("input");
 		commitfield.setAttribute("type", "text");
 		commitfield.setAttribute("name", "commit");
-		commitfield.setAttribute("value", "Delete Bookmark(s)");
+		commitfield.setAttribute("value", "Delete Bookmark");
 		form.appendChild(commitfield);
 
 

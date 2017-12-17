@@ -16,12 +16,12 @@
         <div class="card light-blue darken-1">
             <div class="card-content white-text">
                 <span class="card-title">Bookmark Actions</span>
-                <p>Hey <?php echo $user_data['first_name']; ?>, these are quick links for you to create, update and delete bookmarks</p>
+                <p>Hey <?php echo $user_data['first_name']; ?>, with this application, you can conduct 3 actions with your bookmarks: </p>
             </div>
             <div class="card-action">
-                <a href="index.php?content=bookmarks/create_bookmarks.php">Create</a>
-                <a href="index.php?content=bookmarks/update_bookmarks.php">Update</a>
-                <a href="index.php?content=bookmarks/delete_bookmarks.php">Delete</a>
+                <a>Create</a>
+                <a>Update</a>
+                <a>Delete</a>
             </div>
         </div>
     </div>

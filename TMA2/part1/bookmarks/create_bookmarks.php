@@ -2,7 +2,7 @@
 	protect_page();
 
 	// did user submit a form and was the form to Create bookmarks? 
-	if (empty($_POST) === false && $_POST["commit"] === "Create Bookmark(s)") {
+	if (empty($_POST) === false && $_POST["commit"] === "Create Bookmark") {
 
 		// ensure fields are filled 
 		foreach ($_POST as $key => $value) {
@@ -44,7 +44,7 @@
 	  </div>
 
 	  <p class="create_bk_submit">
-		 <input type="submit" name="commit" value="Create Bookmark(s)" class="create_bk_submit" >
+		 <input type="submit" name="commit" value="Create Bookmark" class="create_bk_submit" >
 	  </p>
    </form>
 
