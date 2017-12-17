@@ -14,7 +14,7 @@
 	        if(logged_in() === true){
 	            include 'template_files/loggedin.php';
 	        }else{
-	            include 'template_files/login.php';
+	            include 'authentication/login.php';
 	        }
     	}
     ?>

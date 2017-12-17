@@ -47,8 +47,6 @@ function user_exists($username){
     $query = mysqli_query($GLOBALS['connect'], $query_string ) or die (mysqli_error($GLOBALS['connect']));
     $row = mysqli_fetch_row($query);
 
-    echo "user_exists: " . $row[0]; 
-
     return ($row[0] == 1) ? true : false;
 }
 
