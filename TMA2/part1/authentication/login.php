@@ -1,8 +1,7 @@
 <?php
 
 	// when login data has been posted 
-	if (empty($_POST) === false) {
-
+	if (empty($_POST) === false && $_POST["commit"] === "Log in") {
 		$username = $_POST['username'];
 		$password = $_POST['password'];
 
@@ -30,6 +29,12 @@
 
 			}
 		}
+	} elseif (empty($_POST) === false && $_POST["commit"] === "Log out") {
+		session_name('sec_session_id');
+		session_start();
+		$_SESSION = array(0);
+		session_destroy();
+		header('Location: index.php?content=template_files/main_content.php');
 	}
 
 
@@ -41,7 +46,7 @@
 <div class="widget">
     <h5 class="widget_header">Login/Register</h5>
     <div class="bookmark_inner">
-        <form method="post" action="index.php?content=authentication/login.php">
+        <form method="post" action="">
             <fieldset>
 
                 <p><input type="text" name="username" placeholder="Username"></p>

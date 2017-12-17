@@ -2,14 +2,16 @@
 <div class="row">
     <div class="col s12 m6">
         <div class="card light-blue darken-1">
-            <div class="card-content white-text">
-                <span class="card-title">App Actions</span>
-                <p>Hey <?php echo $user_data['first_name']; ?>, feel free to sign out or email your feedback!</p>
-            </div>
-            <div class="card-action">
-                <a href="index.php?content=authentication/logout.php">Sign Out</a>
-                <a href="mailto:askalburgi@gmail.com">Email feedback</a>
-            </div>
+            <form action="index.php?content=authentication/login.php" method="post">
+                <div class="card-content white-text">
+                    <span class="card-title">App Actions</span>
+                    <p>Hey <?php echo $user_data['first_name']; ?>, feel free to sign out or email your feedback!</p>
+                </div>
+                <div class="card-action">
+                    <input type="submit" name="commit" value="Log out" class="btn-flat orange-text" />
+                    <a href="mailto:askalburgi@gmail.com">Email feedback</a>
+                </div>
+            </form>
         </div>
     </div>
     <div class="col s12 m6">

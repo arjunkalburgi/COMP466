@@ -1,21 +1,12 @@
 <div class="content">
     <?php
-    	if (isset($_GET['content'])) {
-    		// echo "we are a go people"; 
-            if(logged_in() === true){
-                include 'bookmarks/bookmark.php';
-                include 'template_files/loggedin.php';
-            } else {
-                include $_GET['content']; 
-            }
 
-    	} else {
-    		// echo "we are not a go"; 
-	        if(logged_in() === true){
-	            include 'template_files/loggedin.php';
-	        }else{
-	            include 'authentication/login.php';
-	        }
-    	}
+        if ((!empty($_POST) && $_POST["commit"] === "Log out") || !logged_in()) {
+            include 'authentication/login.php';
+        } else {
+            include 'bookmarks/bookmark.php';
+            include 'template_files/loggedin.php';
+        }
+        
     ?>
 </div>

@@ -40,7 +40,7 @@ function output_bookmarks() {
 		echo implode('', $output);
 
 	} else {
-		echo '<div class="bookmark_select">No stored bookmarks.';
+		echo '<li class="collection-item">No stored bookmarks.</li>';
 	}
 }
 
