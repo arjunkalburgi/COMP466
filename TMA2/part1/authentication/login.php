@@ -25,7 +25,7 @@
 
 				// send back to main content
 				$_SESSION['user_id'] = $login;
-				header('Location: index.php?content=template_files/main_content.php');
+				header('Location: index.php');
 
 			}
 		}
@@ -34,7 +34,7 @@
 		session_start();
 		$_SESSION = array(0);
 		session_destroy();
-		header('Location: index.php?content=template_files/main_content.php');
+		header('Location: index.php');
 	}
 
 

@@ -22,7 +22,7 @@ function output_errors($errors){
         $output[] = '<li>'. $error . '</li>';
     }
     
-    return '<ul>'. implode('', $output) . '</ul>';
+    return '<ul style="color:red;font-weight:600;">'. implode('', $output) . '</ul>';
 }
 
 ?>
