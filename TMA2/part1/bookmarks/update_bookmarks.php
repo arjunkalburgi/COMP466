@@ -2,7 +2,8 @@
 	protect_page();
 
 	// did user submit a form and was the form to update bookmarks? 
-	if (empty($_POST) === false && $_POST["commit"] === "Update Bookmark(s)") {
+	if (empty($_POST) === false) {
+		if ($_POST["commit"] === "Update Bookmark(s)") {
 
 		// ensure fields are filled 
 		foreach ($_POST as $key => $value) {
@@ -18,21 +19,23 @@
 			// update_bookmarks($_POST); 
 		}
 
-	} elseif (empty($_POST) === false && $_POST["commit"] === "Delete Bookmark(s)") {
-		
-		// ensure fields are filled 
-		foreach ($_POST as $key => $value) {
-			if (empty($value)) {
-				$errors[] = 'All fields are required!';
-				break 1;
+		} elseif ($_POST["commit"] === "Delete Bookmark(s)") {
+			
+			// ensure fields are filled 
+			foreach ($_POST as $key => $value) {
+				if (empty($value)) {
+					$errors[] = 'All fields are required!';
+					break 1;
+				}
 			}
-		}
 
-		// if all good and bookmark good, commit. 
-		if(empty($errors) === true) {
-			// echo "Delete Bookmark(s)"; 
-			delete_bookmarks($_POST); 
-		}
+			// if all good and bookmark good, commit. 
+			if(empty($errors) === true) {
+				// echo "Delete Bookmark(s)"; 
+				if (delete_bookmarks($_POST)) {
+					header("Refresh:0");
+				}
+			}
 
 	}
 
