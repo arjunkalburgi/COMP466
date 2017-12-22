@@ -41,3 +41,8 @@
 	border: none;
 	color:#03a9f4;
 }
+
+.error {
+	color: red; 
+	font-weight: 600;
+}

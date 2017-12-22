@@ -2,7 +2,7 @@
 
 function is_logged_in(){
     if(logged_in() === false){
-        header('Location: authentication/permissiondenied.php');
+        header('Location: index.php?content=authentication/permissiondenied.php');
         exit();
     }
 }

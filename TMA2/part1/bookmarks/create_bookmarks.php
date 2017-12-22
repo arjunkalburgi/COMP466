@@ -31,7 +31,7 @@
 <div class="create_bk_widget collection" style="padding: 0.5rem;">
    <form action="" method="post">
 	  
-	  <div style="color: red; font-weight: 600;"><?php echo output_errors($errors); ?></div>
+	  <div class="error"><?php echo output_errors($errors); ?></div>
 	  <div id="create_0" class="create_bk_inner_first">
 	  	<div class="row">
 	  		<div class="col s12 m6">
