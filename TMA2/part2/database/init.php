@@ -20,50 +20,48 @@
 	    echo "hiiiiiiii from createcoursestable"; 
 	    
 	    $createcoursestable = "CREATE TABLE courses (
-	        courseID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	        unitID int NOT NULL,
-	        unitTitle varchar (33) NOT NULL
+	        id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	        courseTitle varchar (30) NOT NULL
 	        )";
 	    $results = mysqli_query($GLOBALS['connect'], $createcoursestable) or die (mysqli_error($GLOBALS['connect']));
-	}
-	$quizquery = mysqli_query($GLOBALS['connect'], "SELECT 1 FROM quizzes LIMIT 1");
-	if ($quizquery === false) {
-	    echo "hiiiiiiii from quizquery"; 
-
-	    $createquiztable = "CREATE TABLE quizzes (
-	        quiz_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	        courseID_Ref int NOT NULL,
-	        unitID_Ref int NOT NULL,
-	        quizAnswer varchar (50) NOT NULL
-	        )";
-	    $results = mysqli_query($GLOBALS['connect'], $createquiztable) or die (mysqli_error($GLOBALS['connect']));
-	}
-	$lessonquery = mysqli_query($GLOBALS['connect'], "SELECT 1 FROM lessons LIMIT 1");
-	if ($lessonquery === false) {
-	    echo "hiiiiiiii from lessonquery"; 
-
-	    $createlessontable = "CREATE TABLE lessons (
-	        lessonID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	        lessonTitle varchar (30) NOT NULL,
-	        lessonContent varchar (3000) NOT NULL,
-	        courseID_Ref int NOT NULL,
-	        unitID_Ref int NOT NULL
-	        )";
-	    $results = mysqli_query($GLOBALS['connect'], $createlessontable) or die (mysqli_error($GLOBALS['connect']));
 	}
 	$unitsquery = mysqli_query($GLOBALS['connect'], "SELECT 1 FROM units LIMIT 1");
 	if ($unitsquery === false) {
 	    echo "hiiiiiiii from unitsquery"; 
 
 	    $unitstable = "CREATE TABLE units (
-	        unitID int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	        unitTitle varchar (30) NOT NULL,
-	        objective varchar (3000) NOT NULL,
-	        review varchar (3000) NOT NULL,
-	        quiz varchar (3000) NOT NULL,
-	        courseID_Ref int NOT NULL
+	        id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	        title varchar (30) NOT NULL,
+	        contributors varchar (3000) NOT NULL,
+	        abstract varchar (3000) NOT NULL,
+	        courseID_Ref int NOT NULL REFERENCES course(id)
 	        )";
 	    $results = mysqli_query($GLOBALS['connect'], $unitstable) or die (mysqli_error($GLOBALS['connect']));
+	}
+	$lessonquery = mysqli_query($GLOBALS['connect'], "SELECT 1 FROM lessons LIMIT 1");
+	if ($lessonquery === false) {
+	    echo "hiiiiiiii from lessonquery"; 
+
+	    $createlessontable = "CREATE TABLE lessons (
+	        id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	        title varchar (30) NOT NULL,
+	        content varchar (3000) NOT NULL,
+	        quizID_Ref int NOT NULL REFERENCES quiz(id),
+	        unitID_Ref int NOT NULL REFERENCES unit(id),
+	        courseID_Ref int NOT NULL REFERENCES course(id)
+	        )";
+	    $results = mysqli_query($GLOBALS['connect'], $createlessontable) or die (mysqli_error($GLOBALS['connect']));
+	}
+	$quizquery = mysqli_query($GLOBALS['connect'], "SELECT 1 FROM quizzes LIMIT 1");
+	if ($quizquery === false) {
+	    echo "hiiiiiiii from quizquery"; 
+
+	    $createquiztable = "CREATE TABLE quizzes (
+	        id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	        question  varchar (50) NOT NULL,
+	        answer varchar (50) NOT NULL
+	        )";
+	    $results = mysqli_query($GLOBALS['connect'], $createquiztable) or die (mysqli_error($GLOBALS['connect']));
 	}
 
 

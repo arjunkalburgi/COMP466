@@ -1,4 +1,4 @@
-<?xml version="1.0"?><!DOCTYPE book   PUBLIC '-//NLM//DTD Book DTD v2.1 20050630//EN'   'book.dtd'>
+<?xml version="1.0"?><!DOCTYPE book   PUBLIC '-//NLM//DTD Book DTD v2.1 20050630//EN'   ' _____book.dtd'>
 <courses>
 	<course book-part-number="Part 1" book-part-type="part" id="course1">
 		<title>The Databases</title>
@@ -31,9 +31,22 @@
 							Initially, GenBank was built and maintained at Los Alamos National Laboratory (LANL). In the early 1990s, this responsibility was awarded to NCBI through congressional mandate. NCBI undertook the task of scanning the literature for sequences and manually typing the sequences into the database. Staff then added annotation to these records, based upon information in the published article. Scanning sequences from the literature and placing them into GenBank is now a rare occurrence. Nearly all of the sequences are now deposited directly by the labs that generate the sequences. This is attributable to, in part, a requirement by most journal publishers that nucleotide sequences are first deposited into publicly available databases (DDBJ/EMBL/GenBank) so that the Accession number can be cited and the sequence can be retrieved when the article is published. NCBI began accepting direct submissions to GenBank in 1993 and received data from LANL until 1996. Currently, NCBI receives and processes about 20,000 direct submission sequences per month, in addition to the approximately 200,000 bulk submissions that are processed automatically.
 						</p>
 						<quiz id="quiz3">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text>
+									The GenBank sequence database is produced at _____ for Biotechnology Information (NCBI)
+								</text>
+								<answer>
+									National Center
+								</answer>
+							</question>
+							<question>
+								<text>This database is produced as part of an international collaboration with the _____ (EMBL) Data Library </text>
+								<answer>European Molecular Biology Laboratory</answer>
+							</question>
+							<question>
+								<text>The EMBL Data Library is from the  European Bioinformatics Institute (EBI) and the _____ (DDBJ).</text>
+								<answer>DNA Data Bank of Japan</answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson4">
@@ -45,9 +58,14 @@
 							The Collaboration created a <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/collab/FT/index.html" xmlns:xlink="http://www.w3.org/1999/xlink">Feature Table Definition</ext-link>that outlines legal features and syntax for the DDBJ, EMBL, and GenBank feature tables. The purpose of this document is to standardize annotation across the databases. The presentation and format of the data are different in the three databases, however, the underlying biological information is the same.
 						</p>
 						<quiz id="quiz4">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text>In the mid-1990s, the GenBank databasebecame part of the _____.</text>
+								<answer>International Nucleotide Sequence Database Collaboration</answer>
+							</question>
+							<question>
+								<text>The Collaboration created a _____ that outlines legal features and syntax</text>
+								<answer>Feature Table Definition</answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson5">
@@ -56,9 +74,14 @@
 							When scientists submit data to GenBank, they have the opportunity to keep their data confidential for a specified period of time. This helps to allay concerns that the availability of their data in GenBank before publication may compromise their work. When the article containing the citation of the sequence or its Accession number is published, the sequence record is released. The database staff request that submitters notify GenBank of the date of publication so that the sequence can be released without delay. The request to release should be sent to <email>gb-admin@ncbi.nlm.nih.gov</email>.
 						</p>
 						<quiz id="quiz5">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text>When scientists submit data to GenBank, they have the opportunity to keep their data _____ for a specified period of time.</text>
+								<answer>confidential</answer>
+							</question>
+							<question>
+								<text>This helps to allay concerns that the availability of their data in GenBank _____ publication may compromise their work. </text>
+								<answer>before</answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson6">
@@ -82,9 +105,18 @@
 							Segmented sets are a collection of noncontiguous sequences that cover a specified genetic region. The most common example is a set of genomic sequences containing exons from a single gene where part or all of the intervening regions have not been sequenced. Each member record within the set contains the appropriate annotation, exon features in this case. However, the mRNA and CDS will be annotated as joined features across the individual records. Segmented sets themselves can be part of an environmental sample, population, phylogenetic, or mutation set.
 						</p>
 						<quiz id="quiz6">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text>various features and subsequent qualifiers agreed upon by the International _____ Database Collaboration.</text>
+								<answer> Nucleotide Sequence</answer>
+							</question>
+							<question>
+								<text> If part of the _____ encodes a protein, a conceptual translation, called a CDS(coding sequence), is annotated.</text>
+								<answer>nucleotide sequence</answer>
+							</question>
+							<question>
+								<text> If part of the nucleotide sequence encodes a protein, a conceptual translation, called a CDS (coding _____), is annotated.</text>
+								<answer>sequence</answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson7">
@@ -110,9 +142,18 @@
 							Phase 0, 1, and 2 records are in the HTG division of GenBank, whereas phase 3 entries go into the taxonomic division of the organism, for example, PRI (primate) for human. An entry keeps its Accession number as it progresses from one phase to another but receives a new Accession.Version number and a new gi number each time there is a sequence change.
 						</p>
 						<quiz id="quiz7">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson9">
@@ -127,9 +168,18 @@
 							Submissions to HTG must contain three identifiers that are used to track each HTG record: the genome center tag, the sequence name, and the Accession number. The genome center tag is assigned by NCBI and is generally the FTP account login name. The sequence name is a unique identifier that is assigned by the submitter to a particular clone or entry and must be unique within the group's submissions. When a sequence is first submitted, it has only a sequence name and genome center tag; the Accession number is assigned during processing. All updates to that entry must include the center tag, sequence name, and Accession number, or processing will fail.
 						</p>
 						<quiz id="quiz9">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson10">
@@ -175,9 +225,18 @@
 							The processing pathway also generates reports. For successful submissions, two files are generated: one contains the submission in GenBank flat file format (without the sequence); and another is a status report file. The status report file, ac4htgs, contains the genome center, sequence name, Accession number, phase, create date, and update date for the submission. Submissions that fail processing receive an error file with a short description of the error(s) that prevented processing. The GenBank annotator also sends email to the submitter, explaining the errors in further detail.
 						</p>
 						<quiz id="quiz10">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson14">
@@ -188,9 +247,18 @@
 							When successful submissions are loaded into GenBank, they undergo additional validation checks. If GenBank annotators find errors, they write to the submitters, asking them to fix these errors and submit an update.
 						</p>
 						<quiz id="quiz14">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1738">
@@ -205,9 +273,18 @@
 							WGS submissions can be created using tbl12asn, a utility that is packaged with the Sequin submission software. Information on submitting these sequences can be found at <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/Genbank/wgs.html" xmlns:xlink="http://www.w3.org/1999/xlink">Whole Genome Shotgun Submissions</ext-link>.
 						</p>
 						<quiz id="quiz1738">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson15">
@@ -433,9 +510,18 @@
 							</sec>
 						</sec>
 						<quiz id="quiz15">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -509,17 +595,24 @@
 							</boxed-text>
 						</p>
 						<quiz id="quiz56">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text>The MeSH Translation Table contains: MeSH Terms, Subheadings, See-Reference mappings (also known as _____ terms) </text>
+								<answer>entry</answer>
+							</question>
+							<question>
+								<text>Mappings derived from the _____ (UMLS) that have equivalent synonyms or lexical variants in English </text>
+								<answer> Unified Medical Language System</answer>
+							</question>
+							<question>
+								<text>Names of Substances and synonyms to the Names of Substances (now known as _____) </text>
+								<answer>Supplementary Concept Substance Names</answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson62">
 						<title>2. Journals Translation Table</title>
 						<p>
-							If the search term(s) is not found in the MeSH Translation Table, the PubMed search algorithm then looks up the term in the 
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#JournalsTranslationTable" xmlns:xlink="http://www.w3.org/1999/xlink">Journals Translation Table</ext-link>
-							, which contains the full journal title, MEDLINE abbreviation, and International Standard Serial Number ( ISSN): 
+							If the search term(s) is not found in the MeSH Translation Table, the PubMed search algorithm then looks up the term in the <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#JournalsTranslationTable" xmlns:xlink="http://www.w3.org/1999/xlink">Journals Translation Table</ext-link>, which contains the full journal title, MEDLINE abbreviation, and International Standard Serial Number ( ISSN): 
 							<boxed-text content-type="website" position="anchor">
 								<title>Search term: New England Journal of Medicine</title>
 								<p>
@@ -531,9 +624,7 @@
 							</boxed-text>
 						</p>
 						<p>
-							If a journal name is also a MeSH term, PubMed will search the term as both a MeSH term and as a Text Word, but not as a 
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#JournalTitles" xmlns:xlink="http://www.w3.org/1999/xlink">journal name</ext-link>
-							, for a search that does not specify the journal field: 
+							If a journal name is also a MeSH term, PubMed will search the term as both a MeSH term and as a Text Word, but not as a <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#JournalTitles" xmlns:xlink="http://www.w3.org/1999/xlink">journal name</ext-link>, for a search that does not specify the journal field: 
 							<boxed-text content-type="website" position="anchor">
 								<title>Search term: Cell</title>
 								<p>
@@ -548,17 +639,24 @@
 							</boxed-text>
 						</p>
 						<quiz id="quiz62">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text>If a journal name is also a MeSH term, ____ will search the term</text>
+								<answer>PubMed</answer>
+							</question>
+							<question>
+								<text>PubMed will search the term as both a MeSH term and as a Text Word, but not as a _____</text>
+								<answer>journal name</answer>
+							</question>
+							<question>
+								<text>Journals Translation Table, which contains the full journal title, _____, and International Standard Serial Number (ISSN)</text>
+								<answer>MEDLINE abbreviation</answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson64">
 						<title>3. Author Index</title>
 						<p>
-							If the phrase is not found in MeSH or the Journals Translation Table and is a word with one or two letters after it, PubMed then checks the 
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#AuthorIndex" xmlns:xlink="http://www.w3.org/1999/xlink">Author Index</ext-link>
-							. The author's name should be entered in the form: Last Name (space) Initials, e.g., o'malley f, smith jp, or gomez-sanchez m.
+							If the phrase is not found in MeSH or the Journals Translation Table and is a word with one or two letters after it, PubMed then checks the <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#AuthorIndex" xmlns:xlink="http://www.w3.org/1999/xlink">Author Index</ext-link>. The author's name should be entered in the form: Last Name (space) Initials, e.g., o'malley f, smith jp, or gomez-sanchez m.
 						</p>
 						<p>
 							If only one initial is used, PubMed finds all names with that first initial, and if only an author's last name is entered, PubMed will search that name in All Fields. It will not default to the Author Index because an initial does not follow the last name: 
@@ -629,9 +727,18 @@
 							</table>
 						</table-wrap>
 						<quiz id="quiz64">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text>If the phrase is not found in MeSH or the Journals Translation Table and is a word with one or two letters after it, PubMed then checks the _____ .</text>
+								<answer>Author Index</answer>
+							</question>
+							<question>
+								<text>PubMed finds all names with that first initial, and if only an author's _____ is entered</text>
+								<answer>Last Name</answer>
+							</question>
+							<question>
+								<text>It will not default to the _____ because an initial does not follow the last name</text>
+								<answer>Author Index</answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson66">
@@ -640,28 +747,34 @@
 							It is possible to override PubMed's Automatic Term Mapping by using search rules, syntax, and qualifying terms with search field abbreviations.
 						</p>
 						<p>
-							The   Booleanoperators AND, OR, and NOT must be entered in uppercase letters and are processed left to right. Nesting of search terms is possible by enclosing concepts in parentheses. The terms inside the set of parentheses will be processed as a unit and then incorporated into the overall strategy. Terms may be qualified using PubMed's   
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#SearchFieldDescriptionsandTags" xmlns:xlink="http://www.w3.org/1999/xlink">Search Field Descriptions and Tags</ext-link>
-							. Each search term should be followed by the appropriate search field tag, which indicates which field will be searched:
+							The Booleanoperators AND, OR, and NOT must be entered in uppercase letters and are processed left to right. Nesting of search terms is possible by enclosing concepts in parentheses. The terms inside the set of parentheses will be processed as a unit and then incorporated into the overall strategy. Terms may be qualified using PubMed's <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#SearchFieldDescriptionsandTags" xmlns:xlink="http://www.w3.org/1999/xlink">Search Field Descriptions and Tags</ext-link>. Each search term should be followed by the appropriate search field tag, which indicates which field will be searched:
 						</p>
 						<p>
 							Search term: o'malley [au] will search only the author field. Specifying the field precludes the Automatic Term Mapping, which would result in the search o'malley[All Fields] if the field were not specified. Similarly, using the search term Cell [Journal] avoids using the MeSH Translation Table, which would interpret Cell as only a text word and MeSH term.
 						</p>
 						<quiz id="quiz66">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text>It is possible to override PubMed's _____ by using search rules,</text>
+								<answer>Automatic Term Mapping</answer>
+							</question>
+							<question>
+								<text> Terms may be qualified using PubMed's _____ and Tags.</text>
+								<answer>Search Field Descriptions</answer>
+							</question>
+							<question>
+								<text> Similarly, using the search term Cell [Journal] avoids using the MeSH _____,</text>
+								<answer>Translation Table</answer>
+							</question>
 						</quiz>
 					</lesson>
-					<lesson  id="lesson67">
+					<lesson id="lesson67">
 						<title>Using PubMed</title>
 						<sec id="bid.68">
 							<title>Searching</title>
 							<sec id="bid.69">
 								<title>Simple Searching</title>
 								<p>
-									A simple search can be conducted from the 
-									<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nih.gov/entrez/query.fcgi" xmlns:xlink="http://www.w3.org/1999/xlink">PubMed</ext-link>
+									A simple search can be conducted from the <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nih.gov/entrez/query.fcgi" xmlns:xlink="http://www.w3.org/1999/xlink">PubMed</ext-link>
 									homepage by entering terms in the query box and pressing Enter from the keyboard or clicking on the  Go button on the screen.
 								</p>
 								<p>
@@ -696,38 +809,31 @@
 							<sec id="bid.70">
 								<title>Complex Searching</title>
 								<p>
-									There are a variety of ways that PubMed can be searched in a more sophisticated manner than simply typing search terms into the search box and selecting  Go . It is possible to construct complex search strategies using Boolean operators and the various functions listed below, provided in the 
-									<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#FeaturesBar" xmlns:xlink="http://www.w3.org/1999/xlink">Features Bar</ext-link>
-									:  
+									There are a variety of ways that PubMed can be searched in a more sophisticated manner than simply typing search terms into the search box and selecting  Go . It is possible to construct complex search strategies using Boolean operators and the various functions listed below, provided in the  <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#FeaturesBar" xmlns:xlink="http://www.w3.org/1999/xlink">Features Bar</ext-link> :  
 									<list list-type="bullet">
 										<list-item id="bid.71">
 											<p>
-												<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Limits" xmlns:xlink="http://www.w3.org/1999/xlink">Limits</ext-link>
-												restricts search terms to a specific search field.
+												<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Limits" xmlns:xlink="http://www.w3.org/1999/xlink">Limits</ext-link> restricts search terms to a specific search field.
 											</p>
 										</list-item>
 										<list-item id="bid.72">
 											<p>
-												<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Index" xmlns:xlink="http://www.w3.org/1999/xlink">Preview/Index</ext-link>
-												allows users to view and select terms from search field indexes and to preview the number of search results before displaying citations.
+												<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Index" xmlns:xlink="http://www.w3.org/1999/xlink">Preview/Index</ext-link> allows users to view and select terms from search field indexes and to preview the number of search results before displaying citations.
 											</p>
 										</list-item>
 										<list-item id="bid.73">
 											<p>
-												<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#History" xmlns:xlink="http://www.w3.org/1999/xlink">History</ext-link>
-												holds previous search strategies and results. The results can be combined to make new searches.
+												<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#History" xmlns:xlink="http://www.w3.org/1999/xlink">History</ext-link> holds previous search strategies and results. The results can be combined to make new searches.
 											</p>
 										</list-item>
 										<list-item id="bid.74">
 											<p>
-												<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Clipboard" xmlns:xlink="http://www.w3.org/1999/xlink">Clipboard</ext-link>
-												allows users to save or view selected citations from one search or several searches.
+												<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Clipboard" xmlns:xlink="http://www.w3.org/1999/xlink">Clipboard</ext-link> allows users to save or view selected citations from one search or several searches.
 											</p>
 										</list-item>
 										<list-item id="bid.75">
 											<p>
-												<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Details" xmlns:xlink="http://www.w3.org/1999/xlink">Details</ext-link>
-												displays the search strategy as it was translated by PubMed, including error messages.
+												<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Details" xmlns:xlink="http://www.w3.org/1999/xlink">Details</ext-link> displays the search strategy as it was translated by PubMed, including error messages.
 											</p>
 										</list-item>
 									</list>
@@ -735,9 +841,18 @@
 							</sec>
 						</sec>
 						<quiz id="quiz67">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text>A simple search can be conducted from the Pubmed homepage by entering ____ in the query box</text>
+								<answer>terms</answer>
+							</question>
+							<question>
+								<text>If __ __ __ __ is entered in the query box, PubMed will go through the Automatic Term Mapping protocol</text>
+								<answer>more than one term</answer>
+							</question>
+							<question>
+								<text>If a phrase of more than two terms is not found in any translation table, then the last word of the phrase is _____</text>
+								<answer>dropped</answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson76">
@@ -753,8 +868,7 @@
 								</list-item>
 								<list-item id="bid.78">
 									<p>
-										<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#ClinicalQueries" xmlns:xlink="http://www.w3.org/1999/xlink">Clinical Queries</ext-link>
-										is a set of search filters developed for clinicians to retrieve clinical studies of the etiology, prognosis, diagnosis, prevention, or treatment of disorders. The Systematic Reviews feature retrieves systematic reviews and meta-analysis studies by topic.
+										<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#ClinicalQueries" xmlns:xlink="http://www.w3.org/1999/xlink">Clinical Queries</ext-link> is a set of search filters developed for clinicians to retrieve clinical studies of the etiology, prognosis, diagnosis, prevention, or treatment of disorders. The Systematic Reviews feature retrieves systematic reviews and meta-analysis studies by topic.
 									</p>
 								</list-item>
 								<list-item id="bid.79">
@@ -786,30 +900,38 @@
 							</list>
 						</p>
 						<quiz id="quiz76">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text>True or false? Clinical Queries is a set of search filters developed for clinicians to retrieve clinical studies of the etiology, prognosis, diagnosis, prevention, or treatment of disorders. _____</text>
+								<answer>true</answer>
+							</question>
+							<question>
+								<text>The Systematic Reviews feature retrieves systematic reviews and _____ studies by topic</text>
+								<answer>meta-analysis</answer>
+							</question>
+							<question>
+								<text>True or false? Single Citation Matcher is a fill-in-the-blank form that allows a user to find the PubMed ID (PMID) number for a single article or all citations in a given journal issue by entering partial journal citation information _____</text>
+								<answer>true</answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson83">
 						<title>Results</title>
 						<p>
-							PubMed retrieves and displays search results in the Summary format in the order the record was initially added to PubMed, with the most recent first. (Note that this date can differ widely from the publication date.) Citations can be viewed in several other 
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#DisplayingFormats" xmlns:xlink="http://www.w3.org/1999/xlink">formats</ext-link>
-							and can be 
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Sort" xmlns:xlink="http://www.w3.org/1999/xlink">sorted</ext-link>
-							, 
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Saving" xmlns:xlink="http://www.w3.org/1999/xlink">saved</ext-link>
-							, and 
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Printing" xmlns:xlink="http://www.w3.org/1999/xlink">printed</ext-link>
-							, or the full text can be 
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Ordering" xmlns:xlink="http://www.w3.org/1999/xlink">ordered</ext-link>
-							.
+							PubMed retrieves and displays search results in the Summary format in the order the record was initially added to PubMed, with the most recent first. (Note that this date can differ widely from the publication date.) Citations can be viewed in several other  <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#DisplayingFormats" xmlns:xlink="http://www.w3.org/1999/xlink">formats</ext-link> and can be  <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Sort" xmlns:xlink="http://www.w3.org/1999/xlink">sorted</ext-link> ,  <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Saving" xmlns:xlink="http://www.w3.org/1999/xlink">saved</ext-link> , and  <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Printing" xmlns:xlink="http://www.w3.org/1999/xlink">printed</ext-link> , or the full text can be  <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#Ordering" xmlns:xlink="http://www.w3.org/1999/xlink">ordered</ext-link>.
 						</p>
 						<quiz id="quiz83">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson84">
@@ -818,18 +940,13 @@
 							A variety of links can be found on PubMed citations including:
 						</p>
 						<p>
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#RelatedPubMedArticlesLink" xmlns:xlink="http://www.w3.org/1999/xlink">Related Articles</ext-link>
-							, which retrieves a precalculated set of PubMed citations that are closely related to the selected article. PubMed creates this set by comparing words from the title, abstract, and MeSH terms using a word-weighted 
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/computation.html" xmlns:xlink="http://www.w3.org/1999/xlink">algorithm</ext-link>
-							.
+							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#RelatedPubMedArticlesLink" xmlns:xlink="http://www.w3.org/1999/xlink">Related Articles</ext-link>, which retrieves a precalculated set of PubMed citations that are closely related to the selected article. PubMed creates this set by comparing words from the title, abstract, and MeSH terms using a word-weighted <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/computation.html" xmlns:xlink="http://www.w3.org/1999/xlink">algorithm</ext-link>.
 						</p>
 						<p>
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/linkout/" xmlns:xlink="http://www.w3.org/1999/xlink">LinkOut</ext-link>
-							, which provides links to publishers, aggregators, libraries, biological databases, sequencing centers, and other Web sites. These link to the provider's site to obtain the full text of articles or related resources, e.g., consumer health information or molecular biology database records. There may be a charge to access the text or information, depending on the policy of the provider.
+							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/linkout/" xmlns:xlink="http://www.w3.org/1999/xlink">LinkOut</ext-link>, which provides links to publishers, aggregators, libraries, biological databases, sequencing centers, and other Web sites. These link to the provider's site to obtain the full text of articles or related resources, e.g., consumer health information or molecular biology database records. There may be a charge to access the text or information, depending on the policy of the provider.
 						</p>
 						<p>
-							<ext-link ext-link-type="uri" xlink:href="http://web.ncbi.nlm.nih.gov/entrez/query.fcgi?db=Books" xmlns:xlink="http://www.w3.org/1999/xlink">Books</ext-link>
-							, which provides links to textbooks so that users can explore unfamiliar concepts found in search results. In collaboration with book publishers, NCBI is adapting textbooks for the Web and linking them to PubMed. The Books link displays a facsimile of the abstract, in which some words or phrases show up as hypertext links to the corresponding terms in the books available at NCBI. Selecting a hyperlinked word or phrase takes you to a list of book entries in which the phrase is found.
+							<ext-link ext-link-type="uri" xlink:href="http://web.ncbi.nlm.nih.gov/entrez/query.fcgi?db=Books" xmlns:xlink="http://www.w3.org/1999/xlink">Books</ext-link>, which provides links to textbooks so that users can explore unfamiliar concepts found in search results. In collaboration with book publishers, NCBI is adapting textbooks for the Web and linking them to PubMed. The Books link displays a facsimile of the abstract, in which some words or phrases show up as hypertext links to the corresponding terms in the books available at NCBI. Selecting a hyperlinked word or phrase takes you to a list of book entries in which the phrase is found.
 						</p>
 						<p>
 							NCBI databases, as well as other resources, may be available from the  Links pull-down menu to the right of each citation and from the  Display pull-down menu. PubMed will return only the first 500 items when using the  Display pull-down menu, from which the following links are available:
@@ -904,56 +1021,59 @@
 							</list>
 						</p>
 						<quiz id="quiz84">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text> A variety of links can be found on PubMed citations including: _____, which retrieves a precalculated set of PubMed citations that are closely related to the selected article.</text>
+								<answer>Related Articles</answer>
+							</question>
+							<question>
+								<text>Structure three-dimensional structures from the _____ ( MMDB) that were determined by X-ray crystallography and NMRspectroscopy.</text>
+								<answer>Molecular Modeling Database</answer>
+							</question>
+							<question>
+								<text>True or false? SNP dbSNP is a database of single nucleotide polymorphisms.</text>
+								<answer>false</answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson92">
 						<title>How to Create Hyperlinks to PubMed</title>
 						<p>
-							The Entrez system provides three distinct ways to create Web URLlinks that search and retrieve items from PubMed and the molecular biology databases: (1) by using the 
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/eutils_help.html" xmlns:xlink="http://www.w3.org/1999/xlink">Entrez Programming Utilities</ext-link>
-							; (2) via the 
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#SavingaSearchStrategy" xmlns:xlink="http://www.w3.org/1999/xlink">URL button</ext-link>
-							on the  Details screen; and (3) by constructing URLs 
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/linking.html" xmlns:xlink="http://www.w3.org/1999/xlink">by hand</ext-link>
-							.
+							The Entrez system provides three distinct ways to create Web URLlinks that search and retrieve items from PubMed and the molecular biology databases: (1) by using the <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/eutils_help.html" xmlns:xlink="http://www.w3.org/1999/xlink">Entrez Programming Utilities</ext-link>; (2) via the <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#SavingaSearchStrategy" xmlns:xlink="http://www.w3.org/1999/xlink">URL button</ext-link>on the  Details screen; and (3) by constructing URLs <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/linking.html" xmlns:xlink="http://www.w3.org/1999/xlink">by hand</ext-link>.
 						</p>
 						<p>
 							The Entrez Programming Utilities can be used to create URL links directly to all Entrez data, including PubMed citations and their link information, without using the front-end Entrez query engine. These Utilities provide a fast, efficient way to search and download citation data.
 						</p>
 						<quiz id="quiz92">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text>The _____ system provides three distinct ways to create Web URLlinks</text>
+								<answer>Entrez</answer>
+							</question>
+							<question>
+								<text>The _____ can be used to create URL links directly to all Entrez data, including PubMed citations and their link information, without using the front-end Entrez query engine.</text>
+								<answer>Entrez Programming Utilities</answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson93">
 						<title>Customer Support</title>
 						<p>
-							If you need more assistance, please contact our 
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#ForMoreAssistance" xmlns:xlink="http://www.w3.org/1999/xlink">Customer Support</ext-link>
-							services by selecting the  Write to the Help Desk link displayed on all PubMed pages or by sending an email t  
-							<email>custserv@nlm.nih.gov</email>. You may also contact the NLM Customer Service Desk at 1-888-346-3656 [(1-888)-FINDNLM]. Hours of operation are Monday through Friday from 8:30 a.m. to 8:45 p.m. and Saturday from 9:00 a.m. to 5:00 p.m. (Eastern Time).
+							If you need more assistance, please contact our <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/help/pmhelp.html#ForMoreAssistance" xmlns:xlink="http://www.w3.org/1999/xlink">Customer Support</ext-link>services by selecting the "Write to the Help Desk" link displayed on all PubMed pages or by sending an email <email>custserv@nlm.nih.gov</email>. You may also contact the NLM Customer Service Desk at 1-888-346-3656 [(1-888)-FINDNLM]. Hours of operation are Monday through Friday from 8:30 a.m. to 8:45 p.m. and Saturday from 9:00 a.m. to 5:00 p.m. (Eastern Time).
 						</p>
 						<p>
-							Additional information is also available in the 
-							<ext-link ext-link-type="uri" xlink:href="http://www.nlm.nih.gov/bsd/pubmed_tutorial/m1001.html" xmlns:xlink="http://www.w3.org/1999/xlink">PubMed Tutorial</ext-link>
-							, 
-							<ext-link ext-link-type="uri" xlink:href="http://www.nlm.nih.gov/pubs/web_based.html" xmlns:xlink="http://www.w3.org/1999/xlink">PubMed Training Manuals</ext-link>
-							, and 
-							<ext-link ext-link-type="uri" xlink:href="http://www.nlm.nih.gov/pubs/techbull/tb.html" xmlns:xlink="http://www.w3.org/1999/xlink">NLM Technical Bulletin</ext-link>
-							.
+							Additional information is also available in the <ext-link ext-link-type="uri" xlink:href="http://www.nlm.nih.gov/bsd/pubmed_tutorial/m1001.html" xmlns:xlink="http://www.w3.org/1999/xlink">PubMed Tutorial</ext-link>, <ext-link ext-link-type="uri" xlink:href="http://www.nlm.nih.gov/pubs/web_based.html" xmlns:xlink="http://www.w3.org/1999/xlink">PubMed Training Manuals</ext-link>, and <ext-link ext-link-type="uri" xlink:href="http://www.nlm.nih.gov/pubs/techbull/tb.html" xmlns:xlink="http://www.w3.org/1999/xlink">NLM Technical Bulletin</ext-link>.
 						</p>
 						<p>
-							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/faq.html" xmlns:xlink="http://www.w3.org/1999/xlink">FAQs</ext-link>
-							are available on all PubMed pages.
+							<ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query/static/faq.html" xmlns:xlink="http://www.w3.org/1999/xlink">FAQs</ext-link> are available on all PubMed pages.
 						</p>
 						<quiz id="quiz93">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text>Contact Customer service by clicking the "_____" link</text>
+								<answer></answer>
+							</question>
+							<question>
+								<text>True or false? There is a FAQ page? ____</text>
+								<answer>True</answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -1020,9 +1140,18 @@
 							All the above databases and tools are discussed in more detail in other parts of this Chapter, including tips on how to make the best use of them.
 						</p>
 						<quiz id="quiz95">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text>Two searches can be performed from this page, an _____ search or a Structure Summary search.</text>
+								<answer>Entrez Structure</answer>
+							</question>
+							<question>
+								<text>The difference is that the Entrez Structure can take ____ ____ for the query.</text>
+								<answer>any text</answer>
+							</question>
+							<question>
+								<text>Only a PDB code or MMDB ID number can be used for the _____ search</text>
+								<answer>Structure Summary</answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson97">
@@ -1132,9 +1261,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz97">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text>MMDB is based on the structures within _____ (PDB) and can be queried using the Entrez search engine,</text>
+								<answer>Protein Data Bank</answer>
+							</question>
+							<question>
+								<text>Often used in conjunction with Cn3D is the _____ (VAST)</text>
+								<answer>Vector Alignment Search Tool</answer>
+							</question>
+							<question>
+								<text>True or false? The output of the precomputed VAST searches is a list of structure records, each representing one of the Non-Redundant PDB chain sets (nr-PDB), which can also be downloaded.</text>
+								<answer>True</answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson110">
@@ -1192,9 +1330,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz110">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text>_____ (CDs), is based solely on conserved sequence motifs.</text>
+								<answer>Conserved Domains</answer>
+							</question>
+							<question>
+								<text>_____ is based solely on similar, compact substructures</text>
+								<answer>3D Domains</answer>
+							</question>
+							<question>
+								<text>The term _____ refers in general to a distinct functional and/or structural unit of a protein</text>
+								<answer>domain</answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson118">
@@ -1393,9 +1540,18 @@
 							</sec>
 						</sec>
 						<quiz id="quiz118">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson150">
@@ -1548,9 +1704,18 @@
 							</sec>
 						</sec>
 						<quiz id="quiz150">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson178">
@@ -1692,9 +1857,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz178">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson202">
@@ -1775,9 +1949,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz202">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson213">
@@ -1828,9 +2011,18 @@
 							</sec>
 						</sec>
 						<quiz id="quiz213">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson222">
@@ -1854,9 +2046,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz222">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson226">
@@ -1900,9 +2101,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz226">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson231">
@@ -1925,9 +2135,18 @@
 							</list-item>
 						</list>
 						<quiz id="quiz231">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -2011,9 +2230,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1144">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1145">
@@ -2306,9 +2534,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1145">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1155">
@@ -2685,9 +2922,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1155">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1172">
@@ -3047,9 +3293,18 @@
 							</sec>
 						</sec>
 						<quiz id="quiz1172">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1196">
@@ -3097,9 +3352,18 @@
 							</sec>
 						</sec>
 						<quiz id="quiz1196">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1204">
@@ -3316,9 +3580,18 @@
 							</list>
 						</sec>
 						<quiz id="quiz1204">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson2001">
@@ -3354,9 +3627,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz2001">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson2007">
@@ -3393,9 +3675,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz2007">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson2010">
@@ -3419,9 +3710,18 @@
 							Each SNP position in the protein sequence is used to determine its corresponding amino acid and amino acid position in the 3D structure from the BLAST result. These data are stored in the SNP3D table.
 						</p>
 						<quiz id="quiz2010">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -3466,9 +3766,18 @@
 							6). However, more detailed descriptions, tools, and news releases are available on the <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/geo" xmlns:xlink="http://www.w3.org/1999/xlink">GEO Web site</ext-link>.
 						</p>
 						<quiz id="quiz338">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson339">
@@ -3690,9 +3999,18 @@
 							Once a platform, sample, or series is defined by a submitter, an Accession number (i.e., a unique, stable identifier) is assigned (Figure 2). Whether a GEO Accession number refers to a platform, sample, or series can be understood by the Accession number prefix. Platforms have the prefix GPL, samples have the prefix GSM, and series have the prefix GSE.
 						</p>
 						<quiz id="quiz339">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson343">
@@ -3777,9 +4095,18 @@
 							Given a valid GEO Accession number, the Accession Display tool available on the GEO Web site provides a number of options for the retrieval and display of repository contents (see Box 1).
 						</p>
 						<quiz id="quiz343">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson353">
@@ -3821,9 +4148,18 @@
 							A quarterly, cumulative graph of the number of individual molecular abundance measurements in public submissions made through the first quarter of 2002 is shown in Figure 4.
 						</p>
 						<quiz id="quiz353">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson356">
@@ -3998,9 +4334,18 @@
 							Extensive indexing and linking on the data in GEO are performed periodically and can be queried through Entrez ProbeSet (Box 3). Many users of Entrez will recognize this interface as similar to that of other popular NCBI resources such as PubMedand GenBank. As with any Entrez database, a Booleanphrase may be entered and restricted to any number of supported attribute fields (Table 2). Matches are linked to the full GEO entry as well as to other Entrez databases, currently Nucleotide, Taxonomy, and PubMed, as well as related Entrez ProbeSet entries. (See Chapter 15for more details.) Entrez ProbeSet is accessible through the <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=geo" xmlns:xlink="http://www.w3.org/1999/xlink">Entrez Web site</ext-link>as one of the drop-down menu selections.
 						</p>
 						<quiz id="quiz356">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson359">
@@ -4056,9 +4401,18 @@
 							</list>
 						</p>
 						<quiz id="quiz359">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson365">
@@ -4079,9 +4433,18 @@
 							The GEO resource is under constant development and aims to improve its indexing, linking, searching, and display capabilities to allow vigorous data mining. Because the data sets stored within GEO are from heterogeneous techniques and sources, they are not necessarily comparable. For this reason, we have defined a ProbeSet to be a collection of GEO samples that contains comparable data. The selection of GEO samples into ProbeSets is necessary before integrating data in the GEO repository into other NCBI resources (see Chapter 15, Chapter 16, and Chapter 20), as well as for developing useful display tools for these data (Figure 5).
 						</p>
 						<quiz id="quiz365">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson367">
@@ -4308,9 +4671,18 @@
 							</list-item>
 						</list>
 						<quiz id="quiz367">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson394">
@@ -4319,9 +4691,18 @@
 							We gratefully acknowledge the work of Vladimir Soussov, as well as the entire NCBI Entrez team, especially Grisha Starchenko, Vladimir Sirotinin, Alexey Iskhakov, Anton Golikov, and Pramod Paranthaman. We thank Jim Ostell for guidance, Lou Staudt for discussions during our initial planning for GEO, and the extreme patience shown by Brian Oliver, Wolfgang Huber, and Gavin Sherlock when making the first data submissions. Admirable patience was also exhibited by Al Zhong during the development of the direct deposit validator. Special thanks go to Manish Inala and Wataru Fujibuchi for their continuing work on future features and tools.
 						</p>
 						<quiz id="quiz394">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson395">
@@ -4405,9 +4786,18 @@
 						<p>Table 3shows a collection of data sets from various sources. Ron Edgar, Michael Domrachev, Tugba Suzek, Tanya Barrett, and Alex E. Lash contributed to this NCBI resource.
 						</p>
 						<quiz id="quiz395">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -4477,9 +4867,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz424">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson427">
@@ -4663,9 +5062,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz427">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson437">
@@ -4734,9 +5142,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz437">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson442">
@@ -4760,9 +5177,18 @@
 							The Table of Contents for a book is created from actual elements within the book content, rather than from the Table of Contents given in the book frontmatter of the hard copy. This ensures that the Table of Contents represents the content accurately as it is organized on BookShelf.
 						</p>
 						<quiz id="quiz442">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson444">
@@ -4784,9 +5210,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz444">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson446">
@@ -4878,9 +5313,18 @@
 							</list-item>
 						</list>
 						<quiz id="quiz446">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -5000,9 +5444,18 @@
 							PMC article citations may also be retrieved by doing a search in PMC or through a PubMed search. (In PubMed, use the  subsets limit if you want to find only articles that are available in PMC.)
 						</p>
 						<quiz id="quiz458">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson466">
@@ -5023,9 +5476,18 @@
 							Refer to <ext-link ext-link-type="uri" xlink:href="http://www.pubmedcentral.gov/about/pubinfo.html" xmlns:xlink="http://www.w3.org/1999/xlink">Information for Publishers</ext-link>to learn more about participating in PMC.
 						</p>
 						<quiz id="quiz466">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson467">
@@ -5034,9 +5496,18 @@
 							From Abstract and Full Text pages in PMC are links to related articles in PubMed and to related records in other Entrez databases, such as Nucleotides or Books. These are identical to the links between databases that you can find in any Entrez record.
 						</p>
 						<quiz id="quiz467">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson468">
@@ -5048,9 +5519,18 @@
 							The content is displayed dynamically on the PMC site by journal, volume, and issue (if applicable). XML, Web graphics, PDFs, and supplemental data are stored in a Sybasedatabase. When a reader requests an article, the XML is retrieved from the database, and it is converted to HTMLusing XSLTstylesheets. The look of the HTML pages is controlled further by using Cascading Style Sheets (CSS), which allow manipulation of colors, fonts, and typefaces.
 						</p>
 						<quiz id="quiz468">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson469">
@@ -5222,9 +5702,18 @@
 							</sec>
 						</sec>
 						<quiz id="quiz469">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson482">
@@ -5281,9 +5770,18 @@
 							The database has been designed to allow multiple versions of articles. In addition to article information, the database also stores information on content suppliers and publishers and journal-specific information.
 						</p>
 						<quiz id="quiz482">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson488">
@@ -5317,9 +5815,18 @@
 							For the most flexibility in displaying characters across platforms, PMC uses UTF-8 encoding whenever possible. Because not all browsers support the same subset of UTF-8 characters and some characters cannot be represented in UTF-8, PMC displays characters as a combination of GIFs and UTF-8 characters, depending on the Browser/OS combination and the character to be displayed.
 						</p>
 						<quiz id="quiz488">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson490">
@@ -5373,9 +5880,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz490">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson495">
@@ -5384,9 +5900,18 @@
 							Please refer to the <ext-link ext-link-type="uri" xlink:href="http://www.pubmedcentral.gov/about/faq.html" xmlns:xlink="http://www.w3.org/1999/xlink">PMC site</ext-link>for answers to frequently asked questions.
 						</p>
 						<quiz id="quiz495">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -5580,9 +6105,18 @@
 							</sec>
 						</sec>
 						<quiz id="quiz500">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson515">
@@ -5609,9 +6143,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz515">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson519">
@@ -5629,9 +6172,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz519">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson522">
@@ -5645,9 +6197,18 @@
 							Turid Knutsen, Hesed Padilla-Nash, Meena Augustus, Evelin Schrck, Ilan R. Kirsch, Susan Greenhut, James Kriebel, and Thomas Ried
 						</p>
 						<quiz id="quiz522">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -5733,9 +6294,18 @@
 							The staff of the MHC database are currently accepting online submissions for the Primer/Probe/Mix component of dbMHC. Submissions can include typing data from any of the following: Sequence Specific Oligonucleotides (SSOs), Sequence Specific Primers (SSPs), SSO and/or SSP mixes, HLA typing kits, and Sequencing Based Typing (SBT). dbMHC allows submitters to edit their submissions online at any time.
 						</p>
 						<quiz id="quiz1783">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1784">
@@ -6364,9 +6934,18 @@
 							</sec>
 						</sec>
 						<quiz id="quiz1784">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1876">
@@ -9252,9 +9831,18 @@
 							</sec>
 						</sec>
 						<quiz id="quiz1876">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1889">
@@ -9374,9 +9962,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1889">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -9423,9 +10020,18 @@
 							Sequin's versatility is based on its design: (<italic>a</italic>) Sequin holds the sequence(s) being manipulated in memory, in a structured format that allows a rapid response to the commands initiated by the person who is using Sequin; and (<italic>b</italic>) it makes use of many standard functions found in the NCBI Toolkitfor both basic data manipulations and as components of Sequin-specific tasks. In particular, Sequin makes heavy use of the Toolkit's object manager, a behind the scenes support system that keeps track of Sequin's internal data structures and the relationships of each piece of information to others. This allows many of Sequin's functions to operate independently of each other, making data manipulation much faster and making the program easier to maintain.
 						</p>
 						<quiz id="quiz539">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson540">
@@ -9494,9 +10100,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz540">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson546">
@@ -9523,9 +10138,18 @@
 							Features are usually packaged on the sequence indicated by their location. For example, the gene feature is packaged on the nucleotide Bioseq, and a protein feature is packaged on the protein Bioseq. Proteins are real sequences, and features such as mature peptides are annotated on the proteins in protein coordinates (although they can be mapped to nucleotide coordinates for display in a GenBank flatfile). A CDS (coding region) feature location points to the nucleotide, but the feature product points to the protein. For historical reasons, the CDS is usually packaged on the nuc-prot set instead of on the nucleotide sequence.
 						</p>
 						<quiz id="quiz546">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson548">
@@ -9706,9 +10330,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz548">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson553">
@@ -9783,9 +10416,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz553">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson561">
@@ -9827,9 +10469,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz561">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1770">
@@ -9838,9 +10489,18 @@
 							Sequin has an important dual role as a primary submission tool and as a full-featured sequence record editor. It is designed to be modular on several levels, which simplifies the design and implementation of its components. Sequin sits at the top of the NCBI software Toolkit, relying on many of the underlying components, and thus acts as a quality assurance that these functions are working properly.
 						</p>
 						<quiz id="quiz1770">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -9993,9 +10653,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1658">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1659">
@@ -10204,9 +10873,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1659">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson585">
@@ -10248,9 +10926,18 @@
 							</fig>
 						</p>
 						<quiz id="quiz585">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -10338,9 +11025,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1441">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1447">
@@ -10349,9 +11045,18 @@
 							The main inputs for the genome assembly and annotation process are genomic sequences, transcript sequences, and Sequence Tagged Site (STS) maps.
 						</p>
 						<quiz id="quiz1447">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1448">
@@ -10634,9 +11339,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1448">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1458">
@@ -10709,9 +11423,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1458">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1467">
@@ -10751,9 +11474,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1467">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1473">
@@ -10840,9 +11572,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1473">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1486">
@@ -11037,9 +11778,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1486">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1514">
@@ -11066,9 +11816,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1514">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1519">
@@ -11095,9 +11854,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1519">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1523">
@@ -11134,9 +11902,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1523">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1528">
@@ -11145,9 +11922,18 @@
 							To ensure that a consistent view of the annotated genome assembly is presented, the release of databases and FTP files is coordinated. When everything is ready for release, the Map Viewer <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/mapview/map_search.cgi" xmlns:xlink="http://www.w3.org/1999/xlink">display</ext-link>is switched to the new build, the BLAST <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/genome/seq/page.cgi?F=HsBlast.html&amp;org=Hs" xmlns:xlink="http://www.w3.org/1999/xlink">databases</ext-link>are swapped, and the files on the <ext-link ext-link-type="ftp" xlink:href="ftp.ncbi.nlm.nih.gov/genomes/H_sapiens" xmlns:xlink="http://www.w3.org/1999/xlink">FTP</ext-link>site are replaced. Several associated databases are then refreshed, including LocusLink, dbSNP, and UniSTS, so that the data they contain reflect the new build. Finally, the Web pages that provide <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/genome/guide/human/HsStats.html" xmlns:xlink="http://www.w3.org/1999/xlink">statistics</ext-link>for the build and record <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/genome/guide/human/release_notes.html" xmlns:xlink="http://www.w3.org/1999/xlink">changes</ext-link>to the genome assembly and annotation process are updated.
 						</p>
 						<quiz id="quiz1528">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1529">
@@ -11291,9 +12077,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1529">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1534">
@@ -11302,9 +12097,18 @@
 							Richa Agarwala, Jonathan Baker, Hsiu-Chuan Chen, Vyacheslav Chetvernin, Deanna Church, Cliff Clausen, Dmitry Dernovoy, Olga Ermolaeva, Wratko Hlavina, Wonhee Jang, Philip Johnson, Jonathan Kans, Paul Kitts, Alex Lash, David Lipman, Donna Maglott, Jim Ostell, Keith Oxenrider, Kim Pruitt, Sergei Resenchuk, Victor Sapojnikov, Greg Schuler, Steve Sherry, Andrei Shkeda, Alexandre Souvorov, Tugba Suzek, Tatiana Tatusova, Lukas Wagner, and Sarah Wheelan
 						</p>
 						<quiz id="quiz1534">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -11400,9 +12204,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz589">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson597">
@@ -11419,9 +12232,18 @@
 							1) has links to the protein sequence, which in turn has links to neighbors (related sequences). There are lots of records for this protein and its relatives in many organisms, but among them are the proteins from yeast and <italic>E. coli</italic>that prompted the study. From those records there are links back to the PubMed abstracts of articles that reported these proteins. PubMed also has a neighbor function,  Related articles , that represents other articles that contain words and phrases in common with the current record. Because phrases such as <italic>Escherichia coli</italic>, mismatch repair, and MutS all occur in the current article, many of the articles most related to this one describe studies on the <italic>E. coli</italic>mismatch repair system. These articles may not be directly linked to any sequence themselves and may not contain the words human or colon cancer but are relevant to HNPCC nonetheless, because of what the bacterial system may tell us.
 						</p>
 						<quiz id="quiz597">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson598">
@@ -11483,9 +12305,18 @@
 							More nodes are planned for addition in the near future. Each one of these nodes is richly connected to others. Each offers unique information and unique new relationships among its members. The combination of new links and new relationships increases the chances for discovery. The addition of each new node creates different paths through the data that may lead to new connections, without more work on the old nodes.
 						</p>
 						<quiz id="quiz598">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson605">
@@ -11521,9 +12352,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz605">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -11564,9 +12404,18 @@
 							This chapter will first describe the BLAST architecturehow it works at the NCBI siteand then go on to describe the various BLAST outputs. The best known of these outputs is the default display from BLAST Web pages, the so-called traditional report. As well as obtaining BLAST results in the traditional report, results can also be delivered in structured output, such as a hit table (see below), XML, or ASN.1. The optimal choice of output format depends upon the application. The final part of the chapter discusses stand-alone BLAST and describes possibilities for customization. There are many interfaces to BLAST that are often not exploited by users but can lead to more efficient and robust applications.
 						</p>
 						<quiz id="quiz611">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson612">
@@ -11599,9 +12448,18 @@
 							The BLAST Formatter, which sits on the BLAST server, can use the information in the SeqAlign to retrieve the similar sequences found and display them in a variety of ways. Thus, once a query has been completed, the results can be reformatted without having to re-execute the search. This is possible because of the <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/BLAST/blast_overview.html#blastq" xmlns:xlink="http://www.w3.org/1999/xlink">QBLAST</ext-link>system.
 						</p>
 						<quiz id="quiz612">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson614">
@@ -11616,9 +12474,18 @@
 							The E-value gives an indication of the statistical significance of a given pairwise alignment and reflects the size of the database and the scoring system used. The lower the E-value, the more significant the hit. A sequence alignment that has an E-value of 0.05 means that this similarity has a 5 in 100 (1 in 20) chance of occurring by chance alone. Although a statistician might consider this to be significant, it still may not represent a biologically meaningful result, and analysis of the alignments (see below) is required to determine biological significance.
 						</p>
 						<quiz id="quiz614">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson615">
@@ -11684,9 +12551,18 @@
 							By default, a maximum of 500 sequence matches are displayed, which can be changed on the advanced BLAST page with the  Alignments option. Many components of the BLAST results display via the Internet and are hyperlinked to the same information at different places in the page, to additional information including help documentation, and to the Entrez sequence records of matched sequences. These records provide more information about the sequence, including links to relevant research abstracts in PubMed.
 						</p>
 						<quiz id="quiz615">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson620">
@@ -11713,9 +12589,18 @@
 							For these purposes, the hit table output is more useful than the traditional report; it contains only the information required in a more formal structure. The hit table output contains no sequences or definition lines, but for each sequence matched, it lists the sequence identifier, the start and stop points for stretches of sequence similarity (offset by one residue), the percent identity of the match, and the E-value.
 						</p>
 						<quiz id="quiz620">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson622">
@@ -11766,9 +12651,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz622">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson627">
@@ -11798,9 +12692,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz627">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson631">
@@ -11922,8 +12825,7 @@
 								<fn id="mul14" symbol="a">
 									<p>
 										gnl allows databases not included in this list to use the same identifying syntax. This is used for sequences in the 
-										<bold>trace databases</bold>
-										, e.g., gnl|ti|53185177. The combination of the second and third fields should be unique.
+										<bold>trace databases</bold>, e.g., gnl|ti|53185177. The combination of the second and third fields should be unique.
 									</p>
 								</fn>
 							</table-wrap-foot>
@@ -11944,9 +12846,18 @@
 							The reason for adding the gi identifier is to provide a uniform, stable naming convention. If a nucleotide or protein sequence changes (for example, if it is edited by the original submitter of the sequence), a new gi identifier is assigned, but the Accession number of the record remains unchanged. Thus, the gi identifier provides a mechanism for identifying the exact sequence that was used or retrieved in a given search. This is also useful when creating crosslinks between different Entrez databases (Chapter 15).
 						</p>
 						<quiz id="quiz631">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson633">
@@ -11998,9 +12909,18 @@
 							Note also that Main is called, rather than main, and a call to GetArgs is used to get the command-line arguments. db2fasta.c is contained in the tar archive ftp://ftp.ncbi.nih.gov/blast/demo/blast_demo.tar.gz.
 						</p>
 						<quiz id="quiz633">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson638">
@@ -12179,9 +13099,18 @@
 							The BLASTOptionBlk structure contains a large number of members. The most useful ones and a brief description for each are listed in Table 2.
 						</p>
 						<quiz id="quiz638">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson643">
@@ -12222,9 +13151,18 @@
 							All of this is done by high-level function calls, and it is not necessary to write low-level function calls to parse the ASN.1.
 						</p>
 						<quiz id="quiz643">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -12465,9 +13403,18 @@
 							Although ESTs are a useful way to identify clones of interest and provide guidance in identifying gene structure, a full-insert sequence of cDNA clones is preferable for both purposes. High-throughput full-insert cDNA sequencing projects have been the source of over 80,000 sequence submissions accessioned to date (August 2002). The full-insert cDNA sequence can allow identification of the translation product of the sequenced transcript, as well as potentially providing evidence for gene structure. Moreover, for the investigator wanting to use the clone as a reagent, having the accurate and complete sequence of the clone's insert at hand makes complete resequencing unnecessary, if the full-insert cDNA sequencing project makes clones available. Verifying that the full-insert sequence corresponds to either the complete transcript of interest or to its complete, uncorrupted coding sequence is possible without committing laboratory resources and time to a clone that produced an EST. cDNA libraries do not generally include the entire transcript sequence; therefore, many full-insert sequences do not contain the entire transcription unit. Large transcripts (&gt;6 kb) are particularly difficult to obtain.
 						</p>
 						<quiz id="quiz858">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson860">
@@ -12500,9 +13447,18 @@
 							</fig>
 						</p>
 						<quiz id="quiz860">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson862">
@@ -12523,9 +13479,18 @@
 							The component sequences of the cluster are listed, with a brief description of each one and a link to its UniGene Sequence page. The Sequence page provides more detailed information about the individual sequence, and in the case of ESTs, includes a link to its corresponding UniGene Library page. On the Cluster page, the EST clones that are considered by the Mammalian Gene Collection (MGC) project to be putatively full length are listed at the top, whereas others follow in order of their reported insert length. At the bottom of the UniGene Cluster page is an option for the user to download the sequences of the cluster in FASTA format.
 						</p>
 						<quiz id="quiz862">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson863">
@@ -12552,9 +13517,18 @@
 							To further refine the view, the sequence alignments in the table can be sorted by: (<italic>a</italic>) percent identity; (<italic>b</italic>) alignment length; (<italic>c</italic>) beginning coordinate of the alignment; (<italic>d</italic>) ending coordinate of the alignment; (<italic>e</italic>) UniGene cluster ID; or (<italic>f</italic>) GenBank Accession number. It is also possible to omit various rows of the table by restricting the display to a chosen organism or by choosing a cut-off value for the percent identity of the alignment and the length of the alignment.
 						</p>
 						<quiz id="quiz863">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson865">
@@ -12569,9 +13543,18 @@
 							DDD uses the Fisher Exact test to restrict the output to statistically significant differences (<italic>P</italic>0.05). The analysis is also restricted to deeply sequenced libraries; only those with over 1000 sequences in UniGene are included in DDD. These requirements place limitations on the capabilities of the analysis. Unless there are a large number of sequences in each pool, the frequencies of genes are generally not found to be statistically significant. Furthermore, the wide variety of tissue types, cell types, histology, and methods of generating the libraries can make it difficult to attribute significant differences to any one aspect of the libraries. These issues underscore the need for more libraries to be made public and the need for the comparisons to be made using proper controls. Libaries generated by the Cancer Genome Anatomy Project (<ext-link ext-link-type="uri" xlink:href="http://cgap.nci.nih.gov/" xmlns:xlink="http://www.w3.org/1999/xlink">CGAP</ext-link>) will become especially valuable to this end. This project has resulted in a plethora of human libraries made from a variety of tissue types and generated using a variety of methods.
 						</p>
 						<quiz id="quiz865">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson866">
@@ -12601,9 +13584,18 @@
 							</fig>
 						</p>
 						<quiz id="quiz866">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -12639,9 +13631,18 @@
 							35). The COGs reflect one-to-many and many-to-many orthologous relationships as well as simple one-to-one relationships (hence, orthologous groups of proteins). In addition to the classification itself, the COGs Web site includes the COGnitor program, which assigns proteins from newly sequenced genomes to COGs that already exist and to several functionalities that allow the user to select and analyze various subsets of COGs.
 						</p>
 						<quiz id="quiz886">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson887">
@@ -12737,9 +13738,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz887">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson897">
@@ -12748,9 +13758,18 @@
 							A phyletic pattern is the pattern of species that are represented or not represented in a given COG; alternatively, phyletic patterns can be described in terms of the sets of COGs that are represented in a given range of species. The COGs show a broad diversity of phyletic patterns; only a small fraction are universal COGs, i.e., they are represented in all sequenced genomes, whereas COGs present in only three or four species are most abundant. This patchy distribution of phyletic patterns probably reflects the major role of horizontal gene transfer and lineage-specific gene loss in the evolution of prokaryotes, as well as the rapid evolution of certain genes in specific lineages, which may be linked to functional changes. Phyletic patterns are informative not only as indicators of probable evolutionary scenarios but also functionally; most often, different steps of the same pathway are associated with proteins that have the same phyletic pattern, whereas on some occasions, complementary patterns indicate that distinct (sometimes unrelated) proteins are responsible for the same function in different sets of species. The COG system includes a simple phyletic pattern search tool that allows the selection of COGs according to any given pattern of species. This tool effectively provides the functionality of differential genome display (for example, allowing the selection of all COGs that are present in one, but not the other, of a pair of genomes of interest) and can be helpful for delineating sets of candidate proteins for a particular range of functional features, e.g., virulence or hyperthermophily.
 						</p>
 						<quiz id="quiz897">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson898">
@@ -12765,9 +13784,18 @@
 							The COG data set and the COGnitor program also are available by anonymous ftp at <ext-link ext-link-type="ftp" xlink:href="ftp://ftp.ncbi.nih.gov/pub/COG" xmlns:xlink="http://www.w3.org/1999/xlink">ftp://ftp.ncbi.nih.gov/pub/COG</ext-link>.
 						</p>
 						<quiz id="quiz898">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson899">
@@ -12776,9 +13804,18 @@
 							Substantial evolution of the COGs is expected in the near future in terms of both growth by adding more genomes and the addition of new functionalities and layers of presentation. Quantitatively, the main forthcoming addition is the COGs for eukaryotic genomes, which are expected to approximately double the size of the COG system. Many of the COGs include paralogous proteins, and this will be addressed by introducing hierarchical organization into the COG system, whereby related COGs will be unified at a higher level. In addition, partial integration of the COGs with the NCBI's Conserved Domains Database (CDD) is expected (Chapter 3), which will result in a more flexible and informative representation of the domain organization of proteins and of structural information that is available for COG members.
 						</p>
 						<quiz id="quiz899">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson900">
@@ -12796,9 +13833,18 @@
 							The annotation group: Darren A. Natale (group leader), Natalie Fedorova, Anastasia Nikolskaya, Aviva Jacobs, Jodie Yin, B. Sridhar Rao, Dmitri M. Krylov, Sergei Mekhedov, John Jackson, Raja Mazumder, and Sona Vasudevan
 						</p>
 						<quiz id="quiz900">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -12859,9 +13905,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz915">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson917">
@@ -12882,9 +13937,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz917">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson920">
@@ -12893,9 +13957,18 @@
 							The NCBI   <ext-link ext-link-type="uri" xlink:href="http://www.ncbi.nlm.nih.gov/Sitemap/index.html" xmlns:xlink="http://www.w3.org/1999/xlink">Site Map</ext-link>serves as a guide to NCBI resources. It provides a comprehensive, linked list of resources, along with a brief description of each resource. An effective way to locate a resource of interest within the Site Map is to perform a Find in Page search, a function that is built into all commonly used Web browsers.
 						</p>
 						<quiz id="quiz920">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson921">
@@ -12912,9 +13985,18 @@
 							3).
 						</p>
 						<quiz id="quiz921">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson922">
@@ -13027,9 +14109,18 @@
 							</sec>
 						</sec>
 						<quiz id="quiz922">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson933">
@@ -13038,9 +14129,18 @@
 							In addition to communication by email and phone provided through the Help Desk, a regular research consultation service provides one-on-one support for researchers in the NIH community. The consults are available by appointment and are provided in 1-hour time slots at the NIH Library as well as the NCBI training facility. Because of the success of the program, this type of service may be offered by appointment at selected scientific meetings in the future.
 						</p>
 						<quiz id="quiz933">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson934">
@@ -13085,9 +14185,18 @@
 							Although currently a NIH-based program, other organizations are welcome to consider using the program as a model for development of similar initiatives to meet their bioinformatics support needs.
 						</p>
 						<quiz id="quiz934">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson935">
@@ -13096,9 +14205,18 @@
 							At NCBI, we encourage our users to contact us with questions, suggestions, and requests for training or presentations on NCBI services. We invite feedback on tutorials, FAQs, and other support materials and welcome suggestions regarding additional materials that would be useful in guiding users through the wide range of services offered by NCBI.
 						</p>
 						<quiz id="quiz935">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
@@ -13191,9 +14309,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1680">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1684">
@@ -13250,9 +14377,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1684">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1690">
@@ -13306,9 +14442,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1690">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1697">
@@ -13380,9 +14525,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1697">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1705">
@@ -13409,9 +14563,18 @@
 							In this example, there were multiple, putative, full-length mRNAs. Please note that ESTs can be added to the display by selecting  add ESTs (Figure 5, upper right-hand corner). Additional exons and splicing patterns may then be available to be considered in your model. This feature may be of particular importance if most of the evidence for splicing and exons comes from ESTs rather than complete mRNAs.
 						</p>
 						<quiz id="quiz1705">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1707">
@@ -13444,9 +14607,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1707">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1712">
@@ -13455,9 +14627,18 @@
 							The most complete assembly of the mouse genome available at NCBI is the Mouse Genome Consortium Version 3 WGS assembly. This assembly can be displayed using the mouse version of the Map Viewer; however, the mouse homolog of   <italic>FMR1</italic>is not labeled as such in this assembly; therefore, we cannot find it using a simple search by gene name. We can overcome this obstacle by searching the mouse genome with the human mRNA sequence using mouse genome BLAST. The result of such a search is shown in the   <italic>leftmost inset</italic>in Figure 6 and indicates that a gene model labeled    LOC207836 is the probable homolog. The   <italic>double-arrow</italic>links the human and mouse Map Viewer displays of the corresponding genes in the two species; the structures are not identical, but they do share a rather large 3 exon. If we zoom out a bit in the two displays (  <italic>two right insets</italic>) to see the surrounding genes, we can observe that the organization of the two genomes is similar in the region of   <italic>FMR1</italic>to the extent that a second gene called   <italic>FMR2</italic>lies downstream of   <italic>FMR1</italic>, whereas the mouse version,   <italic>Fmr2</italic>, likewise lies downstream of the mouse   <italic>Fmr1</italic>homolog.
 						</p>
 						<quiz id="quiz1712">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1713">
@@ -13509,9 +14690,18 @@
 							</p>
 						</sec>
 						<quiz id="quiz1713">
-							<question></question>
-							<question></question>
-							<question></question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 					<lesson  id="lesson1718">
@@ -13549,10 +14739,19 @@
 								</fig>
 							</p>
 						</sec>
-						<quiz id="quiz1718">
-							<question></question>
-							<question></question>
-							<question></question>
+						<qui id="quiz1718">
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
+							<question>
+								<text></text>
+								<answer></answer>
+							</question>
 						</quiz>
 					</lesson>
 				</lessons>
