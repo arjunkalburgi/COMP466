@@ -16,8 +16,6 @@
 
 
 	resetdbs(false); 
-	setupdbs(); 
-
 
 	// if (logged_in()) {
 	//     $session_user_id = $_SESSION['user_id'];

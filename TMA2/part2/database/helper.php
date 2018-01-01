@@ -38,45 +38,51 @@ function spit_xml_content($xml_string){
 // init functions 
 function resetdbs($resetornah) {
   if ($resetornah) {
-    $resetdbsquery = "TRUNCATE TABLE courses; 
-              TRUNCATE TABLE units; 
-              TRUNCATE TABLE lessons; 
-              TRUNCATE TABLE quizzes";
+    $resetdbsquery = "DROP TABLE courses"; 
     $results = mysqli_query($GLOBALS['connect'], $resetdbsquery) or die (mysqli_error($GLOBALS['connect']));  
+    $resetdbsquery = "DROP TABLE units";
+    $results = mysqli_query($GLOBALS['connect'], $resetdbsquery) or die (mysqli_error($GLOBALS['connect']));  
+    $resetdbsquery = "DROP TABLE lessons"; 
+    $results = mysqli_query($GLOBALS['connect'], $resetdbsquery) or die (mysqli_error($GLOBALS['connect']));  
+    $resetdbsquery = "DROP TABLE quizzes";
+    $results = mysqli_query($GLOBALS['connect'], $resetdbsquery) or die (mysqli_error($GLOBALS['connect']));  
+
+    setupdbs();
+    xml2db();
   }
 }
 
 function setupdbs() {
   $coursesquery = mysqli_query($GLOBALS['connect'], "SELECT 1 FROM courses LIMIT 1");
   if ($coursesquery === false) {
-      echo "hiiiiiiii from createcoursestable"; 
+      echo "courses dropped and being made\n"; 
       
       $createcoursestable = "CREATE TABLE courses (
           id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-          courseTitle varchar (30) NOT NULL
+          courseTitle varchar (100) NOT NULL
           )";
       $results = mysqli_query($GLOBALS['connect'], $createcoursestable) or die (mysqli_error($GLOBALS['connect']));
   }
   $unitsquery = mysqli_query($GLOBALS['connect'], "SELECT 1 FROM units LIMIT 1");
   if ($unitsquery === false) {
-      echo "hiiiiiiii from unitsquery"; 
+      echo "units dropped and being made\n"; 
 
       $unitstable = "CREATE TABLE units (
           id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-          title varchar (30) NOT NULL,
-          abstract varchar (3000) NOT NULL,
+          title varchar (1000) NOT NULL,
+          abstract text NOT NULL,
           courseID_Ref int NOT NULL REFERENCES course(id)
           )";
       $results = mysqli_query($GLOBALS['connect'], $unitstable) or die (mysqli_error($GLOBALS['connect']));
   }
   $lessonquery = mysqli_query($GLOBALS['connect'], "SELECT 1 FROM lessons LIMIT 1");
   if ($lessonquery === false) {
-      echo "hiiiiiiii from lessonquery"; 
+      echo "lesson dropped and being made\n"; 
 
       $createlessontable = "CREATE TABLE lessons (
           id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-          title varchar (30) NOT NULL,
-          content varchar (3000) NOT NULL,
+          title varchar (1000) NOT NULL,
+          content longtext NOT NULL,
           quizID_Ref int NOT NULL REFERENCES quiz(id),
           unitID_Ref int NOT NULL REFERENCES unit(id),
           courseID_Ref int NOT NULL REFERENCES course(id)
@@ -85,15 +91,16 @@ function setupdbs() {
   }
   $quizquery = mysqli_query($GLOBALS['connect'], "SELECT 1 FROM quizzes LIMIT 1");
   if ($quizquery === false) {
-      echo "hiiiiiiii from quizquery"; 
+      echo "quiz dropped and being made\n"; 
 
       $createquiztable = "CREATE TABLE quizzes (
           id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-          question  varchar (50) NOT NULL,
-          answer varchar (50) NOT NULL
+          question  varchar (1000) NOT NULL,
+          answer varchar (100) NOT NULL
           )";
       $results = mysqli_query($GLOBALS['connect'], $createquiztable) or die (mysqli_error($GLOBALS['connect']));
   }
+  echo "------------------------------------------------------------------------------------------------------------------------\n"; 
 }
 
 // upload from xml to db
@@ -110,10 +117,10 @@ function xml2db() {
 
     // for each unit 
     foreach ($course->units->unit as $unit) {
-      $title = (string)$unit->title;
-      $abstract = (string)$unit->abstract;
+      $title = (string)$unit->unitMeta->title;
+      $abstract = (string)$unit->unitMeta->abstract;
       insertunit2db($title, $abstract, $courseID_Ref);
-      $unitID_Ref = getcourseIDfromtitle($title);
+      $unitID_Ref = getunitIDfromtitle($title);
 
       // for each lesson
       foreach ($unit->lessons->lesson as $lesson) {
@@ -133,73 +140,77 @@ function xml2db() {
 
 // insert 
 function insertcourses2db($title) {
-    $course_string = "INSERT INTO courses (courseTitle) VALUES ('$title');";
-    if (mysqli_multi_query($GLOBALS['connect'], $quiz_string) === false) {
+    $query_string = "INSERT INTO courses (courseTitle) VALUES ('$title');";
+    $results = mysqli_query($GLOBALS['connect'], $query_string) or die (mysqli_error($GLOBALS['connect']));  
+    if ($results === false) {
       echo "Error courses: Could not commit the insertion, please try again.";
     }
 }
 
 function insertunit2db($title, $abstract, $courseID_Ref) {
-    $unit_string = "INSERT INTO units (title, abstract, courseID_Ref) VALUES ('$title', '$abstract', '$courseID_Ref');";
-    if (mysqli_multi_query($GLOBALS['connect'], $quiz_string) === false) {
+    $query_string = "INSERT INTO units (title, abstract, courseID_Ref) VALUES ('$title', '$abstract', '$courseID_Ref');";
+    $results = mysqli_query($GLOBALS['connect'], $query_string) or die (mysqli_error($GLOBALS['connect']));  
+    if ($results === false) {
       echo "Error units: Could not commit the insertion, please try again.";
     }
 }
 
 function insertlesson2db($title, $content, $quizID_Ref, $unitID_Ref, $courseID_Ref) {
-    $course_string = "INSERT INTO lessons (title, content, quizID_Ref, unitID_Ref, courseID_Ref) VALUES ('$title', '$content', '$quizID_Ref', '$unitID_Ref', '$courseID_Ref');";
-    if (mysqli_multi_query($GLOBALS['connect'], $quiz_string) === false) {
+    $query_string = "INSERT INTO lessons (title, content, quizID_Ref, unitID_Ref, courseID_Ref) VALUES ('$title', '$content', '$quizID_Ref', '$unitID_Ref', '$courseID_Ref');";
+    $results = mysqli_query($GLOBALS['connect'], $query_string) or die (mysqli_error($GLOBALS['connect']));  
+    if ($results === false) {
       echo "Error lessons: Could not commit the insertion, please try again.";
     }
 }
 
 function insertquiz2db($question, $answer) {
-    $unit_string = "INSERT INTO quizzes (question, answer) VALUES ('$question', '$answer');";
-    if (mysqli_multi_query($GLOBALS['connect'], $quiz_string) === false) {
+    $query_string = "INSERT INTO quizzes (question, answer) VALUES ('$question', '$answer');";
+    $results = mysqli_query($GLOBALS['connect'], $query_string) or die (mysqli_error($GLOBALS['connect']));  
+    if ($results === false) {
       echo "Error quizzes: Could not commit the insertion, please try again.";
     }
 }
 
 // get id
 function getcourseIDfromtitle($title) {
-  $courseidquery = "SELECT $id FROM courses WHERE courseTitle = '$title'";
-  $result = mysqli_query($GLOBALS['connect'], $courseidquery);
+  $getidquery = "SELECT id FROM courses WHERE courseTitle = '$title'";
+  $result = mysqli_query($GLOBALS['connect'], $getidquery);
   $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
   if (($data !== null) && (empty($data) === false)) {
-    return $data; 
+    return $data[0]["id"]; 
   } else {
     echo "error retrieving from courses db";
     exit(0); 
   }
 }
 function getunitIDfromtitle($title) {
-  $courseidquery = "SELECT $id FROM units WHERE title = '$title'";
-  $result = mysqli_query($GLOBALS['connect'], $courseidquery);
+  $getidquery = "SELECT id FROM units WHERE title = '$title'";
+  $result = mysqli_query($GLOBALS['connect'], $getidquery);
   $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
   if (($data !== null) && (empty($data) === false)) {
-    return $data; 
+    return $data[0]["id"]; 
   } else {
     echo "error retrieving from units db";
     exit(0); 
   }
 }
 function getlessonIDfromtitle($title) {
-  $courseidquery = "SELECT $id FROM lessons WHERE title = '$title'";
-  $result = mysqli_query($GLOBALS['connect'], $courseidquery);
+  $getidquery = "SELECT id FROM lessons WHERE title = '$title'";
+  $result = mysqli_query($GLOBALS['connect'], $getidquery);
   $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
   if (($data !== null) && (empty($data) === false)) {
-    return $data; 
+    return $data[0]["id"]; 
   } else {
     echo "error retrieving from lessons db";
     exit(0); 
   }
 }
 function getquizIDfromquestion($question) {
-  $courseidquery = "SELECT $id FROM quizzes WHERE question = '$question'";
-  $result = mysqli_query($GLOBALS['connect'], $courseidquery);
+  $getidquery = "SELECT id FROM quizzes WHERE question = '$question'";
+  $result = mysqli_query($GLOBALS['connect'], $getidquery);
   $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
   if (($data !== null) && (empty($data) === false)) {
-    return $data; 
+    return $data[0]["id"]; 
   } else {
     echo "error retrieving from quizzes db";
     exit(0); 
