@@ -9,11 +9,13 @@
         <div class="col s12 m6">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
-              <span class="card-title">Unit 4</span>
-              <p>Databases for the Web in MySQL, relational database system.</p>
+              <span class="card-title">Navigation Options</span>
+              <p>Go back to choose another course, unit or lesson. </p>
             </div>
             <div class="card-action">
-              <a href="index.php/content=unit4/study.php">STUDY UNIT 4</a>
+              <a href="index.php/content=learning/course.php">COURSE</a>
+              <a href="index.php/content=unit4/study.php">UNIT</a>
+              <a href="index.php/content=unit4/study.php">LESSON</a>
             </div>
           </div>
         </div>
@@ -35,3 +37,4 @@
     	}
     ?>
 </div>
+

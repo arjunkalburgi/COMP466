@@ -1,7 +1,7 @@
 <?php
 
    // did user ask for a course? 
-   if (empty($_POST) === false && $_POST["commit"] === "Get Course") {
+   if (empty($_POST) === false) {
 
       // ensure fields are filled 
       foreach ($_POST as $key => $value) {
@@ -14,24 +14,10 @@
       // if all good display units:  
       if(empty($errors)) {
          // display course info: 
-         ?>
-
-         <div class="index_splash">
-            <h1 class="header_text">
-               Course: <?php echo $_POST["courseTitle"]; ?>
-               <br>
-               <a href="index.php">selectagain</a>
-            </h1>
-
-         </div>
-
-
-         <?php 
-         $GLOBALS['coursechoosen'] = $_POST["courseId"]; 
+         header('Location: index.php?content=learning/unit.php&coursechoosen='.$_POST["courseId"]); // contains nothing or select a unit or unit info 
       }
       
    } else {
-      $GLOBALS['coursechoosen'] = ""; 
       ?>
 
       <ul class="collection with-header">
@@ -39,7 +25,7 @@
 
       <?php
 
-      // get courses from sql 
+         // get courses from sql 
          $getidquery = "SELECT * FROM courses";
          $result = mysqli_query($GLOBALS['connect'], $getidquery) or die (mysqli_error($GLOBALS['connect']));  
          $courses = mysqli_fetch_all($result, MYSQLI_ASSOC);
