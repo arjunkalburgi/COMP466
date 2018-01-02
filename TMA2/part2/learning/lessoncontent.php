@@ -9,8 +9,6 @@
 	$lesson = getlessondatafromID($_GET["lessonchoosen"]);
 	$quizzes = getquizdatafromlessonID($lesson["id"]); 
 
-	echo var_dump($quizzes); 
-
 	// quizzing parse $lesson["quiz"]
 	if (!empty($_POST) && $_POST["commit"] === "Try Quiz Now") {
 		?>
@@ -40,12 +38,43 @@
 		</div>
 
 		<?php 
-
 	}
 
 	// Are we showing the quiz answers
-	else if (!empty($_POST) && $_POST["commit"] === "Post Quiz") {
+	elseif (!empty($_POST) && $_POST["commit"] === "Post Quiz") {
+		// show quiz answers 
+		?>
+		<div class="index_splash">
+			<h1 class="header_text">
+				Course: <?php echo getcourseTitlefromID($lesson["courseID_Ref"]); ?>
+				<br>
+				unit: <?php echo getunitTitlefromID($lesson["unitID_Ref"]); ?>
+				<br>
+				Lesson: <?php echo $lesson["title"]; ?>
+				<br>
+				<a href="index.php">select again</a>
+			</h1>
+		</div>
 
+		<ul class="collection with-header">
+			<li class="collection-header"><b>your quiz results</b></li>
+
+			<?php
+			echo implode('', getquizresultsaslist($quizzes, $_POST));
+			?>
+		</ul>
+
+		<form action="" method="post">
+			<input type="submit" name="commit" value="Try Quiz Now" class="create_bk_submit" >
+			<input type="submit" name="commit" value="Reread lesson" class="create_bk_submit" >
+			<input type="submit" name="commit" value="Pick another lesson" class="create_bk_submit" >
+		</form>
+
+		<?php 
+	}
+
+	elseif (!empty($_POST) && $_POST["commit"] === "Pick another lesson") {
+        header('Location: index.php?content=learning/lessonpicker.php&unitchoosen='.$lesson["unitID_Ref"]); 
 	}
 
 	// Teaching the lesson show $lesson["content"]
