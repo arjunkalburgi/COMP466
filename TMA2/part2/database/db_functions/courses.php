@@ -1,68 +1,61 @@
 <?php
 
-
-//returns an array of all the various courses details from the db
-function get_all_courses() {
-
-   $query = "SELECT * FROM courses";
-   $result = mysqli_query($GLOBALS['connect'], $query);
-   $answer = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-   return $answer;
+// insert 
+function insertcourses2db($title) {
+    $query_string = "INSERT INTO courses (courseTitle) VALUES ('$title');";
+    $results = mysqli_query($GLOBALS['connect'], $query_string) or die (mysqli_error($GLOBALS['connect']));  
+    if ($results === false) {
+      echo "Error courses: Could not commit the insertion, please try again.";
+    }
 }
 
-function show_courses_dropdown(){
 
-   if(empty($GLOBALS['courses']) === false){
-      foreach($GLOBALS['courses'] as $course_row){
-         echo '<li><a href="course.php?data='.$course_row['courseID'].'">'.$course_row['courseTitle'].'</a></li>';
-      }
-   }else{
-      echo '<li><a href="#">There are no courses</a></li>';
+// get 
+function getcourseIDfromtitle($title) {
+   $getidquery = "SELECT id FROM courses WHERE courseTitle = '$title'";
+   $result = mysqli_query($GLOBALS['connect'], $getidquery);
+   $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+   if (($data !== null) && (empty($data) === false)) {
+    return $data[0]["id"]; 
+   } else {
+    echo "error retrieving from courses db";
+    exit(0); 
    }
 }
 
-//this outputs the thumbnails on the home page
-function show_courses_thumbnails(){
-
-   if(empty($GLOBALS['courses']) === false){ //always check if our course global array is empty
-      foreach($GLOBALS['courses'] as $course_row){
-         $thumbnail = '<div class="col-md-4">';
-         $thumbnail .= '<h1 class="text-center"><a href="course.php?data='.$course_row['courseID'].'" class="thumbnail">'.$course_row['courseTitle'].'</a></h1>';
-         //$thumbnail .= '<h1 class="text-center"><a href="course.php" onclick="passCourseId('.$course_row['courseID'].');" class="thumbnail">'.$course_row['courseTitle'].'</a></h1>';
-         $thumbnail .= '</div>';
-         echo $thumbnail;
-      }
-   }
-}
-
-//given a specific courseID return an entire row for that courseID
-function specific_course_row($courseID){
-   $result = array();
-   if(empty($GLOBALS['courses']) === false){
-      foreach($GLOBALS['courses'] as $course_row){
-         if($course_row['courseID'] === $courseID){
-            $result = $course_row;
-            break 1;
-         }
-      }
-   }
-   return (empty($result) === false) ? $result : false;
-}
-
-function output_all_units_for_course($courseID){
-
-   $answer = get_all_units_for_course($courseID);
-
-   $construct_unit_string = "";
-   foreach($answer as $row){
-      $unit_id = $row['unitID'];
-      $unit_title = $row['unitTitle'];
-
-      $construct_unit_string .= '<li><a href="unit.php?unit='.$unit_id.'">'.$unit_title.'</a></li>';
+function getcourseTitlefromID($id) {
+   $getidquery = "SELECT courseTitle FROM courses WHERE id = '$id'";
+   $result = mysqli_query($GLOBALS['connect'], $getidquery);
+   $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+   if (($data !== null) && (empty($data) === false)) {
+      return $data[0]["courseTitle"]; 
+   } else {
+      echo "error retrieving from courses db";
+      exit(0); 
    }
 
-   return $construct_unit_string;
 }
+
+function getcoursesaslist() {
+    // get courses from sql 
+    $getidquery = "SELECT * FROM courses";
+    $result = mysqli_query($GLOBALS['connect'], $getidquery) or die (mysqli_error($GLOBALS['connect']));  
+    $courses = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    // echo var_dump($courses);
+
+    $output = array();
+    foreach ($courses as $course) {
+      $output[] = '<li class="collection-item">
+            '.$course['courseTitle'].'
+            <div class="secondary-content">
+            <button onclick="selectButtonClick(\''.$course['courseTitle'].'\', \''.$course['id'].'\')"><i class="material-icons">fast_forward</i></button>
+            </div>
+            </li>';
+    }
+
+    return $output; 
+}
+
 
 ?>

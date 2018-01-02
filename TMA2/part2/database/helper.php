@@ -19,22 +19,6 @@ function output_errors($errors){
     return '<ul style="color:red;font-weight:600;">'. implode('', $output) . '</ul>';
 }
 
-libxml_use_internal_errors(true);
-function spit_xml_content($xml_string){
-   $xml_array = array();
-
-   if(empty($xml_string) === false){
-      $xml_array = simplexml_load_string($xml_string);
-      if($xml_string === false){
-         foreach(libxml_get_errors() as $error){
-            $errors [] = 'Failed loading xml' . $error->message . '<br>';
-         }
-      }
-   }
-
-   return (empty($xml_array) === false) ? $xml_array : false;
-}
-
 // init functions 
 function resetdbs($resetornah) {
   if ($resetornah) {
@@ -138,83 +122,9 @@ function xml2db() {
   }
 }
 
-// insert 
-function insertcourses2db($title) {
-    $query_string = "INSERT INTO courses (courseTitle) VALUES ('$title');";
-    $results = mysqli_query($GLOBALS['connect'], $query_string) or die (mysqli_error($GLOBALS['connect']));  
-    if ($results === false) {
-      echo "Error courses: Could not commit the insertion, please try again.";
-    }
-}
-
-function insertunit2db($title, $abstract, $courseID_Ref) {
-    $query_string = "INSERT INTO units (title, abstract, courseID_Ref) VALUES ('$title', '$abstract', '$courseID_Ref');";
-    $results = mysqli_query($GLOBALS['connect'], $query_string) or die (mysqli_error($GLOBALS['connect']));  
-    if ($results === false) {
-      echo "Error units: Could not commit the insertion, please try again.";
-    }
-}
-
-function insertlesson2db($title, $content, $quizID_Ref, $unitID_Ref, $courseID_Ref) {
-    $query_string = "INSERT INTO lessons (title, content, quizID_Ref, unitID_Ref, courseID_Ref) VALUES ('$title', '$content', '$quizID_Ref', '$unitID_Ref', '$courseID_Ref');";
-    $results = mysqli_query($GLOBALS['connect'], $query_string) or die (mysqli_error($GLOBALS['connect']));  
-    if ($results === false) {
-      echo "Error lessons: Could not commit the insertion, please try again.";
-    }
-}
-
-function insertquiz2db($question, $answer) {
-    $query_string = "INSERT INTO quizzes (question, answer) VALUES ('$question', '$answer');";
-    $results = mysqli_query($GLOBALS['connect'], $query_string) or die (mysqli_error($GLOBALS['connect']));  
-    if ($results === false) {
-      echo "Error quizzes: Could not commit the insertion, please try again.";
-    }
-}
-
-// get id
-function getcourseIDfromtitle($title) {
-  $getidquery = "SELECT id FROM courses WHERE courseTitle = '$title'";
-  $result = mysqli_query($GLOBALS['connect'], $getidquery);
-  $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
-  if (($data !== null) && (empty($data) === false)) {
-    return $data[0]["id"]; 
-  } else {
-    echo "error retrieving from courses db";
-    exit(0); 
-  }
-}
-function getunitIDfromtitle($title) {
-  $getidquery = "SELECT id FROM units WHERE title = '$title'";
-  $result = mysqli_query($GLOBALS['connect'], $getidquery);
-  $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
-  if (($data !== null) && (empty($data) === false)) {
-    return $data[0]["id"]; 
-  } else {
-    echo "error retrieving from units db";
-    exit(0); 
-  }
-}
-function getlessonIDfromtitle($title) {
-  $getidquery = "SELECT id FROM lessons WHERE title = '$title'";
-  $result = mysqli_query($GLOBALS['connect'], $getidquery);
-  $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
-  if (($data !== null) && (empty($data) === false)) {
-    return $data[0]["id"]; 
-  } else {
-    echo "error retrieving from lessons db";
-    exit(0); 
-  }
-}
-function getquizIDfromquestion($question) {
-  $getidquery = "SELECT id FROM quizzes WHERE question = '$question'";
-  $result = mysqli_query($GLOBALS['connect'], $getidquery);
-  $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
-  if (($data !== null) && (empty($data) === false)) {
-    return $data[0]["id"]; 
-  } else {
-    echo "error retrieving from quizzes db";
-    exit(0); 
-  }
+// parser 
+function parse($str) {
+  return str_replace("{{{", "<", $str); 
 }
 
 ?>
