@@ -2,6 +2,8 @@
 
 App: 
 
+	insert each quiz, not just the first one
+
 	display lesson 
 	display quiz, mark quiz 
 

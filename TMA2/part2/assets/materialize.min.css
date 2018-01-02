@@ -56,3 +56,8 @@
 .parsed p {
 	font-size: small;
 }
+.parsed p input {
+	width: unset !important;
+	height: 1.5rem !important; 
+	margin: 0px 10px !important; 
+}

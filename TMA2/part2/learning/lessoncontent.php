@@ -7,11 +7,39 @@
 	}
 
 	$lesson = getlessondatafromID($_GET["lessonchoosen"]);
-	$quiz = getquizdatafromlessonID($lesson["id"]); 
+	$quizzes = getquizdatafromlessonID($lesson["id"]); 
 
+	echo var_dump($quizzes); 
 
 	// quizzing parse $lesson["quiz"]
 	if (!empty($_POST) && $_POST["commit"] === "Try Quiz Now") {
+		?>
+		<div class="index_splash">
+			<h1 class="header_text">
+				Course: <?php echo getcourseTitlefromID($lesson["courseID_Ref"]); ?>
+				<br>
+				unit: <?php echo getunitTitlefromID($lesson["unitID_Ref"]); ?>
+				<br>
+				Lesson: <?php echo $lesson["title"]; ?>
+				<br>
+				<a href="index.php">select again</a>
+			</h1>
+		</div>
+
+		<div class="parsed">
+			<form action="" method="post">
+				
+				<?php
+					foreach ($quizzes as $quiz) {
+						echo '<p>'.parsequizquestion($quiz["question"], $quiz["id"]).'</p>'; 
+					}
+				?>
+
+				<input type="submit" name="commit" value="Post Quiz" class="create_bk_submit" >
+			</form>
+		</div>
+
+		<?php 
 
 	}
 

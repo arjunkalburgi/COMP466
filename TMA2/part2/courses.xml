@@ -634,7 +634,7 @@
 						</content>
 						<quiz id="quiz62">
 							<question>
-								<text>If a journal name is also a MeSH term, ____ will search the term</text>
+								<text>If a journal name is also a MeSH term, _____ will search the term</text>
 								<answer>PubMed</answer>
 							</question>
 							<question>
@@ -842,11 +842,11 @@
 						</content>
 						<quiz id="quiz67">
 							<question>
-								<text>A simple search can be conducted from the Pubmed homepage by entering ____ in the query box</text>
+								<text>A simple search can be conducted from the Pubmed homepage by entering _____ in the query box</text>
 								<answer>terms</answer>
 							</question>
 							<question>
-								<text>If __ __ __ __ is entered in the query box, PubMed will go through the Automatic Term Mapping protocol</text>
+								<text>If _____ is entered in the query box, PubMed will go through the Automatic Term Mapping protocol</text>
 								<answer>more than one term</answer>
 							</question>
 							<question>
@@ -1143,7 +1143,7 @@
 								<answer>Entrez Structure</answer>
 							</question>
 							<question>
-								<text>The difference is that the Entrez Structure can take ____ ____ for the query.</text>
+								<text>The difference is that the Entrez Structure can take _____ for the query.</text>
 								<answer>any text</answer>
 							</question>
 							<question>

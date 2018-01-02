@@ -114,9 +114,9 @@ function xml2db() {
         $lessonID_Ref = getlessonIDfromtitle($title); 
 
         // for each quiz question
-        foreach ($lesson->quiz->question as $question) {
-            $question = (string)$lesson->quiz->question->text;
-            $answer = (string)$lesson->quiz->question->answer;
+        foreach ($lesson->quiz->question as $quiz) {
+            $question = (string)$quiz->text;
+            $answer = (string)$quiz->answer;
             insertquiz2db($question, $answer, $lessonID_Ref);
         }
       }

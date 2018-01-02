@@ -26,11 +26,16 @@ function getquizdatafromlessonID($id) {
   $result = mysqli_query($GLOBALS['connect'], $getidquery) or die (mysqli_error($GLOBALS['connect']));  
   $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
   if (($data !== null) && (empty($data) === false)) {
-      return $data[0]; 
+      return $data; 
   } else {
       echo "error retrieving from quizzes db";
       exit(0); 
   }
+}
+
+// parser 
+function parsequizquestion($str, $id) {
+  return str_replace("_____", '<input type="text" name="answer'.$id.'" placeholder="Answer">', $str); 
 }
 
 ?>
