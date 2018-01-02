@@ -1,50 +1,102 @@
 <?php
-include 'core/init.php';
-include 'includes/overall/top_page.php';
 
-//data holds the courseID of a specific course
-if(isset($_GET['data'])){
-   $_SESSION['currentCourse'] = part2_sanitize($_GET['data']);  //we maintain a global variable of the current course in session
-   $course_row = specific_course_row($_SESSION['currentCourse']); //takes in a course ID and returns the entire row for that course
-   if($course_row === false){
-      $errors [] = 'Could not find the specified course';
-   }
-}
-?>
+   // did user ask for a course? 
+   if (empty($_POST) === false && $_POST["commit"] === "Get Course") {
 
-   <div class="container">
-      <div class="row">
-         <div class="col-sm-4 col-md-3 sidebar">
-            <ul class="nav nav-sidebar">
-               <li class="active"><a href="#"><h3>Overview<span class="sr-only">(current)</span></h3></a></li>
-               <?php echo output_all_units_for_course($_SESSION['currentCourse']);?>
-            </ul>
+      // ensure fields are filled 
+      foreach ($_POST as $key => $value) {
+         if (empty($value)) {
+            $errors[] = 'All fields are required!';
+            break 1;
+         }
+      }
+
+      // if all good display units:  
+      if(empty($errors)) {
+         // display course info: 
+         ?>
+
+         <div class="index_splash">
+            <h1 class="header_text">
+               Course: <?php echo $_POST["courseTitle"]; ?>
+               <br>
+               <a href="index.php">selectagain</a>
+            </h1>
+
          </div>
 
-         <div class="col-sm-8 col-md-9 main">
-            <div class="jumbotron">
-               <h1><?php echo $course_row['courseTitle']; ?></h1>
-               <p>
-                  <?php
-                     echo $course_row['introduction'];
-                  ?>
-               </p>
-            </div>
-            <?php
-               echo part2_output_errors($errors);
-            ?>
-            <h1 class="page-header">Syllabus</h1>
-            <?php echo $course_row['syllabus']; ?>
-            <h1 class="page-header">Summary</h1>
-            <?php echo $course_row['summary']; ?>
-            <h1 class="page-header">Research</h1>
-            <?php echo $course_row['research']; ?>
-            <h1 class="page-header">Books</h1>
-            <?php echo $course_row['books']; ?>
-            <h1 class="page-header">Assignments</h1>
-            <?php echo $course_row['assignment']; ?>
-         </div>
-      </div>
-   </div>
 
-<?php include 'includes/overall/bottom_page.php'; ?>
+         <?php 
+         $GLOBALS['coursechoosen'] = $_POST["courseId"]; 
+      }
+      
+   } else {
+      $GLOBALS['coursechoosen'] = ""; 
+      ?>
+
+      <ul class="collection with-header">
+         <li class="collection-header"><b>press the button to select this course</b></li>
+
+      <?php
+
+      // get courses from sql 
+         $getidquery = "SELECT * FROM courses";
+         $result = mysqli_query($GLOBALS['connect'], $getidquery) or die (mysqli_error($GLOBALS['connect']));  
+         $courses = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+         // echo var_dump($courses);
+
+         $output = array();
+         foreach ($courses as $course) {
+            $output[] = '<li class="collection-item">
+                  '.$course['courseTitle'].'
+                  <div class="secondary-content">
+                  <button onclick="selectButtonClick(\''.$course['courseTitle'].'\', \''.$course['id'].'\')"><i class="material-icons">fast_forward</i></button>
+                  </div>
+                  </li>';
+         }
+
+         echo implode('', $output);
+
+      ?>
+      </ul>
+
+      <script type="text/javascript">
+         
+         function selectButtonClick(courseTitle, courseId) {
+
+            // * * * * * * * * * * * * * * * * * * * *
+            // from https://stackoverflow.com/a/133997
+            var form = document.createElement("form");
+            form.setAttribute("method", "post");
+            form.setAttribute("action", "");
+
+            // bookmark name field
+             var formfield = document.createElement("input");
+            formfield.setAttribute("type", "text");
+            formfield.setAttribute("name", "courseTitle");
+            formfield.setAttribute("value", courseTitle);
+            form.appendChild(formfield);
+
+            // bookmark url field
+             var formfield = document.createElement("input");
+            formfield.setAttribute("type", "text");
+            formfield.setAttribute("name", "courseId");
+            formfield.setAttribute("value", courseId);
+            form.appendChild(formfield);
+
+            // commit field
+             var commitfield = document.createElement("input");
+            commitfield.setAttribute("type", "text");
+            commitfield.setAttribute("name", "commit");
+            commitfield.setAttribute("value", "Get Course");
+            form.appendChild(commitfield);
+
+
+            document.body.appendChild(form);
+            form.submit();
+         }
+         
+      </script>
+
+<?php } ?>

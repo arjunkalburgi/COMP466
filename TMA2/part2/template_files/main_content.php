@@ -3,6 +3,7 @@
     	if (!empty($_POST) && isset($_GET['content'])) {
         	include $_GET['content']; 
     	} else {
+        include 'learning/course.php'; // contains select a course or course info 
     ?>
     <div class="row">
         <div class="col s12 m6">
