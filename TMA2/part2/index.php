@@ -5,7 +5,7 @@
 	ini_set('display_errors', 1);
 
 	include 'database/init.php';
-	include 'template_files/page_structure/top_page.php';
+	include 'template_files/top_page.php';
 ?>
 
 	<div class="container">
@@ -16,4 +16,4 @@
 
 	</div>
 
-<?php include 'template_files/page_structure/bottom_page.php'; ?>
+<?php include 'template_files/bottom_page.php'; ?>

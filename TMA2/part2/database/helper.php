@@ -1,22 +1,8 @@
 <?php
 
 
-function array_sanitize(&$item){
-    $item = mysqli_real_escape_string($GLOBALS['connect'], $item);
-}
-
 function sanitize($data){
     return mysqli_real_escape_string($GLOBALS['connect'], $data);
-}
-
-function output_errors($errors){
-    $output = array();
-
-    foreach ($errors as $error) {
-        $output[] = '<li>'. $error . '</li>';
-    }
-    
-    return '<ul style="color:red;font-weight:600;">'. implode('', $output) . '</ul>';
 }
 
 // init functions 
@@ -89,7 +75,7 @@ function setupdbs() {
 
 // upload from xml to db
 function xml2db() {
-  $xml = simplexml_load_file("./courses.xml");
+  $xml = simplexml_load_file("./assets/courses.xml");
 
   echo $xml === false;
 
