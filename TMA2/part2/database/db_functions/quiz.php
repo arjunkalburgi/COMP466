@@ -21,14 +21,14 @@ function getquizIDfromquestion($question) {
   }
 }
 
-function getquizdatafromID($id) {
-  $getidquery = "SELECT * FROM quizzes WHERE id = '$id'";
-  $result = mysqli_query($GLOBALS['connect'], $getidquery);
+function getquizdatafromlessonID($id) {
+  $getidquery = "SELECT * FROM quizzes WHERE lessonID_Ref = '$id'";
+  $result = mysqli_query($GLOBALS['connect'], $getidquery) or die (mysqli_error($GLOBALS['connect']));  
   $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
   if (($data !== null) && (empty($data) === false)) {
       return $data[0]; 
   } else {
-      echo "error retrieving from lessons db";
+      echo "error retrieving from quizzes db";
       exit(0); 
   }
 }

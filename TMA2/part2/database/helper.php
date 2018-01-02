@@ -108,14 +108,13 @@ function xml2db() {
 
       // for each lesson
       foreach ($unit->lessons->lesson as $lesson) {
-        
         $title = (string)$lesson->title;
         $content = (string)$lesson->content;
         insertlesson2db($title, $content, $unitID_Ref, $courseID_Ref);
         $lessonID_Ref = getlessonIDfromtitle($title); 
 
         // for each quiz question
-        foreach ($lesson->question as $question) {
+        foreach ($lesson->quiz->question as $question) {
             $question = (string)$lesson->quiz->question->text;
             $answer = (string)$lesson->quiz->question->answer;
             insertquiz2db($question, $answer, $lessonID_Ref);

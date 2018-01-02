@@ -11,7 +11,7 @@ function insertlesson2db($title, $content, $unitID_Ref, $courseID_Ref) {
 
 function getlessonIDfromtitle($title) {
     $getidquery = "SELECT id FROM lessons WHERE title = '$title'";
-    $result = mysqli_query($GLOBALS['connect'], $getidquery);
+    $result = mysqli_query($GLOBALS['connect'], $getidquery) or die (mysqli_error($GLOBALS['connect']));  
     $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
     if (($data !== null) && (empty($data) === false)) {
         return $data[0]["id"]; 
@@ -43,7 +43,7 @@ function getlessonsaslist() {
 
 function getlessondatafromID($id) {
   $getidquery = "SELECT * FROM lessons WHERE id = '$id'";
-  $result = mysqli_query($GLOBALS['connect'], $getidquery);
+  $result = mysqli_query($GLOBALS['connect'], $getidquery) or die (mysqli_error($GLOBALS['connect']));  
   $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
   if (($data !== null) && (empty($data) === false)) {
       return $data[0]; 
