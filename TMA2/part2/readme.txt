@@ -7,7 +7,6 @@
 		<p>'s and <sec>'s 
 
 	display lesson picker
-	rename files to "picker"
 	
 	display lesson 
 	display quiz, mark quiz 

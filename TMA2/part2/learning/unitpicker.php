@@ -19,30 +19,9 @@
 			}
 		}
 
-		// if all good display units:  
+		// if all good move to lesson picker:  
 		if(empty($errors)) {
-			// display unit info: 
-			$unit = getunitdatafromID($_POST["unitId"]); 
-
-			?>
-
-			<div class="index_splash">
-			<h1 class="header_text">
-			   Unit: <?php echo $unit["title"]; ?>
-			   <br>
-			   <a href="index.php">select again</a>
-			</h1>
-
-			<div class="parsed">
-				<?php echo parse($unit["abstract"]); ?>
-			</div>
-
-			</div>
-
-
-			<?php 
-			echo "poooooop";
-			// header('Location: index.php?content=learning/lesson.php&coursechoosen='.$_GET['coursechoosen'].'&unitchoosen='.$_POST["unitId"]); // contains nothing or select a lesson or lesson info or quiz + ans
+			header('Location: index.php?content=learning/lessonpicker.php&coursechoosen='.$_GET['coursechoosen'].'&unitchoosen='.$_POST["unitId"]); // contains nothing or select a lesson or lesson info or quiz + ans
 		}
 	  
 	} else {
@@ -53,6 +32,8 @@
 
         <div class="index_splash">
             <h1 class="header_text">
+				Course: <?php echo getcourseTitlefromID($_GET["coursechoosen"]); ?>
+				<br>
             	<a href="index.php">select a different course</a>
             </h1>
         </div>

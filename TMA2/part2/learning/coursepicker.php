@@ -16,7 +16,7 @@
       // if all good display units:  
       if(empty($errors)) {
          // display course info: 
-         header('Location: index.php?content=learning/unit.php&coursechoosen='.$_POST["courseId"]); // contains nothing or select a unit or unit info 
+         header('Location: index.php?content=learning/unitpicker.php&coursechoosen='.$_POST["courseId"]); // contains nothing or select a unit or unit info 
       }
       
    } else {
