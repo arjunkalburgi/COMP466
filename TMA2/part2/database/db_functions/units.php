@@ -21,6 +21,19 @@ function getunitIDfromtitle($title) {
   }
 }
 
+function getunitTitlefromID($id) {
+  $getidquery = "SELECT title FROM units WHERE id = '$id'";
+  $result = mysqli_query($GLOBALS['connect'], $getidquery);
+  $data = mysqli_fetch_all($result, MYSQLI_ASSOC);
+  if (($data !== null) && (empty($data) === false)) {
+      return $data[0]["title"]; 
+  } else {
+      echo "error retrieving from units db";
+      exit(0); 
+  }
+}
+
+
 function getunitdatafromID($id) {
   $getidquery = "SELECT * FROM units WHERE id = '$id'";
   $result = mysqli_query($GLOBALS['connect'], $getidquery);
