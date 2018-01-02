@@ -46,3 +46,13 @@
 	color: red; 
 	font-weight: 600;
 }
+
+.parsed {
+	width: 80%; 
+}
+.parsed h1 {
+	font-size: 1rem;
+}
+.parsed p {
+	font-size: small;
+}

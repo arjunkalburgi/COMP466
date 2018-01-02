@@ -2,7 +2,7 @@
 
 	// if unit hasn't been choosen
 	if (!isset($_GET['unitchoosen'])) {
-		// force back to course choosing 
+		// force back to unit choosing 
 		exit(0);
 	}
 
@@ -20,7 +20,7 @@
 		// if all good move to lesson picker:  
 		if(empty($errors)) {
 			echo "this is where we'll go get the lesson stuff.";
-			// header('Location: index.php?content=learning/lesson.php&coursechoosen='.$_GET['coursechoosen'].'&unitchoosen='.$_POST["unitId"]); // contains nothing or select a lesson or lesson info or quiz + ans
+			header('Location: index.php?content=learning/lessoncontent.php&lessonchoosen='.$_POST["lessonId"]); // lesson info or quiz + ans
 		}
 	  
 	} else {
@@ -48,17 +48,17 @@
 		<!-- // select a lesson -->
 
 		<ul class="collection with-header">
-			<li class="collection-header"><b>press the button to select the unit</b></li>
+			<li class="collection-header"><b>press the button to select the lesson</b></li>
 
 			<?php
-				echo implode('', getunitsaslist());
+				echo implode('', getlessonsaslist());
 			?>
 
 		</ul>
 
 		<script type="text/javascript">
 		 
-		 function selectButtonClick(unitTitle, unitId) {
+		 function selectButtonClick(lessonTitle, lessonId) {
 
 		    // * * * * * * * * * * * * * * * * * * * *
 		    // from https://stackoverflow.com/a/133997
@@ -69,22 +69,22 @@
 		    // bookmark name field
 		     var formfield = document.createElement("input");
 		    formfield.setAttribute("type", "text");
-		    formfield.setAttribute("name", "unitTitle");
-		    formfield.setAttribute("value", unitTitle);
+		    formfield.setAttribute("name", "lessonTitle");
+		    formfield.setAttribute("value", lessonTitle);
 		    form.appendChild(formfield);
 
 		    // bookmark url field
 		     var formfield = document.createElement("input");
 		    formfield.setAttribute("type", "text");
-		    formfield.setAttribute("name", "unitId");
-		    formfield.setAttribute("value", unitId);
+		    formfield.setAttribute("name", "lessonId");
+		    formfield.setAttribute("value", lessonId);
 		    form.appendChild(formfield);
 
 		    // commit field
 		     var commitfield = document.createElement("input");
 		    commitfield.setAttribute("type", "text");
 		    commitfield.setAttribute("name", "commit");
-		    commitfield.setAttribute("value", "Get Unit");
+		    commitfield.setAttribute("value", "Get Lesson");
 		    form.appendChild(commitfield);
 
 

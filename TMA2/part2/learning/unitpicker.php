@@ -21,7 +21,7 @@
 
 		// if all good move to lesson picker:  
 		if(empty($errors)) {
-			header('Location: index.php?content=learning/lessonpicker.php&coursechoosen='.$_GET['coursechoosen'].'&unitchoosen='.$_POST["unitId"]); // contains nothing or select a lesson or lesson info or quiz + ans
+			header('Location: index.php?content=learning/lessonpicker.php&unitchoosen='.$_POST["unitId"]); // contains nothing or select a lesson or lesson info or quiz + ans
 		}
 	  
 	} else {

@@ -7,7 +7,7 @@
 				<unitMeta>
 					<title>GenBank: The Nucleotide Sequence Database</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{p>
 							The GenBank sequence database is an annotated collection of all publicly available nucleotide sequences and their protein translations. This database is produced at National Center for Biotechnology Information (NCBI) as part of an international collaboration with the European Molecular Biology Laboratory (EMBL) Data Library from the European Bioinformatics Institute (EBI) and the DNA Data Bank of Japan (DDBJ). GenBank and its collaborators receive sequences produced in laboratories throughout the world from more than 100,000 distinct organisms. GenBank continues to grow at an exponential rate, doubling every 10 months. Release 134, produced in February 2003, contained over 29.3 billion nucleotide bases in more than 23.0 million sequences. GenBank is built by direct submissions from individual laboratories, as well as from bulk submissions from large-scale sequencing centers.
 						{{{/p>
@@ -540,7 +540,7 @@
 				<unitMeta>
 					<title>PubMed: The Bibliographic Database</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{p>
 							PubMed is a database developed by the National Center for Biotechnology Information (NCBI) at the National Library of Medicine (NLM), one of the institutes of the National Institutes of Health (NIH). The database was designed to provide access to citations (with abstracts) from biomedical journals. Subsequently, a linking feature was added to provide access to full-text journal articles at Web sites of participating publishers, as well as to other related Web resources. PubMed is the bibliographic component of the NCBIs Entrez retrieval system.
 						{{{/p>
@@ -1092,7 +1092,7 @@
 				<unitMeta>
 					<title>Macromolecular Structure Databases</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{p>
 							The resources provided by NCBI for studying the three-dimensional (3D) structures of proteins center around two databases: the Molecular Modeling Database (MMDB), which provides structural information about individual proteins; and the Conserved Domain Database (CDD), which provides a directory of sequence and structure alignments representing conserved functional domains within proteins(CDs). Together, these two databases allow scientists to retrieve and view structures, find structurally similar proteins to a protein of interest, and identify conserved functional sites.
 						{{{/p>
@@ -2174,7 +2174,7 @@
 				<unitMeta>
 					<title>The Single Nucleotide Polymorphism Database (dbSNP) of Nucleotide Sequence Variation</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{p>
 							Sequence variations exist at defined positions within genomes and are responsible for individual  phenotypic characteristics, including a persons propensity toward complex disorders such as heart disease and cancer. As  tools for understanding human variation and molecular genetics, sequence variations can be used for gene mapping, definition  of population structure, and performance of functional studies.
 						{{{/p>
@@ -3752,7 +3752,7 @@
 				<unitMeta>
 					<title>The Gene Expression Omnibus (GEO): A Gene Expression and Hybridization Repository</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{p>
 							The Gene Expression Omnibus (<abbrev>GEO</abbrev>) project was initiated at NCBI in 1999 in response to the growing demand for a public repository for data generated from high-throughput microarray experiments.<abbrev>GEO</abbrev>has a flexible and open design that allows the submission, storage, and retrieval of many types of data sets, such as those from high-throughput gene expression, genomic hybridization, and antibody array experiments.<abbrev>GEO</abbrev>was never intended to replace lab-specific gene expression databases or laboratory information management systems (<abbrev>LIMS</abbrev>), both of which usually cater to a particular type of data set and analytical method. Rather,<abbrev>GEO</abbrev>complements these resources by acting as a central, molecular abundancedata distribution hub.<abbrev>GEO</abbrev>is available on the World Wide Web at  {{{a href="http://www.ncbi.nih.gov/geo">http://www.ncbi.nih.gov/geo{{{/a>.
 						{{{/p>
@@ -4834,7 +4834,7 @@
 				<unitMeta>
 					<title>The NCBI BookShelf: Searchable Biomedical Books</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{p>
 							The {{{a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=Books">BookShelf{{{/a>is a collection of biomedical books that can be searched directly in Entrez or found via keyword links in PubMed abstracts. Books have been added to the BookShelf in collaboration with authors and publishers, and the complete content (including all figures and tables) is free to use for anyone with an Internet connection.
 						{{{/p>
@@ -5353,7 +5353,7 @@
 				<unitMeta>
 					<title>PubMed Central (PMC): An Archive for Literature from Life Sciences Journals</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{p>
 							PubMed Central (PMC) is the National Library of Medicines digital archive of full-text journal literature. Journals deposit material in PMC on a voluntary basis. Articles in PMC may be retrieved either by browsing a table of contents for a specific journal or by searching the database. Certain journals allow the full text of their articles to be viewed directly in PMC. These are always free, although there may be a time lag of a few weeks to a year or more between publication of a journal issue and when it is available in PMC. Other journals require that PMC direct users to the journals own Web site to see the full text of an article. In this case, the material will always be available free to any user no more than 1 year after publication but will usually be available only to the journals subscribers for the first 6 months to 1 year.
 						{{{/p>
@@ -5944,7 +5944,7 @@
 				<unitMeta>
 					<title>The SKY/CGH Database for Spectral Karyotyping and Comparative Genomic Hybridization Data</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{fig id="bid.499">
 							{{{label>
 								1
@@ -6207,7 +6207,7 @@
 				<unitMeta>
 					<title>The Major Histocompatibility Complex Database, dbMHC</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{p>
 							One of the most intensely studied regions of the human genome is the Major Histocompatibility Complex (MHC), a group of genes that occupies approximately 46 megabases on the short arm of chromosome 6. The MHC genes, known in humans as Human Leukocyte Antigen (HLA) genes, are highly polymorphic and encode molecules involved in the immune response. The MHC database, {{{a href="http://www.ncbi.nlm.nih.gov/mhc">dbMHC{{{/a>, was designed to provide a neutral platform where the HLA community can submit, edit, view, and exchange MHC data. It currently consists of an interactive Alignment Viewer for HLA and related genes, an MHC microsatellite database (dbMHCms), a sequence interpretation site for Sequencing Based Typing (SBT), and a Primer/Probe database. dbMHC staff are in the process of creating a new database that will house a wide variety of HLA data including:
 							{{{list list-type="bullet">
@@ -9965,7 +9965,7 @@
 				<unitMeta>
 					<title>Sequin: A Sequence Submission and Editing Tool</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{p>
 							Sequin is a stand-alone sequence record editor, designed for preparing new sequences for submission to GenBank and for editing existing records. Sequin runs on the most popular computer platforms found in biology laboratories, including PC, Macintosh, UNIX, and Linux. It can handle a wide range of sequence lengths and complexities, including entire chromosomes and large datasets from population or phylogenetic studies. Sequin is also used within NCBI by the GenBank and Reference Sequence indexers for routine processing of records before their release.
 						{{{/p>
@@ -10493,7 +10493,7 @@
 				<unitMeta>
 					<title>The Processing of Biological Sequence Data at NCBI</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{p>
 							The biological sequence information that makes up the foundation of NCBIs databases and curated resources comes from many sources. How are these data managed and processed once they reach NCBI? This chapter will discuss the flow of sequence data, from the management of data submission to the making of data available for use.
 						{{{/p>
@@ -10911,7 +10911,7 @@
 				<unitMeta>
 					<title>Genome Assembly and Annotation Process</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{boxed-text id="bid.1742" position="margin">
 							{{{label>
 								1
@@ -12105,7 +12105,7 @@
 				<unitMeta>
 					<title>The Entrez Search and Retrieval System</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{p>
 							Entrez is the text-based search and retrieval system used at NCBI for all of the major databases, including PubMed, Nucleotide and Protein Sequences, Protein Structures, Complete Genomes, Taxonomy, OMIM, and many others. Entrez is at once an indexing and retrieval system, a collection of data from many sources, and an organizing principle for biomedical information. These general concepts are the focus of this chapter. Other chapters cover the details of a specific Entrez database (e.g., PubMed in Chapter 2) or a specific source of data (e.g., GenBank in Chapter 1).
 						{{{/p>
@@ -12355,7 +12355,7 @@
 				<unitMeta>
 					<title>The BLAST Sequence Analysis Tool</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{p>
 							The comparison of nucleotide or protein sequences from the same or different organisms is a very powerful tool in molecular biology. By finding similarities between sequences, scientists can infer the function of newly sequenced genes, predict new members of gene families, and explore evolutionary relationships. Now that whole genomes are being sequenced, sequence similarity searching can be used to predict the location and function of protein-coding and transcription-regulation regions in genomic DNA.
 						{{{/p>
@@ -13168,7 +13168,7 @@
 				<unitMeta>
 					<title>UniGene: A Unified View of the Transcriptome</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{p>
 							The task of assembling an inventory of all genes of {{{i>Homo sapiens{{{/i>and other organisms began more than a decade ago with large-scale survey sequencing of transcribed sequences. The resulting Expressed Sequence Tags (ESTs) were a gold mine of novel gene sequences that provided an infrastructure for additional large-scale projects, such as gene maps, expression systems, and full-length cDNA projects. In addition, untold numbers of targeted gene-hunting projects have benefited from the availability of these sequences and the physical clone reagents. However, the high level of redundancy found among transcribed sequences, not to mention a variety of common experimental artifacts, made it difficult for many people to make effective use of the data. This problem was the motivation for the development of {{{a href="http://www.ncbi.nlm.nih.gov/UniGene/">UniGene{{{/a>, a largely automated analytical system for producing an organized view of the transcriptome. In this chapter, we discuss the properties of the input sequences, the process by which they are analyzed in UniGene, and some pointers on how to use the resource.
 						{{{/p>
@@ -13593,7 +13593,7 @@
 				<unitMeta>
 					<title>The Clusters of Orthologous Groups (COGs) Database: Phylogenetic Classification of Proteins from Complete Genomes</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{p>
 							The protein database of Clusters of Orthologous Groups (COGs) is an attempt to phylogenetically classify the complete complement of proteins (both predicted and characterized) encoded by complete genomes. Each COG is a group of three or more proteins that are inferred to be orthologs, i.e., they are direct evolutionary counterparts. The current release of the COGs database consists of 4,873 COGs, which include 136,711 proteins (~71% of all encoded proteins) from 50 bacterial genomes, 13 archaeal genomes, and 3 genomes of unicellular eukaryotes, the yeasts {{{i>Saccharomyces cerevisiae{{{/i>and {{{i>Schizosaccharomyces pombe{{{/i>, and the microsporidian {{{i>Encephalitozoon cuniculi{{{/i>. The COG database is updated periodically as new genomes become available. The COGs for complete eukaryotic genomes are in preparation. The COGs can be applied to the task of functional annotation of newly sequenced genomes by using the COGnitor program, which is available on the COGs {{{a href="http://www.ncbi.nlm.nih.gov/COG/">homepage{{{/a>.
 						{{{/p>
@@ -13851,7 +13851,7 @@
 				<unitMeta>
 					<title>User Services: Helping You Find Your Way</title>
 					<abstract>
-						{{{h1>Summary{{{/h1>
+						{{{h1>Unit summary{{{/h1>
 						{{{p>
 							The User Services team is the primary liaison between the public and the resources and data at NCBI. User Services disseminates information through outreach training programs and exhibits at scientific conferences and responds to incoming questions by email and telephone assistance. The team instructs people in the use of NCBI resources, responds to a wide range of questions, receives comments and suggestions, and coordinates with the NCBI resource developers to implement suggestions from users. In addition, User Services develops documentation, tutorials, and other support materials; produces the NCBI News; and publishes articles on NCBI resources.
 						{{{/p>

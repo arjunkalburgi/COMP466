@@ -20,5 +20,25 @@ function getlessonIDfromtitle($title) {
   }
 }
 
+function getlessonsaslist() {
+    // get units from sql 
+    $getidquery = "SELECT * FROM lessons WHERE unitID_Ref = " . $_GET['unitchoosen'];
+    $result = mysqli_query($GLOBALS['connect'], $getidquery) or die (mysqli_error($GLOBALS['connect']));  
+    $lessons = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+    $output = array();
+    foreach ($lessons as $lesson) {
+    $output[] = '<li class="collection-item">
+          '.$lesson['title'].'
+          <div class="secondary-content">
+          <button onclick="selectButtonClick(\''.$lesson['title'].'\', \''.$lesson['id'].'\')"><i class="material-icons">fast_forward</i></button>
+          </div>
+          </li>';
+    }
+
+    return $output; 
+}
+
+
 
 ?>
