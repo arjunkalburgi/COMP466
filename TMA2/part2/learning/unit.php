@@ -1,5 +1,6 @@
 <?php
 
+	// code for selecting a unit. That is all. 
 
 	// if course hasn't been choosen
 	if (!isset($_GET['coursechoosen'])) {
@@ -21,16 +22,21 @@
 		// if all good display units:  
 		if(empty($errors)) {
 			// display unit info: 
-			// get unit content 
+			$unit = getunitdatafromID($_POST["unitId"]); 
 
 			?>
 
 			<div class="index_splash">
 			<h1 class="header_text">
-			   Unit: <?php echo $_POST["unitTitle"]; ?>
+			   Unit: <?php echo $unit["title"]; ?>
 			   <br>
-			   <a href="index.php">selectagain</a>
+			   <a href="index.php">select again</a>
 			</h1>
+
+			<div class="parsed">
+				<?php echo parse($unit["abstract"]); ?>
+			</div>
+
 			</div>
 
 
@@ -57,23 +63,7 @@
 			<li class="collection-header"><b>press the button to select the unit</b></li>
 
 			<?php
-
-				// get units from sql 
-				$getidquery = "SELECT * FROM units WHERE courseID_Ref = " . $_GET['coursechoosen'];
-				$result = mysqli_query($GLOBALS['connect'], $getidquery) or die (mysqli_error($GLOBALS['connect']));  
-				$units = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-				$output = array();
-				foreach ($units as $unit) {
-				$output[] = '<li class="collection-item">
-				      '.$unit['title'].'
-				      <div class="secondary-content">
-				      <button onclick="selectButtonClick(\''.$unit['title'].'\', \''.$unit['id'].'\')"><i class="material-icons">fast_forward</i></button>
-				      </div>
-				      </li>';
-				}
-
-				echo implode('', $output);
+				echo implode('', getunitsaslist());
 			?>
 
 		</ul>

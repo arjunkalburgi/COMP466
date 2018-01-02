@@ -1,7 +1,9 @@
 <?php
 
+   // code for selecting a course. That is all. 
+
    // did user ask for a course? 
-   if (empty($_POST) === false) {
+   if (!empty($_POST) && $_POST["commit"] === "Get Course") {
 
       // ensure fields are filled 
       foreach ($_POST as $key => $value) {
@@ -23,28 +25,9 @@
       <ul class="collection with-header">
          <li class="collection-header"><b>press the button to select this course</b></li>
 
-      <?php
-
-         // get courses from sql 
-         $getidquery = "SELECT * FROM courses";
-         $result = mysqli_query($GLOBALS['connect'], $getidquery) or die (mysqli_error($GLOBALS['connect']));  
-         $courses = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-         // echo var_dump($courses);
-
-         $output = array();
-         foreach ($courses as $course) {
-            $output[] = '<li class="collection-item">
-                  '.$course['courseTitle'].'
-                  <div class="secondary-content">
-                  <button onclick="selectButtonClick(\''.$course['courseTitle'].'\', \''.$course['id'].'\')"><i class="material-icons">fast_forward</i></button>
-                  </div>
-                  </li>';
-         }
-
-         echo implode('', $output);
-
-      ?>
+         <?php
+            echo implode('', getcoursesaslist());
+         ?>
       </ul>
 
       <script type="text/javascript">
@@ -82,7 +65,6 @@
             document.body.appendChild(form);
             form.submit();
          }
-         
       </script>
 
 <?php } ?>
