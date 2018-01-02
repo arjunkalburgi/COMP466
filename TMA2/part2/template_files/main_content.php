@@ -1,6 +1,6 @@
 <div class="content">
     <?php
-    	if (!empty($_POST) && isset($_GET['content'])) {
+    	if (isset($_GET['content'])) {
         	include $_GET['content']; 
     	} else {
         include 'learning/coursepicker.php'; // contains select a course or course info 
