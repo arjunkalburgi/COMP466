@@ -67,9 +67,8 @@ function setupdbs() {
           id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
           title varchar (1000) NOT NULL,
           content longtext NOT NULL,
-          quizID_Ref int NOT NULL REFERENCES quiz(id),
-          unitID_Ref int NOT NULL REFERENCES unit(id),
-          courseID_Ref int NOT NULL REFERENCES course(id)
+          unitID_Ref int NOT NULL REFERENCES units(id),
+          courseID_Ref int NOT NULL REFERENCES courses(id)
           )";
       $results = mysqli_query($GLOBALS['connect'], $createlessontable) or die (mysqli_error($GLOBALS['connect']));
   }
@@ -80,7 +79,8 @@ function setupdbs() {
       $createquiztable = "CREATE TABLE quizzes (
           id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
           question  varchar (1000) NOT NULL,
-          answer varchar (100) NOT NULL
+          answer varchar (100) NOT NULL,
+          lessonID_Ref int NOT NULL REFERENCES lessons(id)
           )";
       $results = mysqli_query($GLOBALS['connect'], $createquiztable) or die (mysqli_error($GLOBALS['connect']));
   }
@@ -108,15 +108,18 @@ function xml2db() {
 
       // for each lesson
       foreach ($unit->lessons->lesson as $lesson) {
-
-        $question = (string)$lesson->quiz->question->text;
-        $answer = (string)$lesson->quiz->question->answer;
-        insertquiz2db($question, $answer);
-        $quizID_Ref = getquizIDfromquestion($question);
-
+        
         $title = (string)$lesson->title;
         $content = (string)$lesson->content;
-        insertlesson2db($title, $content, $quizID_Ref, $unitID_Ref, $courseID_Ref);
+        insertlesson2db($title, $content, $unitID_Ref, $courseID_Ref);
+        $lessonID_Ref = getlessonIDfromtitle($title); 
+
+        // for each quiz question
+        foreach ($lesson->question as $question) {
+            $question = (string)$lesson->quiz->question->text;
+            $answer = (string)$lesson->quiz->question->answer;
+            insertquiz2db($question, $answer, $lessonID_Ref);
+        }
       }
     }
   }
