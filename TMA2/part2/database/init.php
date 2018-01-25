@@ -15,7 +15,7 @@
 	$errors = array();
 
 
-	resetdbs(false); 
+	resetdbs(mysqli_query($GLOBALS['connect'], "SELECT 1 FROM courses LIMIT 1") === false); 
 
 	// if (logged_in()) {
 	//     $session_user_id = $_SESSION['user_id'];

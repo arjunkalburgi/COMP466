@@ -377,9 +377,6 @@ function wipeInHoriz() {
 }
 
 function start() {
-	// var divElem = document.getElementById("buffer");
-	// var divSize = document.getElementById("header").offsetHeight;
-	// divElem.style.height = divSize + "px";
 	startSlideShow();
 
 }

@@ -16,7 +16,6 @@
 		if(empty($errors) === true && check_url_bookmark($_POST)) {
 			// refresh content after deletion to make sure the correct content is on the page
 			if (create_bookmarks($_POST)) {
-				echo "lolo";
 				header("Location: index.php?content=bookmarks/update_bookmarks.php");
 			}
 		}
