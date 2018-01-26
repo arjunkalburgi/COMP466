@@ -1,7 +1,7 @@
 ASSIGNMENT REPORT  
 =======
 
-(Note: I found the required documentation formatting a little redundant so I formated it in my own way. Sorry!)
+(Note: I found the required documentation formatting a little redundant so I formated it in my own way between this file and the tma2.htm file. Sorry!)
 
 
 # PART 1 
