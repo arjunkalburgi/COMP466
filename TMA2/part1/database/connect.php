@@ -4,7 +4,7 @@
 	error_reporting(E_ALL); 
 	ini_set('display_errors',1);
 
-	$link = mysqli_connect("127.0.0.1", "root", "mysqlpwd", "mysql", "3306");
+	$link = mysqli_connect("127.0.0.1", "root", "password", "mysql", "3306");
 	mysqli_select_db($link, 'mysql')or die("error connecting to db mysql");
 	
 	$GLOBALS['connect'] = $link; 

@@ -8,13 +8,13 @@ function sanitize($data){
 // init functions 
 function resetdbs($resetornah) {
   if ($resetornah) {
-    $resetdbsquery = "DROP TABLE courses"; 
+    $resetdbsquery = "DROP TABLE IF EXISTS courses"; 
     $results = mysqli_query($GLOBALS['connect'], $resetdbsquery) or die (mysqli_error($GLOBALS['connect']));  
-    $resetdbsquery = "DROP TABLE units";
+    $resetdbsquery = "DROP TABLE IF EXISTS units";
     $results = mysqli_query($GLOBALS['connect'], $resetdbsquery) or die (mysqli_error($GLOBALS['connect']));  
-    $resetdbsquery = "DROP TABLE lessons"; 
+    $resetdbsquery = "DROP TABLE IF EXISTS lessons"; 
     $results = mysqli_query($GLOBALS['connect'], $resetdbsquery) or die (mysqli_error($GLOBALS['connect']));  
-    $resetdbsquery = "DROP TABLE quizzes";
+    $resetdbsquery = "DROP TABLE IF EXISTS quizzes";
     $results = mysqli_query($GLOBALS['connect'], $resetdbsquery) or die (mysqli_error($GLOBALS['connect']));  
 
     setupdbs();
@@ -64,7 +64,7 @@ function setupdbs() {
 
       $createquiztable = "CREATE TABLE quizzes (
           id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
-          question  varchar (1000) NOT NULL,
+          question  text NOT NULL,
           answer varchar (100) NOT NULL,
           lessonID_Ref int NOT NULL REFERENCES lessons(id)
           )";

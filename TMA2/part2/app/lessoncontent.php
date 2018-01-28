@@ -74,7 +74,7 @@
 	}
 
 	elseif (!empty($_POST) && $_POST["commit"] === "Pick another lesson") {
-        header('Location: index.php?content=learning/lessonpicker.php&unitchoosen='.$lesson["unitID_Ref"]); 
+        header('Location: index.php?content=app/lessonpicker.php&unitchoosen='.$lesson["unitID_Ref"]); 
 	}
 
 	// Teaching the lesson show $lesson["content"]

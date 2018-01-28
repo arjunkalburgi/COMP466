@@ -20,7 +20,7 @@
 		// if all good move to lesson picker:  
 		if(empty($errors)) {
 			echo "this is where we'll go get the lesson stuff.";
-			header('Location: index.php?content=learning/lessoncontent.php&lessonchoosen='.$_POST["lessonId"]); // lesson info or quiz + ans
+			header('Location: index.php?content=app/lessoncontent.php&lessonchoosen='.$_POST["lessonId"]); // lesson info or quiz + ans
 		}
 	  
 	} else {

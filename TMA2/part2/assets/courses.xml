@@ -7,7 +7,7 @@
 				<unitMeta>
 					<title>GenBank: The Nucleotide Sequence Database</title>
 					<abstract>
-						{{{h1>Unit summary{{{/h1>
+						{{{h1>Summary{{{/h1>
 						{{{p>
 							The GenBank sequence database is an annotated collection of all publicly available nucleotide sequences and their protein translations. This database is produced at National Center for Biotechnology Information (NCBI) as part of an international collaboration with the European Molecular Biology Laboratory (EMBL) Data Library from the European Bioinformatics Institute (EBI) and the DNA Data Bank of Japan (DDBJ). GenBank and its collaborators receive sequences produced in laboratories throughout the world from more than 100,000 distinct organisms. GenBank continues to grow at an exponential rate, doubling every 10 months. Release 134, produced in February 2003, contained over 29.3 billion nucleotide bases in more than 23.0 million sequences. GenBank is built by direct submissions from individual laboratories, as well as from bulk submissions from large-scale sequencing centers.
 						{{{/p>
@@ -26,12 +26,8 @@
 						</content>
 						<quiz id="quiz3">
 							<question>
-								<text>
-									The GenBank sequence database is produced at _____ for Biotechnology Information (NCBI)
-								</text>
-								<answer>
-									National Center
-								</answer>
+								<text>The GenBank sequence database is produced at _____ for Biotechnology Information (NCBI)</text>
+								<answer>National Center</answer>
 							</question>
 							<question>
 								<text>This database is produced as part of an international collaboration with the _____ (EMBL) Data Library </text>
@@ -145,16 +141,8 @@
 						</content>
 						<quiz id="quiz7">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>True or false? An entry keeps its Accession number as it progresses from one phase to another but receives a new Accession.Version number and a new gi number each time there is a sequence change._____</text>
+								<answer>true</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -172,17 +160,13 @@
 							{{{/p>
 						</content>
 						<quiz id="quiz9">
-							<question>
-								<text></text>
-								<answer></answer>
+                            <question>
+								<text>fa2htgs is a _____ program that is downloaded to the users computer.</text>
+								<answer>command-line</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>True or false? The sequence name is a unique identifier that is assigned by the submitter to a particular clone or entry and must be unique within the groups submissions. _____ </text>
+								<answer>true</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -231,17 +215,17 @@
 							{{{/p>
 						</content>
 						<quiz id="quiz10">
-							<question>
-								<text></text>
-								<answer></answer>
+                            <question>
+								<text>Once Seq-submit files are successfully processed with no errors in the submission, they are automatically loaded into _____.</text>
+								<answer>GenBank</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>For successful submissions, two files are generated: one contains the submission in GenBank flat file format (without the sequence); and another is a _____ file.</text>
+								<answer>status report</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Entries can fail HTG processing because of three types of problems: Formatting, _____, and Data. </text>
+								<answer>Identification</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -254,16 +238,8 @@
 						</content>
 						<quiz id="quiz14">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>Successful submissions undergo _____ after being loaded into GenBank.</text>
+								<answer>validation checks</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -282,16 +258,12 @@
 						</content>
 						<quiz id="quiz1738">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>WGS sequence records may contain  _____ , similar to other GenBank records.</text>
+								<answer>annotation</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>The Accession number for a WGS sequence contains the project ID, a two-digit _____, and six digits for the contig ID.</text>
+								<answer>version number</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -521,16 +493,16 @@
 						</content>
 						<quiz id="quiz15">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The three databases where the EST, STS, and GSS sequences are maintained within GenBank are in the dbEST, dbSTS, and _____ databases.</text>
+								<answer>dbGSS</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>What does FLIC stand for?</text>
+								<answer>Full-Length Insert cDNA</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text> The BankIt validator compares the _____ sequence provided by the submitter with the conceptual translation of the coding region based on the provided spans.</text>
+								<answer>amino acid</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -540,7 +512,7 @@
 				<unitMeta>
 					<title>PubMed: The Bibliographic Database</title>
 					<abstract>
-						{{{h1>Unit summary{{{/h1>
+						{{{h1>Summary{{{/h1>
 						{{{p>
 							PubMed is a database developed by the National Center for Biotechnology Information (NCBI) at the National Library of Medicine (NLM), one of the institutes of the National Institutes of Health (NIH). The database was designed to provide access to citations (with abstracts) from biomedical journals. Subsequently, a linking feature was added to provide access to full-text journal articles at Web sites of participating publishers, as well as to other related Web resources. PubMed is the bibliographic component of the NCBIs Entrez retrieval system.
 						{{{/p>
@@ -634,7 +606,7 @@
 						</content>
 						<quiz id="quiz62">
 							<question>
-								<text>If a journal name is also a MeSH term, _____ will search the term</text>
+								<text>If a journal name is also a MeSH term, ____ will search the term</text>
 								<answer>PubMed</answer>
 							</question>
 							<question>
@@ -842,11 +814,11 @@
 						</content>
 						<quiz id="quiz67">
 							<question>
-								<text>A simple search can be conducted from the Pubmed homepage by entering _____ in the query box</text>
+								<text>A simple search can be conducted from the Pubmed homepage by entering ____ in the query box</text>
 								<answer>terms</answer>
 							</question>
 							<question>
-								<text>If _____ is entered in the query box, PubMed will go through the Automatic Term Mapping protocol</text>
+								<text>If __ __ __ __ is entered in the query box, PubMed will go through the Automatic Term Mapping protocol</text>
 								<answer>more than one term</answer>
 							</question>
 							<question>
@@ -925,16 +897,16 @@
 						</content>
 						<quiz id="quiz83">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>PubMed retrieves and displays search results in the Summary format in the order the record was initially added to PubMed, with the _____ first.</text>
+								<answer>most recent</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Citations can be  viewed in other formats, and can be sorted, saved, and _____.</text>
+								<answer>printed</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The full text can also be _____.</text>
+								<answer>ordered</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -1092,7 +1064,7 @@
 				<unitMeta>
 					<title>Macromolecular Structure Databases</title>
 					<abstract>
-						{{{h1>Unit summary{{{/h1>
+						{{{h1>Summary{{{/h1>
 						{{{p>
 							The resources provided by NCBI for studying the three-dimensional (3D) structures of proteins center around two databases: the Molecular Modeling Database (MMDB), which provides structural information about individual proteins; and the Conserved Domain Database (CDD), which provides a directory of sequence and structure alignments representing conserved functional domains within proteins(CDs). Together, these two databases allow scientists to retrieve and view structures, find structurally similar proteins to a protein of interest, and identify conserved functional sites.
 						{{{/p>
@@ -1143,7 +1115,7 @@
 								<answer>Entrez Structure</answer>
 							</question>
 							<question>
-								<text>The difference is that the Entrez Structure can take _____ for the query.</text>
+								<text>The difference is that the Entrez Structure can take ____ ____ for the query.</text>
 								<answer>any text</answer>
 							</question>
 							<question>
@@ -1545,16 +1517,16 @@
 						</content>
 						<quiz id="quiz118">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>To begin a search on the structure and biosynthesis of aminocyclopropanes, we would go to the _____ main page and enter aminocyclopropane synthase in the Search box.</text>
+								<answer>Structure</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>By clicking on the 3D Domain bar at a point within domain 3, we are taken to the _____ page for this domain, where we find nearly 200 structure neighbors. </text>
+								<answer>VAST Structure Neighbors</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The secondary structure can be viewed easily by first selecting the _____ link to the left of the desired chain in the graphic display.</text>
+								<answer>Protein</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -1711,16 +1683,12 @@
 						</content>
 						<quiz id="quiz150">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The Vector Alignment Search Tool (VAST) is used to calculate similar structures on each protein contained in the _____. </text>
+								<answer>MMDB</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>Among the many viewing options provided by Cn3D, the  _____  menu allows only the aligned residues to be viewed, only the aligned domains, or all residues of each chain.</text>
+								<answer>Show/Hide</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -1866,16 +1834,16 @@
 						</content>
 						<quiz id="quiz178">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>While identifying the conserved functional domains in topoisomerase enzymes and then finding human proteins with the same domains, we start from the Structure main page where we enter the _____ 1I7D in the Structure Summary search box and quickly find the Structure Summary page for this record.</text>
+								<answer>PDB code</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>While finding human proteins that have these same CDs, we perform a CDART search. To limit these results to human proteins, we select the _____ button. </text>
+								<answer>Subset by Taxonomy</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Results from a CD search are displayed as colored bars underneath a _____. </text>
+								<answer>sequence ruler</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -1960,16 +1928,16 @@
 						</content>
 						<quiz id="quiz202">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The protein hits, which have similar domain architectures to the query sequence, can be further refined by  _____ , in which the results can be limited to selected nodes of the taxonomic tree. </text>
+								<answer>taxonomic group</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Each match is either a single protein, in which case its _____ is shown, or is a cluster of very similar proteins, in which case the number of members in the cluster is shown.</text>
+								<answer>Accession number</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Selecting any protein Accession number displays the _____ for that protein.</text>
+								<answer>flatfile</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -2024,16 +1992,16 @@
 						</content>
 						<quiz id="quiz213">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>BLAST searches only the protein sequences provided by _____.</text>
+								<answer>MMDB records</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text> The  _____  button in the Blink report displays the CD-Search results page for the query protein.</text>
+								<answer>CDD-Search</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>All records in the MMDB are obtained originally from the  _____  (PDB).</text>
+								<answer>Protein Data Bank</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -2061,16 +2029,16 @@
 						</content>
 						<quiz id="quiz222">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Cn3D is the _____ PNG command in the File menu. </text>
+								<answer>Export</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Save File in the View bar downloads the file in a choice of three formats: ASN.1, PDB, or _____.</text>
+								<answer>Mage</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Alignments of VAST neighbors can be saved/downloaded from the VAST _____ page of any MMDB record.</text>
+								<answer>Structure Neighbors</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -2118,16 +2086,12 @@
 						</content>
 						<quiz id="quiz226">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Users can download the _____ databases from the NCBI FTP site</text>
+								<answer>NCBI Structure</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>Users can download the PSSMs for each CD record, the sequence alignments in  _____  format, or a text file containing the accessions and descriptions of all CD records.</text>
+								<answer>mFASTA</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -2154,26 +2118,19 @@
 						</content>
 						<quiz id="quiz231">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>The list type is _____.</text>
+								<answer>”bullet”</answer>
 							</question>
 						</quiz>
 					</lesson>
 				</lessons>
+													{{{
 			</unit>
 			<unit book-part-number="5" book-part-type="chapter" id="unit1143">
 				<unitMeta>
 					<title>The Single Nucleotide Polymorphism Database (dbSNP) of Nucleotide Sequence Variation</title>
 					<abstract>
-						{{{h1>Unit summary{{{/h1>
+						{{{h1>Summary{{{/h1>
 						{{{p>
 							Sequence variations exist at defined positions within genomes and are responsible for individual  phenotypic characteristics, including a persons propensity toward complex disorders such as heart disease and cancer. As  tools for understanding human variation and molecular genetics, sequence variations can be used for gene mapping, definition  of population structure, and performance of functional studies.
 						{{{/p>
@@ -2237,16 +2194,16 @@
 						</content>
 						<quiz id="quiz1144">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The minimum sequence length for a variation definition (SNPassay) is 25 bp for both the 5 and 3 flanks and ____ bp overall to ensure an adequate sequence for accurate mapping of the variation on reference genome sequence.</text>
+								<answer>100</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Unknown or no survey of flanking sequence can occur when variations are captured from published literature without an indication of _____.</text>
+								<answer>survey conditions</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>When multiple genes are involved in a trait, then the identification of the genetic causes of the trait requires the identification of the chromosomal _____, or haplotypes, that carry the putative gene variants.</text>
+								<answer>segment combinations</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -2543,16 +2500,16 @@
 						</content>
 						<quiz id="quiz1145">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The dbSNP may be searched using either _____ (aliases) or a combination of 28 different search fields. </text>
+								<answer>qualifiers</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Records in LocusLink will have a pointer back to dbSNP if you have associated one or more variations with a  _____ .</text>
+								<answer>gene feature</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>_____ is the most flexible query structure in dbSNP.</text>
+								<answer>Free Form</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -2933,16 +2890,16 @@
 						</content>
 						<quiz id="quiz1155">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A short tag or abbreviation called  _____  HANDLE uniquely defines each submitting laboratory and groups the submissions within the database.</text>
+								<answer>Submitter</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Sequence submissions have a minimum length requirement to maximize the _____ of the sequence in larger contexts.</text>
+								<answer>specificity</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>General genotype data provide the foundation for individual _____ definitions and are useful for selecting positive and negative control reagents in new experiments.</text>
+								<answer>haplotype</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -3305,16 +3262,16 @@
 						</content>
 						<quiz id="quiz1172">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Data submitted to dbSNP are _____ and provide a non-redundant set of variations for each organism in the database.</text>
+								<answer>clustered</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Estimates of average heterozygosity have an accompanying _____ based on the sample sizes of the underlying data, which reflects the overall uncertainty of the estimate.</text>
+								<answer>standard error</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Variations in coding regions have a functional class assigned to each allele for the variation because these classes depend on _____.</text>
+								<answer>allele sequence</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -3366,16 +3323,16 @@
 						</content>
 						<quiz id="quiz1196">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>_____ are base URLs to which dbSNP can append the submitters ID for the variation to construct a complete URL to the specific data for the record.</text>
+								<answer>LinkOutURLs</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>When an original submitted SNP record shows a relationship between a SNP and a STS, we share the data with dbSTS and establish a _____ between the SNP and the STS record.</text>
+								<answer>link</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>When we determine that a variation needs to be placed within an STS feature, we note the relationship in the dbSNP table  _____ .</text>
+								<answer>SnpInSts</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -3596,16 +3553,16 @@
 						</content>
 						<quiz id="quiz1204">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>If you are planning to create a local copy of dbSNP, you must first have a relational _____, such as Sybase, Microsoft SQL server, or Oracle. </text>
+								<answer>database server</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The /data _____ contains all data files of dbSNP tables, organized as one file per table.</text>
+								<answer>subdirectory</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>For each table, it compares the number of rows in the ___ file with the number of rows in the newly loaded table and reports discrepancies.</text>
+								<answer>bcp</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -3645,16 +3602,16 @@
 						</content>
 						<quiz id="quiz2001">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The file NSE.dtd is simply a _____ file that bundles the two module files NCBI_Entity and NSE (NCBI SNP Exchange). </text>
+								<answer>header</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>ss FASTA contains all submitted SNP sequences in FASTA format, whereas rs FASTA contains all the  _____  SNP sequences in FASTA format.</text>
+								<answer>reference</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The chromosome reports format provides an ordered list of  _____  in approximate chromosome coordinates. </text>
+								<answer>RefSNPs</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -3695,16 +3652,16 @@
 						</content>
 						<quiz id="quiz2007">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Both refSNP and subSNP FASTA sets are aligned to the genome assembly using  _____ .</text>
+								<answer>MegaBLAST</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Short sequences of ____ bases or fewer are BLASTed with word size = 22.</text>
+								<answer>75</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Hits are discarded when the mismatch count is greater than the  _____  mismatch count. </text>
+								<answer>minimum</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -3732,16 +3689,12 @@
 						</content>
 						<quiz id="quiz2010">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>When a protein is known to have a structure neighbor, dbSNP projects the RefSNPs located in that protein sequence onto _____.</text>
+								<answer>sequence structures</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>Each SNP position in the protein sequence is used to determine its corresponding _____ and amino acid position in the 3D structure from the BLAST result.</text>
+								<answer>amino acid</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -3751,7 +3704,7 @@
 				<unitMeta>
 					<title>The Gene Expression Omnibus (GEO): A Gene Expression and Hybridization Repository</title>
 					<abstract>
-						{{{h1>Unit summary{{{/h1>
+						{{{h1>Summary{{{/h1>
 						{{{p>
 							The Gene Expression Omnibus (<abbrev>GEO</abbrev>) project was initiated at NCBI in 1999 in response to the growing demand for a public repository for data generated from high-throughput microarray experiments.<abbrev>GEO</abbrev>has a flexible and open design that allows the submission, storage, and retrieval of many types of data sets, such as those from high-throughput gene expression, genomic hybridization, and antibody array experiments.<abbrev>GEO</abbrev>was never intended to replace lab-specific gene expression databases or laboratory information management systems (<abbrev>LIMS</abbrev>), both of which usually cater to a particular type of data set and analytical method. Rather,<abbrev>GEO</abbrev>complements these resources by acting as a central, molecular abundancedata distribution hub.<abbrev>GEO</abbrev>is available on the World Wide Web at  {{{a href="http://www.ncbi.nih.gov/geo">http://www.ncbi.nih.gov/geo{{{/a>.
 						{{{/p>
@@ -3776,16 +3729,12 @@
 						</content>
 						<quiz id="quiz338">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text> High-throughput hybridization array- and sequencing-based experiments are used to measure the molecular abundance of mRNA, _____, and proteins in absolute or relative terms.</text>
+								<answer>genomic DNA</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>The development of tissue arrays means that it is possible to analyze, in parallel, the _____ of large numbers of tumor tissue samples from patients at different stages of cancer development.</text>
+								<answer>gene expression</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -4011,16 +3960,16 @@
 						</content>
 						<quiz id="quiz339">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The three principle components (or entities) of GEO are modeled after the three organizational unit common to high-throughput gene expression and array-based methodologies. These three entities are platforms, _____, and series. </text>
+								<answer>samples</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A sample describes the set of molecules that are being probed and references a single platform used to generate _____ data.</text>
+								<answer>molecular abundance</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Within the GEO repository, _____ are stored in designated fields within the database table. </text>
+								<answer>metadata</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -4109,16 +4058,16 @@
 						</content>
 						<quiz id="quiz343">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>GEO platforms (GPL prefix) may have related samples and, through those related samples, related _____.</text>
+								<answer>series</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Format allows you to display the GEO accession in human-readable, _____ form or in machine-readable, SOFT form.</text>
+								<answer>linked HTML</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A GEO _____ is required to retrieve data from the GEO repository database. </text>
+								<answer>Accession number</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -4164,16 +4113,16 @@
 						</content>
 						<quiz id="quiz353">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text> _____ (SOFT) is a line-based, ASCII text format that allows for the representation of multiple GEO platforms, samples, and series in one file.</text>
+								<answer>Simple Omnibus Format in Text</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>As a way of depositing data into GEO, a file containing an ASCII-encoded text table of data can be uploaded, and metadata fields can be interactively entered through a series of _____. </text>
+								<answer>Web forms</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Bulk submissions of large data sets may be rapidly incorporated into GEO via _____ of SOFT formatted data.</text>
+								<answer>direct deposit</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -4352,16 +4301,16 @@
 						</content>
 						<quiz id="quiz356">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The basic unit (defined by a unique identifier, or UID, in Entrez parlance) in Entrez ProbeSet is the _____, fused with its affiliated platform and series information.</text>
+								<answer>GEO sample</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>GenBank Accessions, PubMed references, and taxonomy information are also linked to the appropriate Entrez databases for cross-reference and appear in the _____ section of the display. </text>
+								<answer>Links</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Extensive indexing and linking on the data in GEO are performed periodically and can be queried through _____. </text>
+								<answer>Entrez ProbeSet</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -4421,16 +4370,16 @@
 						</content>
 						<quiz id="quiz359">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Samples are oftentimes organized into meaningful _____ within series. </text>
+								<answer>data sets</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>To arrive at our series of interest from the GEO repository, we can perform an Entrez ProbeSet query and follow _____ links to a sample and then to its related series. </text>
+								<answer>GEO accession</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>First step in selecting a series of data and retrieving the data for this series from the GEO repository: select the linked number of public series from the table of _____ given on the GEO homepage.</text>
+								<answer>Repository Contents</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -4455,16 +4404,12 @@
 						</content>
 						<quiz id="quiz365">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The GEO resource is under constant development and aims to improve its indexing, linking, searching, and display capabilities to allow vigorous _____.</text>
+								<answer>data mining</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>The selection of GEO samples into ProbeSets is necessary before integrating data in the GEO repository into other _____.</text>
+								<answer>NCBI resources</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -4695,16 +4640,16 @@
 						</content>
 						<quiz id="quiz367">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>On first login, _____ and contact information must be provided.</text>
+								<answer>authentication</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Accession updates can be made through a link from the _____ after logging in. </text>
+								<answer>Accession Display</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>GEO series (GSE prefix) will have at least one related sample and, through those related samples, will have at least one related _____.</text>
+								<answer>platform</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -4717,16 +4662,12 @@
 						</content>
 						<quiz id="quiz394">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>We gratefully acknowledge the work of _____, as well as the entire NCBI Entrez team.</text>
+								<answer>Vladimir Soussov</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>Special thanks go to _____ and Wataru Fujibuchi for their continuing work on future features and tools.</text>
+								<answer>Manish Inala</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -4814,16 +4755,16 @@
 						</content>
 						<quiz id="quiz395">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>These series represent microarray studies from the public collection of the _____ Database ( SMD).</text>
+								<answer>Stanford Microarray</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>This series represents the Cancer _____ Project SAGE library collection. </text>
+								<answer>Genome Anatomy</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>These platforms represent the latest probe attributes of the commercially available _____ high density oligonucleotide arrays. </text>
+								<answer>Affymetrix Gene Chips</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -4833,7 +4774,7 @@
 				<unitMeta>
 					<title>The NCBI BookShelf: Searchable Biomedical Books</title>
 					<abstract>
-						{{{h1>Unit summary{{{/h1>
+						{{{h1>Summary{{{/h1>
 						{{{p>
 							The {{{a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=Books">BookShelf{{{/a>is a collection of biomedical books that can be searched directly in Entrez or found via keyword links in PubMed abstracts. Books have been added to the BookShelf in collaboration with authors and publishers, and the complete content (including all figures and tables) is free to use for anyone with an Internet connection.
 						{{{/p>
@@ -4877,16 +4818,16 @@
 						</content>
 						<quiz id="quiz424">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The BookShelf provides a venue through which publishers and authors can make the full text of  _____  available to the scientific community.</text>
+								<answer>biomedical books</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>If a conversion needs to be done, the content must be in a format robust enough to meet the needs of the BookShelf publishing system and ____.</text>
+								<answer>DTD</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text> HTMLand PDF formats are less desirable because the data formats are less _____.</text>
+								<answer>detailed</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -5074,16 +5015,16 @@
 						</content>
 						<quiz id="quiz427">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The BookShelf can be accessed from all  _____  abstract pages.</text>
+								<answer>PubMed</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The book that contains the most hits appears at the ___ of the list. Choosing </text>
+								<answer>top</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The hierarchal elements that describe the current location are _____ and may be used to travel up the organizational levels of a book.</text>
+								<answer>hyperlinked</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -5156,16 +5097,16 @@
 						</content>
 						<quiz id="quiz437">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Each chapter and appendix is an _____, as is the frontmatter. </text>
+								<answer>independent file</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Graphic files are converted into GIF and ____ formats and optimized for display on the Web.</text>
+								<answer>JPEG</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Special characters are converted to the BookShelf/_____ ( PMC) character set during conversion into XML. </text>
+								<answer>PubMed Central</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -5193,16 +5134,16 @@
 						</content>
 						<quiz id="quiz442">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The XML files for each book are stored in a _____.</text>
+								<answer>Sybasedatabase</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The look of the HTML pages is controlled further using CSS, which allow manipulation of colors, _____, and typefaces</text>
+								<answer>fonts</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The Table of Contents for a book is created from actual _____ within the book content.</text>
+								<answer>elements</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -5228,16 +5169,12 @@
 						</content>
 						<quiz id="quiz444">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>To simplify the delivery of books online and to allow for the expansion of linking within the Entrez system, NCBI decided to convert all content into a _____ format.</text>
+								<answer>centralized XML</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>PMC created a new _____ for the BookShelf project, which was based on the ISO-12803 DTD.</text>
+								<answer>DTD</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -5333,16 +5270,16 @@
 						</content>
 						<quiz id="quiz446">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>After performing a general PubMed search, click on the _____ of one of the search results to view the abstract. </text>
+								<answer>author name</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The books can be searched either as a complete _____ or as a single, selected book. </text>
+								<answer>collection</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The range of navigation for each book is determined on a case-by-case basis, in agreement with the _____.</text>
+								<answer>publisher</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -5352,7 +5289,7 @@
 				<unitMeta>
 					<title>PubMed Central (PMC): An Archive for Literature from Life Sciences Journals</title>
 					<abstract>
-						{{{h1>Unit summary{{{/h1>
+						{{{h1>Summary{{{/h1>
 						{{{p>
 							PubMed Central (PMC) is the National Library of Medicines digital archive of full-text journal literature. Journals deposit material in PMC on a voluntary basis. Articles in PMC may be retrieved either by browsing a table of contents for a specific journal or by searching the database. Certain journals allow the full text of their articles to be viewed directly in PMC. These are always free, although there may be a time lag of a few weeks to a year or more between publication of a journal issue and when it is available in PMC. Other journals require that PMC direct users to the journals own Web site to see the full text of an article. In this case, the material will always be available free to any user no more than 1 year after publication but will usually be available only to the journals subscribers for the first 6 months to 1 year.
 						{{{/p>
@@ -5452,16 +5389,16 @@
 						</content>
 						<quiz id="quiz458">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A table of contents for the _____ issue of a journal or a list of all issues of the journal available through PMC can be viewed.</text>
+								<answer>latest available</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Citations in the References section of an article frequently include a link to the corresponding _____ and sometimes also to the full text of the referenced article in PMC.</text>
+								<answer>PubMed abstract</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>An Abstract page is identical to a _____ page that has been cut off at the end of the abstract.</text>
+								<answer>Full Text</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -5486,16 +5423,16 @@
 						</content>
 						<quiz id="quiz466">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A participating journal is expected to include all of its _____ primary research articles in PMC.</text>
+								<answer>peer-reviewed</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Journals that deposit material in PMC may make the full text viewable directly in PMC or may require that PMC link to the _____ for viewing the complete article.</text>
+								<answer>journal site</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>All data must meet PMC _____ for syntactically correct and complete data.</text>
+								<answer>standards</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -5508,16 +5445,8 @@
 						</content>
 						<quiz id="quiz467">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>From Abstract and Full Text pages in PMC are links to related articles in PubMed and to related records in other _____ databases, such as Nucleotides or Books.</text>
+								<answer>Entrez</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -5533,16 +5462,12 @@
 						</content>
 						<quiz id="quiz468">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>PubMed Central is an XML-based _____ for full-text journal articles.</text>
+								<answer>publishing system</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>The look of the HTML pages is controlled further by using _____ (CSS), which allow manipulation of colors, fonts, and typefaces.</text>
+								<answer>Cascading Style Sheets</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -5718,16 +5643,16 @@
 						</content>
 						<quiz id="quiz469">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>If a DTD is not available for validation, the _____ will check the syntax.</text>
+								<answer>parser</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>When an article is passed through the XSLT conversion, a list is made of each node, or _____ of information, that is included in the file.</text>
+								<answer>named piece</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Publishers that supply content to PMC handle math expressions in one of two ways: supplied images or _____ in SGML.</text>
+								<answer>encoding</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -5788,16 +5713,16 @@
 						</content>
 						<quiz id="quiz482">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Once an article is loaded into the production (public) database, it will retain its _____ (article ID number) in perpetuity.</text>
+								<answer>ArticleId</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The Journal title being loaded is verified against the _____ in the PXML to verify that the journal identity is correct.</text>
+								<answer>ISSNnumber</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>PubMedIDs for the article being loaded or any bibliographic _____ in the article that are not defined in the PXML are looked up upon loading.</text>
+								<answer>citation</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -5835,16 +5760,16 @@
 						</content>
 						<quiz id="quiz488">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Each publisher DTD defines a set of _____ that may be used in their articles. </text>
+								<answer>characters</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The supplied data also include groups of _____ that are to be combined in the final document.</text>
+								<answer>entities</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>For the most flexibility in displaying characters across platforms, PMC uses  _____  encoding whenever possible. </text>
+								<answer>UTF-8</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -5902,16 +5827,16 @@
 						</content>
 						<quiz id="quiz490">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>In the first version of the PMC project, the SGML and XML were loaded into a database in its  _____  format.</text>
+								<answer>native</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>With more and more publishers inquiring about submitting content directly in the PMC DTD, PubMed Central decided that an _____ was necessary.</text>
+								<answer>independent review</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The requirement of the archival article DTD was defined as the ability to represent the _____ of journal articles. </text>
+								<answer>intellectual content</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -5924,16 +5849,8 @@
 						</content>
 						<quiz id="quiz495">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>Please refer to the _____ site for answers to frequently asked questions.</text>
+								<answer>PMC</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -5943,7 +5860,7 @@
 				<unitMeta>
 					<title>The SKY/CGH Database for Spectral Karyotyping and Comparative Genomic Hybridization Data</title>
 					<abstract>
-						{{{h1>Unit summary{{{/h1>
+						{{{h1>Summary{{{/h1>
 						{{{fig id="bid.499">
 							{{{label>
 								1
@@ -6089,16 +6006,16 @@
 						</content>
 						<quiz id="quiz500">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The CGH database displays gains, losses, and _____ of chromosomes and chromosome segments. </text>
+								<answer>amplification</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A colored karyotype with band _____ is presented to the submitter, who then builds each aberrant chromosome by cutting and pasting. </text>
+								<answer>overlay</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Data submitters must use the same terminology for diagnosis (morphology) and _____ (topography) to permit comparison or combination of the data in the SKY/CGH database.</text>
+								<answer>organ site</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -6129,16 +6046,12 @@
 						</content>
 						<quiz id="quiz515">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>One or more terms can be entered, and there are options to search _____, CGH alone, SKY AND CGH, or the default, SKY OR CGH. </text>
+								<answer>SKY alone</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>There are numerous criteria that can be used for comparison, such as diagnosis, tumor site, mouse strain, and gain or loss of specific chromosomes, chromosome arms, or _____.</text>
+								<answer>chromosome bands</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -6160,16 +6073,12 @@
 						</content>
 						<quiz id="quiz519">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>All chromosomal bands, including breakpoints involved in chromosomal abnormalities, are linked to the _____ database. </text>
+								<answer>Map Viewer</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>Map Viewer provides _____, genetic, physical, and radiation hybrid maps.</text>
+								<answer>cytogenetic</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -6187,16 +6096,8 @@
 						</content>
 						<quiz id="quiz522">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text> Karl Sirotkin, Vasuki Gobu, Rodger _____ </text>
+								<answer>Knaus</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -6206,7 +6107,7 @@
 				<unitMeta>
 					<title>The Major Histocompatibility Complex Database, dbMHC</title>
 					<abstract>
-						{{{h1>Unit summary{{{/h1>
+						{{{h1>Summary{{{/h1>
 						{{{p>
 							One of the most intensely studied regions of the human genome is the Major Histocompatibility Complex (MHC), a group of genes that occupies approximately 46 megabases on the short arm of chromosome 6. The MHC genes, known in humans as Human Leukocyte Antigen (HLA) genes, are highly polymorphic and encode molecules involved in the immune response. The MHC database, {{{a href="http://www.ncbi.nlm.nih.gov/mhc">dbMHC{{{/a>, was designed to provide a neutral platform where the HLA community can submit, edit, view, and exchange MHC data. It currently consists of an interactive Alignment Viewer for HLA and related genes, an MHC microsatellite database (dbMHCms), a sequence interpretation site for Sequencing Based Typing (SBT), and a Primer/Probe database. dbMHC staff are in the process of creating a new database that will house a wide variety of HLA data including:
 							{{{list list-type="bullet">
@@ -6266,16 +6167,16 @@
 						</content>
 						<quiz id="quiz1783">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The most important known function of HLA genes is the presentation of processed _____ (antigens) to T cells. </text>
+								<answer>peptides</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>dbMHC is a permanent public archive that was conceived by the _____ and is implemented and hosted by NCBI.</text>
+								<answer>IHWG</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>dbMHC allows submitters to edit their submissions online at _____.</text>
+								<answer>any time</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -6908,16 +6809,16 @@
 						</content>
 						<quiz id="quiz1784">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Before submitting primer/probe data, a user should define the matching stringency of the primer or probe in the _____ field.</text>
+								<answer>Annealing Stringency</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The Mix Element function is located in the lower frame of the _____ Interface and allows users to add elements to a mix or edit existing elements of a mix.</text>
+								<answer>Primer/Probe</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The kit group function is located in the lower frame of the _____ Interface and allows a user to add single elements to, or remove single elements from, a kit group.</text>
+								<answer>Typing Kit</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -9807,16 +9708,16 @@
 						</content>
 						<quiz id="quiz1876">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>dbMHC uses a penalty system based on nucleotide position in its calculation of  _____  interactions with different alleles. </text>
+								<answer>SSO/SSP</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>dbMHCs reactive allele alignment algorithm searches for sequences with a _____ above the stringency level set by the submitter of each probe.</text>
+								<answer>match grade</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>If the submitted primer/probe sequence is shorter than ___ nucleotides and the user submits a score that accepts certain alleles and rejects others, the reactive allele alignment algorithm will use this information to refine the probe extension. </text>
+								<answer>10</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -9940,16 +9841,16 @@
 						</content>
 						<quiz id="quiz1889">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The header and link column sections of dbMHCs _____ are the same as those on the main page.</text>
+								<answer>Graphic View</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Genes listed in the HLA Class II section act as hyperlinks to the Web resource selected in _____ Resource.</text>
+								<answer>Choose Linked</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Users can access the allele selection page by selecting Alleles on the dbMHC _____ Viewer.</text>
+								<answer>Alignment</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -9964,7 +9865,7 @@
 				<unitMeta>
 					<title>Sequin: A Sequence Submission and Editing Tool</title>
 					<abstract>
-						{{{h1>Unit summary{{{/h1>
+						{{{h1>Summary{{{/h1>
 						{{{p>
 							Sequin is a stand-alone sequence record editor, designed for preparing new sequences for submission to GenBank and for editing existing records. Sequin runs on the most popular computer platforms found in biology laboratories, including PC, Macintosh, UNIX, and Linux. It can handle a wide range of sequence lengths and complexities, including entire chromosomes and large datasets from population or phylogenetic studies. Sequin is also used within NCBI by the GenBank and Reference Sequence indexers for routine processing of records before their release.
 						{{{/p>
@@ -9992,16 +9893,16 @@
 						</content>
 						<quiz id="quiz539">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>As input, Sequin takes a _____ sequence(s) from a scientist wanting to submit or edit sequence data. </text>
+								<answer>biological</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>There are some extremely powerful functions built into Sequin that are only available to NCBI _____ staff. </text>
+								<answer>Indexing</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Sequin makes heavy use of the _____ object manager, a behind the scenes support system that keeps track of Sequins internal data structures and the relationships of each piece of information to others.</text>
+								<answer>Toolkits</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -10074,16 +9975,16 @@
 						</content>
 						<quiz id="quiz540">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Sequin expects sequence data in _____ files, which should be prepared as plain text before uploading them into Sequin.</text>
+								<answer>FASTAformatted</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text> A segmented nucleotide entry is a set of non-contiguous sequences that has a defined order and _____. </text>
+								<answer>orientation</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Population, phylogenetic, and mutation studies all involve the _____ of a number of sequences with each other so that regions of sequence similarity are emphasized.</text>
+								<answer>alignment</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -10114,16 +10015,16 @@
 						</content>
 						<quiz id="quiz546">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>For submission to GenBank, the sequence is transformed from the Sequin internal structure to Abstract _____ 1 (ASN.1), the data description language in which GenBank records are stored. </text>
+								<answer>Syntax Notation</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A simple single nucleotide submission is called a _____ set (a BioseqSet of class nuc-prot) containing the nucleotide and protein Bioseqs. </text>
+								<answer>nuc-prot</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A CDS (coding region) feature location points to the nucleotide, but the  _____  points to the protein. </text>
+								<answer>feature product</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -10308,16 +10209,16 @@
 						</content>
 						<quiz id="quiz548">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>When Sequin starts up, it registers a set of _____ used to generate each display format. </text>
+								<answer>function procedures</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The sequence editor is used like a text editor, with new sequence added at the position of the _____. </text>
+								<answer>cursor</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>In feature editor windows, the last tab is a location spreadsheet allowing multiple feature _____ to be entered. </text>
+								<answer>intervals</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -10396,16 +10297,16 @@
 						</content>
 						<quiz id="quiz553">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>When a nucleotide is submitted to GenBank using Sequin, it is essential to give the name of the source _____.</text>
+								<answer>organism</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Double-clicking on an item in the error report launches an _____ on the offending feature.</text>
+								<answer>editor</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Sequin can retranslate all ____ features with a single command. </text>
+								<answer>CDS</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -10451,16 +10352,16 @@
 						</content>
 						<quiz id="quiz561">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The Special Menu allows indexing staff to convert rpt_type to _____ throughout the record.</text>
+								<answer>rpt_unit</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>With a feature or sequence selected, items in the Filter menu perform specific _____ on the selected objects.</text>
+								<answer>analyses</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Obtaining the entire sequence and all of the features requires fetching the individual components from a _____.</text>
+								<answer>network service</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -10473,16 +10374,12 @@
 						</content>
 						<quiz id="quiz1770">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Sequin has an important dual role as a primary submission tool and as a full-featured sequence  _____ . </text>
+								<answer>record editor</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>Sequin sits at the _____ of the NCBI software Toolkit.</text>
+								<answer>top</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -10492,7 +10389,7 @@
 				<unitMeta>
 					<title>The Processing of Biological Sequence Data at NCBI</title>
 					<abstract>
-						{{{h1>Unit summary{{{/h1>
+						{{{h1>Summary{{{/h1>
 						{{{p>
 							The biological sequence information that makes up the foundation of NCBIs databases and curated resources comes from many sources. How are these data managed and processed once they reach NCBI? This chapter will discuss the flow of sequence data, from the management of data submission to the making of data available for use.
 						{{{/p>
@@ -10614,16 +10511,16 @@
 						</content>
 						<quiz id="quiz1658">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The sequence database GenBank is made up of nucleotide sequences submitted by individual scientists and _____ from around the world. </text>
+								<answer>sequencing centers</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>IQ holds links between sequences from ____ and links from these sequences to other resources.</text>
+								<answer>ID</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Small-volume submitters typically use either _____ or Sequin to prepare the ASN.1 for submission. </text>
+								<answer>BankIt</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -10836,16 +10733,16 @@
 						</content>
 						<quiz id="quiz1659">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>All of the sequences for the International _____ Database Collaboration are in GenBank and must have Accession numbers assigned to them.</text>
+								<answer>Nucleic Acid</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The IQ database keeps track of the neighbors for any given sequence; these relationships are all _____ to save time for the people using this feature. </text>
+								<answer>precomputed </answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Many people who use NCBI services think of the GenBank flatfile as the _____ sequence data format. </text>
+								<answer>archetypal</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -10891,16 +10788,16 @@
 						</content>
 						<quiz id="quiz585">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A stand-alone program takes ASN.1-containing files, while a _____ can submit data to ID through the IDProdOS. </text>
+								<answer>client API</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Blob satellite databases, although relational databases, contain ASN.1 objects as _____ data objects.</text>
+								<answer>unnormalized</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The EntrezControl and The _____ databases are uniquely on the query side.</text>
+								<answer>Graveyards</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -10910,7 +10807,7 @@
 				<unitMeta>
 					<title>Genome Assembly and Annotation Process</title>
 					<abstract>
-						{{{h1>Unit summary{{{/h1>
+						{{{h1>Summary{{{/h1>
 						{{{boxed-text id="bid.1742" position="margin">
 							{{{label>
 								1
@@ -10984,16 +10881,16 @@
 						</content>
 						<quiz id="quiz1441">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Freezing the data provides a _____ set of inputs for the remainder of the build process. </text>
+								<answer>stable</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>There are usually a _____ between builds so that the latest build can be evaluated and improvements can be made.</text>
+								<answer>few months</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Periodically, old versions of the sequences are _____ from the set of accumulated data files.</text>
+								<answer>purged</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -11006,16 +10903,8 @@
 						</content>
 						<quiz id="quiz1447">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>The main inputs for the genome assembly and annotation process are genomic sequences, _____, and Sequence Tagged Site (STS) maps.</text>
+								<answer>transcript sequences</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -11302,16 +11191,16 @@
 						</content>
 						<quiz id="quiz1448">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The sequences specified for any _____ chromosomes are retrieved from GenBank and included in the set of genomic sequences to be processed for an assembly. </text>
+								<answer>finished</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Most genomic sequences deposited in GenBank by individual scientists will not be HTG and therefore will not be used for assembly; however, they are used for _____.</text>
+								<answer>alignment</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Any new STS maps are added to our _____ soon after they are released. </text>
+								<answer>data set</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -11388,16 +11277,16 @@
 						</content>
 						<quiz id="quiz1458">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Draft-quality HTGSs sometimes contain segments of sequence derived from _____, most commonly the cloning vector or bacterial host.</text>
+								<answer>foreign sources</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Draft HTGSs consist of a set of sequence contigs derived from a particular _____ artificially linked together to form a single sequence.</text>
+								<answer>clone</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Genomic sequences that appear on any of the chromosome _____ are automatically assigned to the designated chromosome.</text>
+								<answer>tiling paths</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -11441,16 +11330,16 @@
 						</content>
 						<quiz id="quiz1467">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Alignment of the input genomic sequences to each other and to various other sequences is essential for both genome _____ and genome annotation.</text>
+								<answer>assembly</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Annotation of genes requires knowledge of where the sequences for known _____ align to the assembled genomic sequences.</text>
+								<answer>transcripts</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Homologies between the polypeptides encoded by the genomic sequences and known proteins/conserved protein domains provide hints for the gene _____ process.</text>
+								<answer>prediction</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -11541,16 +11430,16 @@
 						</content>
 						<quiz id="quiz1473">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Before the tiling paths are used in the genome assembly, the order of the finished clone sequences included in the tiling paths is compared with the _____ used to assemble the curated contigs of finished sequence.</text>
+								<answer>specifications</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Genomic sequences from additional clones may be added if they provide the sequence for a known gene that is missing from the existing genomic sequence _____.</text>
+								<answer>contigs</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>True or false? There are some contigs that can be assigned to a specific chromosome but cannot be placed along that chromosome. _____</text>
+								<answer>true</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -11749,16 +11638,16 @@
 						</content>
 						<quiz id="quiz1486">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The locations of genomic sequences that potentially code for _____ with homology to other proteins are obtained from three sources.</text>
+								<answer>polypeptides</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Consolidation of the transcript-based gene models and the _____ gene models forms a single set of models. </text>
+								<answer>predicted</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>If a model RNA has a reciprocal best hit with a known RNA, then the _____ of the known RNA is used to identify the gene.</text>
+								<answer>annotation</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -11789,16 +11678,16 @@
 						</content>
 						<quiz id="quiz1514">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Placement of STSs on the genome assembly allows sequence-based data to be integrated with _____ maps that contain STS markers, such as genetic and radiation hybrid maps. </text>
+								<answer>non-sequence-based</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Clones are placed using _____ types of sequence tags.</text>
+								<answer>three</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Placement of _____ (SNPs) and other variations on the genome provides numerous landmarks that are valuable for associating genes with diseases. </text>
+								<answer>Single Nucleotide Polymorphisms</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -11829,16 +11718,16 @@
 						</content>
 						<quiz id="quiz1519">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A fully annotated _____ entry is made for each genomic sequence contig.</text>
+								<answer>Refseq</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A RefSeq entry is made for each chromosome by combining the _____ of the genomic contigs in the appropriate order and with the appropriate spacing.</text>
+								<answer>annotated sequences</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The annotated genomic sequence contig, model transcript, and model protein RefSeqs are saved in GenBank _____ and ASN.1 formats.</text>
+								<answer>flatfile</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -11879,16 +11768,16 @@
 						</content>
 						<quiz id="quiz1523">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Contig coordinates are translated into chromosome coordinates using the _____ of the contigs along each chromosome, as determined in the genome assembly step.</text>
+								<answer>positions</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Maps generated from sequence alignments include maps that show the genomic positions of mRNA plus _____, or genomic sequences from GenBank.</text>
+								<answer>EST sequences</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Cytogenetic maps, genetic _____ maps, and radiation hybrid maps use different coordinate systems that are not based on sequence.</text>
+								<answer>linkage</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -11901,16 +11790,12 @@
 						</content>
 						<quiz id="quiz1528">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>To ensure that a consistent view of the annotated genome assembly is presented, the release of databases and _____ is coordinated.</text>
+								<answer>FTP files</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>Several associated databases are then refreshed, including LocusLink, dbSNP, and UniSTS, so that the data they contain reflect the new  _____ .</text>
+								<answer>build</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -12058,16 +11943,16 @@
 						</content>
 						<quiz id="quiz1529">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The products of the genome assembly and annotation process are linked extensively to various _____ resources.</text>
+								<answer>NCBI</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The maps displayed by Map Viewer have embedded links between _____ and relevant NCBI resources.</text>
+								<answer>map objects</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>During the production of RefSeqs, links between the annotated features (clones, genes, SNPs, and STSs) and the relevant _____ listed in Table 2are created.</text>
+								<answer>resources</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -12080,16 +11965,8 @@
 						</content>
 						<quiz id="quiz1534">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>Tatiana Tatusova, Lukas </text>
+								<answer>Wagner</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -12104,7 +11981,7 @@
 				<unitMeta>
 					<title>The Entrez Search and Retrieval System</title>
 					<abstract>
-						{{{h1>Unit summary{{{/h1>
+						{{{h1>Summary{{{/h1>
 						{{{p>
 							Entrez is the text-based search and retrieval system used at NCBI for all of the major databases, including PubMed, Nucleotide and Protein Sequences, Protein Structures, Complete Genomes, Taxonomy, OMIM, and many others. Entrez is at once an indexing and retrieval system, a collection of data from many sources, and an organizing principle for biomedical information. These general concepts are the focus of this chapter. Other chapters cover the details of a specific Entrez database (e.g., PubMed in Chapter 2) or a specific source of data (e.g., GenBank in Chapter 1).
 						{{{/p>
@@ -12181,16 +12058,16 @@
 						</content>
 						<quiz id="quiz589">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>An Entrez node is a collection of data that is grouped together and _____ together.</text>
+								<answer>indexed</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Another criterion for selecting a particular data type to be an Entrez node is to enable  _____  to other Entrez nodes in a useful and reliable way.</text>
+								<answer>linking</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>All of the protein sequences are _____ against each other, and the highest-scoring hits are stored as indexes within the node. </text>
+								<answer>BLASTed</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -12211,16 +12088,16 @@
 						</content>
 						<quiz id="quiz597">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A discovery system is intended to let you find _____ information than appears in the original data.</text>
+								<answer>more</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The tumor cells from most familial cases of HNPCC had altered, short, repeated DNA sequences, suggesting that DNA _____ had occurred during tumor development.</text>
+								<answer>replication errors</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The researchers could connect the functional data about the yeast and _____ genes with the genetic mapping and clinical phenotype information in humans. </text>
+								<answer>bacterial</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -12286,16 +12163,12 @@
 						</content>
 						<quiz id="quiz598">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Each node offers unique information and unique new _____ among its members.</text>
+								<answer>relationships</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>The addition of each new node creates different paths through the data that may lead to new _____, without more work on the old nodes.</text>
+								<answer>connections</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -12335,16 +12208,16 @@
 						</content>
 						<quiz id="quiz605">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A common theme in the implementation of Entrez is that some functions are unique to each _____ database, whereas others are common to all Entrez databases.</text>
+								<answer>source</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Although the basic principles of Entrez have remained the same for almost a decade, the _____ has been through at least three major redesigns and many minor ones. </text>
+								<answer>software implementation</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Boolean query processing, DocSum retrieval, and other common functions are supported on a number of load-balanced front-end _____ machines.</text>
+								<answer>UNIX</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -12354,7 +12227,7 @@
 				<unitMeta>
 					<title>The BLAST Sequence Analysis Tool</title>
 					<abstract>
-						{{{h1>Unit summary{{{/h1>
+						{{{h1>Summary{{{/h1>
 						{{{p>
 							The comparison of nucleotide or protein sequences from the same or different organisms is a very powerful tool in molecular biology. By finding similarities between sequences, scientists can infer the function of newly sequenced genes, predict new members of gene families, and explore evolutionary relationships. Now that whole genomes are being sequenced, sequence similarity searching can be used to predict the location and function of protein-coding and transcription-regulation regions in genomic DNA.
 						{{{/p>
@@ -12381,16 +12254,16 @@
 						</content>
 						<quiz id="quiz611">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The way most people use BLAST is to input a nucleotide or protein sequence as a  _____  against all (or a subset of) the public sequence databases.</text>
+								<answer>query</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>This chapter will first describe the BLAST _____, how it works at the NCBI site and then go on to describe the various BLAST outputs.</text>
+								<answer>architecture</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>There are many interfaces to BLAST that are often not exploited by users but can lead to more efficient and robust _____.</text>
+								<answer>applications</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -12427,16 +12300,16 @@
 						</content>
 						<quiz id="quiz612">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The BLAST algorithm is tuned to find these domains or _____ of sequence similarity. </text>
+								<answer>shorter stretches</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>When a match is identified, it is used to initiate  _____  and gapped extensions of the word.</text>
+								<answer>gap-free</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The  _____  system located on the BLAST server executes the search, writing information about the sequence alignment in ASN.1.</text>
+								<answer>QBLAST</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -12455,16 +12328,16 @@
 						</content>
 						<quiz id="quiz614">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The bit score gives an indication of how good the alignment is; the _____ the score, the better the alignment.</text>
+								<answer>higher</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A key element in this calculation is the _____ matrix, which assigns a score for aligning any possible pair of residues.</text>
+								<answer>substitution</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The E-value gives an indication of the statistical significance of a given _____ alignment and reflects the size of the database and the scoring system used.</text>
+								<answer>pairwise</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -12534,16 +12407,16 @@
 						</content>
 						<quiz id="quiz615">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The Taxonomy reports link displays this BLAST result on the basis of information in the Taxonomy _____.</text>
+								<answer>database</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Mousing over the bars displays the _____ for that sequence to be shown in the window above the graphic. </text>
+								<answer>definition line</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The traditional report is really designed for human _____, as opposed to being parsed by a program. </text>
+								<answer>readability</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -12574,16 +12447,12 @@
 						</content>
 						<quiz id="quiz620">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The traditional report is merely a display format with no formal _____ or rules, and improvements may be made at any time, changing the underlying HTML.</text>
+								<answer>structure</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>Those human _____ that find very strong, near-exact E.coli sequence matches can be discarded without further examination.</text>
+								<answer>ESTs</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -12638,16 +12507,16 @@
 						</content>
 						<quiz id="quiz622">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Structured output allows for automatic and rigorous checks for _____ errors and changes.</text>
+								<answer>syntax</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The BLAST search itself has been uncoupled from the way the result is formatted, thus allowing different _____ from the same search.</text>
+								<answer>output formats</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>If the O and J options are not used, BLAST assigns unique _____ (for that run) to all sequences and shields the user from this knowledge.</text>
+								<answer>identifiers </answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -12681,16 +12550,16 @@
 						</content>
 						<quiz id="quiz627">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The Toolkit is supported under  _____  and many varieties of UNIX, NT, and MacOS.</text>
+								<answer>Linux </answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The compute engine is independent from the _____; therefore, it is possible (as mentioned above) to compute results once but view them in many different modes.</text>
+								<answer>formatter</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Users are strongly encouraged to use the _____ rather than reading the files associated with the database, because the the files are subject to change.</text>
+								<answer>readdb API</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -12837,16 +12706,16 @@
 						</content>
 						<quiz id="quiz631">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>In some cases, a field is left  _____ , although the original specification called for including this field. </text>
+								<answer>empty</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The syntax of the FASTA _____ lines used in the NCBI BLAST databases depends upon the database from which each sequence was obtained. </text>
+								<answer>definition</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The reason for adding the gi identifier is to provide a uniform, stable _____ convention.</text>
+								<answer>naming</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -12902,16 +12771,12 @@
 						</content>
 						<quiz id="quiz633">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text> _____  dumps the sequence as FASTA.</text>
+								<answer>BioseqRawToFasta</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>Main is called, rather than main, and a call to  _____  is used to get the command-line arguments.</text>
+								<answer>GetArgs</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13094,16 +12959,16 @@
 						</content>
 						<quiz id="quiz638">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>BLASTOptionNew allocates a _____ with default values for the specified program (e.g., blastp).</text>
+								<answer>BLASTOptionBlk</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The expect_value member of the BLASTOptionBlk is changed to a non-default value specified on the _____.</text>
+								<answer>command-line</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The BioseqPtr could have been obtained from the BLAST databases, Entrez, or from FASTA using the function call _____.</text>
+								<answer>FastaToSeqEntry</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13148,16 +13013,12 @@
 						</content>
 						<quiz id="quiz643">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>SeqIdWrite formats the information in _____ into a FASTA identifier (e.g., gi|129295) and places it into query_buf.</text>
+								<answer>query_id</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>All of this is done by _____ function calls, and it is not necessary to write low-level function calls to parse the ASN.1.</text>
+								<answer>high-level</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13382,16 +13243,12 @@
 						</content>
 						<quiz id="quiz858">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>In 1992, a database called dbEST ( 9) was established to serve as _____ for ESTs, which are then distributed to the scientific community as the EST division of GenBank (10).</text>
+								<answer>a collection point</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>Instead, they are identified using only the small bit of sequence data obtained, comparing it to the sequences of known genes and _____.</text>
+								<answer>other ESTs</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13428,16 +13285,16 @@
 						</content>
 						<quiz id="quiz860">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Simple repeats (low-complexity regions) are identified using a word-overrepresentation algorithm called _____, and transposable repetitive elements are identified by comparison with a library of known repeats for each organism.</text>
+								<answer>DUST</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Through the NCBI _____, an increasing number of EST sequences now have base-level error probabilities that are used to identify the highest quality segment of each sequence.</text>
+								<answer>Trace Archive</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>One dilemma is that some level of mismatching should be tolerated because of known levels of base substitution errors in _____, whereas allowing too much mismatching will cause highly similar paralogous genes to cluster together.</text>
+								<answer>ESTs</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13462,16 +13319,12 @@
 						</content>
 						<quiz id="quiz862">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The tissues are listed under _____, which includes the tissue source of libraries of the component sequences and, for human, links to the SAGE resource.</text>
+								<answer>Expression Information</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>On the Cluster page, the EST clones that are considered by the _____ (MGC) project to be putatively full length are listed at the top, whereas others follow in order of their reported insert length.</text>
+								<answer>Mammalian Gene Collection</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13502,16 +13355,8 @@
 						</content>
 						<quiz id="quiz863">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>Other information in the table includes the frame and strand of the alignment, a link to the corresponding trace as provided in the NCBI _____, the UniGene cluster ID, the GenBank Accession number, and columns that describe the aligned region and percent identity.</text>
+								<answer>Trace Archive</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13530,16 +13375,16 @@
 						</content>
 						<quiz id="quiz865">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Unless there are a large number of sequences in each pool, the frequencies of genes are generally not found to be statistically significant. true or false? _____</text>
+								<answer>true</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>DDD uses the _____ test to restrict the output to statistically significant differences (P0.05).</text>
+								<answer>Fisher Exact</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Libaries generated by the _____ (CGAP) will become especially valuable to this end.</text>
+								<answer>Cancer Genome Anatomy Project</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13573,16 +13418,16 @@
 						</content>
 						<quiz id="quiz866">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Ortholog pairs involving sequences from H. sapiensand M. musculushave been imported from the NCBI HumanMouse _____.</text>
+								<answer>Homology Map</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>To simplify the Web view, it is useful to have each report page focus on an individual gene, called the _____, and to show connections that follow from it.</text>
+								<answer>key gene</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>HomoloGene is a resource for exploring putative _____ and results from automated sequence comparisons.</text>
+								<answer>homology relationships among genes, bringing together curated homology information></answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13614,16 +13459,8 @@
 						</content>
 						<quiz id="quiz886">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>The COGs database has been designed as an attempt to _____ proteins</text>
+								<answer>classify</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13723,16 +13560,16 @@
 						</content>
 						<quiz id="quiz887">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The COGfor monoamine oxidase currently contains eight proteins from seven different organisms: one each from Deinococcus radiodurans(DRA0274), Mycobacterium tuberculosis(Rv3170), Bacillus subtilis(BS_yobN), Synechocystis(slr0782), Pseudomonas aeruginosa(PA0421), and Mesorhizobium loti(mll3668), and two paralogs from Caulobacter crescentus(CC2793 and CC1091). This is the only COG in the COGs database that has this phylogenetic pattern. true or false? _____</text>
+								<answer>true</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The _____ procedure is based on the simple notion that any group of at least three proteins from distant genomes that are more similar to each other than they are to any other proteins from the same genomes are most likely to form an orthologous set (Figure 1).</text>
+								<answer>COG construction</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>To assign proteins to _____ procedure, i.e., the consistency of genome-specific BeTs.</text>
+								<answer>COGs, COGnitor applies the same principle that is embedded in the COG construction</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13745,16 +13582,8 @@
 						</content>
 						<quiz id="quiz897">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>A phyletic pattern is the pattern of _____ that are represented or not represented in a given COG</text>
+								<answer>species</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13773,16 +13602,12 @@
 						</content>
 						<quiz id="quiz898">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The main COGs Web pagecontains the following principal features: (a) a list of all COGs organized by the (predicted) _____; (b) separate lists of COGs for each _____ and for a variety of major pathways and functional systems; (c) a table of co-occurrencesof genomes in COGs; (d) a list of COGs organized by phyletic patterns; (e) the phyletic patterns search tool; (f) the COGnitorprogram; (g) a search engine to search COGs for gene names, COG numbers, and arbitrary text; and (h) Help, which covers the principal subjects related to COGs.</text>
+								<answer>functional category</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>Also, each of the COG pages is hyperlinked to: (a) pictorial representations of BLAST search outputs for each member of the COG, which also includes links to the respective GenBank and Entrez-Genomes entries (see, for example, the link from XF2022, the protein from Xyella fastidiosain the exonuclease I COG); (b) a multiple alignmentof the COG members produced automatically using the ClustalW program (11); (c) a FASTA library of the protein sequences that belong to the COG (represented by the floppy disc icon); (d) the respective functional category of COGs and pathway (functional system) if applicable (in this exonuclease I example, the functional category Lrepresents proteins involved in DNA replication, recombination, and repair); (e) a COG information page that includes functional, evolutionary, and structural information on the COG and its members (many of these pages are still under construction); (f) other COGs that include distinct domains of multidomain proteins that belong to the _____ through one of their domains; and (g) the Genome Contexttool that shows the gene neighborhood around the _____ for all genomes that encode proteins of the _____.</text>
+								<answer>iven COG</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13795,16 +13620,8 @@
 						</content>
 						<quiz id="quiz899">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>In addition, partial integration of the COGs with the NCBIs _____ (CDD) is expected (Chapter 3), which will result in a more flexible and informative representation of the domain organization of proteins and of structural information that is available for COG members.</text>
+								<answer>Conserved Domains Database</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13826,15 +13643,7 @@
 						</content>
 						<quiz id="quiz900">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
+								<text>The COG system is developed and maintained by a team of _____ and expert biologists.</text>
 								<answer></answer>
 							</question>
 						</quiz>
@@ -13886,16 +13695,12 @@
 						</content>
 						<quiz id="quiz915">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The help desk open on weekends, true/false? _____</text>
+								<answer>false</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>The NCBI Help Desk staff can neither provide direct answers to medical questions nor give medical advice or guidance. true or false? _____</text>
+								<answer>true</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13920,16 +13725,8 @@
 						</content>
 						<quiz id="quiz917">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>The _____ section of the website presents many fundamentals of NCBIs bioinformatics tools and databases.</text>
+								<answer>About NCBI</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13942,16 +13739,8 @@
 						</content>
 						<quiz id="quiz920">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>The NCBI Site Map serves as a guide to NCBI resources. true or false?</text>
+								<answer>true</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -13965,23 +13754,17 @@
 								The User Services group also prepares fact sheets, brochures, and other public information materials to describe and illustrate NCBI services. A   {{{a href="http://www.ncbi.nlm.nih.gov/About/news/print.html">list{{{/a>of available materials is provided in the   {{{i>About NCBI{{{/i>section of the Web site, under News.
 							{{{/p>
 							{{{p>
-								Overview articles entitled   {{{i>GenBank{{{/i>and   {{{i>Database Resources of the NCBI{{{/i>have also been published recently in the annual database issues of   {{{i>Nucleic Acids Research{{{/i>(  
-								1-  
-								3).
+								Overview articles entitled   {{{i>GenBank{{{/i>and   {{{i>Database Resources of the NCBI{{{/i>have also been published recently in the annual database issues of   {{{i>Nucleic Acids Research{{{/i>(1-3).
 							{{{/p>
 						</content>
 						<quiz id="quiz921">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>What is the name of the quarterly newsletter? _____</text>
+								<answer>NCBI News</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>The newsletter is available free online and paid by print subscription. true or false? _____</text>
+								<answer>true</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -14098,16 +13881,16 @@
 						</content>
 						<quiz id="quiz922">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Molecular Biology Information Resources provides an introduction to four categories of _____ available from NCBI</text>
+								<answer>molecular biology information</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A schedule of planned units at NLM and elsewhere is posted under _____.</text>
+								<answer>Upcoming Courses</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>A Field Guide to GenBank and NCBI _____ a training unit offered in a lecture format, followed by hands-on computer sessions.</text>
+								<answer>Molecular Biology Resources</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -14120,16 +13903,8 @@
 						</content>
 						<quiz id="quiz933">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>A regular research consultation service provides one-on-one support for researchers in the NIH community, true or false? _____</text>
+								<answer>true</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -14178,16 +13953,12 @@
 						</content>
 						<quiz id="quiz934">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>What is the final week of the innovative training program</text>
+								<answer>Practicum</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>What is the Practicum? An institute-related project? true or false?</text>
+								<answer>true</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -14200,16 +13971,8 @@
 						</content>
 						<quiz id="quiz935">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>NCBI users are encouraged to contact with: _____</text>
+								<answer>questions, suggestions, and requests</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -14274,16 +14037,16 @@
 						</content>
 						<quiz id="quiz1680">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Selecting _____ will change the start and stop positions on the contig, where the gene has been annotated.</text>
+								<answer>Display Region</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Another tool for obtaining the desired sequence is the Sequence Viewer, available via the sv link when the Gene_seq map is the master map. true or false?</text>
+								<answer>true</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Another tool for obtaining the desired sequence is the _____, available via the sv link when the Gene_seq map is the master map.</text>
+								<answer>Sequence Viewer</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -14344,16 +14107,16 @@
 						</content>
 						<quiz id="quiz1684">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The Genes_seq map displays known and predicted genes that are annotated on the _____.</text>
+								<answer>genomic contigs</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The types of queries that can be posted to the _____ that will address this type of question are queries by genetic marker or STS.</text>
+								<answer>Map Viewer</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>To the right of the display is a grid indicating other maps upon which these STSs are located. true or false?</text>
+								<answer>true</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -14411,16 +14174,16 @@
 						</content>
 						<quiz id="quiz1690">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>In the case of FMR1, entering a range of 176198 into the _____ boxes generates a display of the genes falling within that range.</text>
+								<answer>Region Shown</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>If we select the chromosome X link under the chromosome graphic, the _____ shows marker hits on several physical maps, highlighted in red, over a fairly large sequence region from about 141 to 142 megabases.</text>
+								<answer>Map Viewer display</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Often, a gene is known to reside only in a _____.</text>
+								<answer>particular region</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -14496,16 +14259,8 @@
 						</content>
 						<quiz id="quiz1697">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>To begin the analysis, we can select the link in the blue sidebarentitled Data as _____ to see a tabular listing of the chromosomal coordinates of the features visible in the current Map Viewer display.</text>
+								<answer>Table View</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -14536,16 +14291,16 @@
 						</content>
 						<quiz id="quiz1705">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The _____ displays the alignment of transcripts, such as mRNA GenBank sequences and RefSeqs, to genomic sequence and shows the positions of predicted genes, but it does not stop there.</text>
+								<answer>Map Viewer</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>There are two boxed regionsin the _____ display.</text>
+								<answer>Map Viewer</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>By using a utility called the _____, it is possible to combine the alignment evidence with the results of gene prediction to construct novel transcripts.</text>
+								<answer>ModelMaker</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -14582,16 +14337,16 @@
 						</content>
 						<quiz id="quiz1707">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Three sources of mouse mapping data are available: the Mouse Genome Database (MGD) map, Jackson Lab map, and the Whitehead/MRC _____ map.</text>
+								<answer>Radiation Hybrid</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Three sources of mouse mapping data are available: the Mouse Genome Database (MGD) map, _____ map, and the Whitehead/MRC Radiation Hybrid map.</text>
+								<answer>Jackson Lab</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>The mouse homolog, called _____, is also positioned on chromosome X, and the order of genes surrounding it is conserved in both genomes.</text>
+								<answer>Fmr1</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -14604,16 +14359,8 @@
 						</content>
 						<quiz id="quiz1712">
 							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
-							</question>
-							<question>
-								<text></text>
-								<answer></answer>
+								<text>The most complete assembly of the mouse genome available at NCBI is the: _____</text>
+								<answer>Mouse Genome Consortium Version 3</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -14669,16 +14416,16 @@
 						</content>
 						<quiz id="quiz1713">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Apparently, the names of FMR genes do not reflect common sequence features but rather a physiological condition, fragile X mental retardation syndrome, associated with this gene. In this sense, the two are members of a group or family, but they show _____ only in the pathological trinucleotide repeats (CGG) n that are often found upstream of their coding regions.</text>
+								<answer>sequence similarity</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Go to the NCBI _____ section of the LocusLink page and select the BLAST Link ( BL ) link.</text>
+								<answer>Reference Sequences</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>To see whether there are undocumented homologs of FMR1in the genome, return to the Map Viewer maps page for the FMR1gene and select the BLAST the _____ link.</text>
+								<answer>Human Genome</answer>
 							</question>
 						</quiz>
 					</lesson>
@@ -14721,16 +14468,16 @@
 						</content>
 						<quiz id="quiz1718">
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Results may be reformatted by selecting Sort by _____ to cluster hits from the same species.</text>
+								<answer>Taxonomy Proximity</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>Select the _____ button in the Genome BLAST results to see the positions of the hits on the chromosomes.</text>
+								<answer>Genome View</answer>
 							</question>
 							<question>
-								<text></text>
-								<answer></answer>
+								<text>To see the functional domains that have been identified in the FMR1 protein, select the _____ (CDD) Search button.</text>
+								<answer>Conserved Domains Database</answer>
 							</question>
 						</quiz>
 					</lesson>

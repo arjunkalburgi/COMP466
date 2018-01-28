@@ -26,6 +26,9 @@ Often times the logic portion of the page interfaces with the database, which ge
 
 Just like in the previous assignment, the materializecss library does a lot to help the HTML/form content portion of the page. The form is automatically validated thanks to materializecss! 
 
+### SET UP
+Need to set up SQL. Go to database/connect.php and make sure line 7 has all the information for your sql server (leave the db name as mysql). Then just load the app and it should make all the tables for you. 
+
 
 # PART 2 
 Part 2 was done a lot more hastily after extending my course for the final time. I found it really difficult to understand why we were required to create our own EML. It took a lot of extra time and effort and didn't really learn much. 
@@ -47,6 +50,9 @@ So because the EML was created the way it was and was sanitized so purfusely, cr
 The original xml file I used had a lot more detail than was neccesary for our app (breaking down sections into further sections and text into p tags, etc). Leaving it this way would actually completely break the xml2db function, since the simplexml functions used to parse the file would try to break them down as well. To avoid this, I modified all the open brackets for every tag in the lesson to '{{{', this way the simplexml would not be able to read it as a tag. Before displaying the content, I pass the content string through a string replace function to convert it back to the open bracket. Thus successfully parsing the content to a readable format. This works great because it preserves a lot of the original xml's formatting! 
 
 ### IMPLEMENTATION / SET UP
+Like Part 1, SQL needs to be set up. Go to database/connect.php and make sure line 7 has all the information for your sql server. 
+
 Upon initial run of the application, make sure resetdbs() in database/init.php takes in a true. This will trash, create and fill up all the database tables for the app. After the initial run, it can be modified to false so that the databases remain for use. Currently the function is called when there is no table for courses, since creation and deletion is done at the same time (when done programatically) checking if one of the tables exists effectively checks them all. 
+
 
 
